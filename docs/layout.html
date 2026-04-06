@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Noctia Layout</title>
+
+  <link rel="stylesheet" href="../noctia.css">
+  <script src="../noctia.js"></script>
+</head>
+
+
+
+
+
+<body class="noctia-fixed-layout">
+
+<div class="noctia-fixed-nav-top auto-hiding p-8 gap-8">
+  <div class="flex-1"></div>
+  <a href="index.html">Home</a>
+  <a href="/">Home</a>
+  <button class="noctia-scroll-top h-40px"></button>
+</div>
+
+<header>
+  <h1 class="noctia-title-1">Noctia Layout</h1>
+</header>
+
+
+
+<main class="noctia-section">
+
+  <nav class="noctia-card-container">
+    <ul>
+      <li><a href="#header">Header</a></li>
+      <li><a href="#footer">Footer</a></li>
+      <li><a href="#fixed-layout">Fixed Layout</a></li>
+      <li><a href="#noctia-section">Noctia Section</a></li>
+      <li><a href="#fixed-navigation">Fixed Navigation</a></li>
+    </ul>
+  </nav>
+
+  <section id="header">
+    <h2 class="noctia-title-2">Header</h2>
+    <button class="noctia-sample-btn p-right-8 p-left-8 border-2 border-radius-999">Sample</button>
+    <dl class="noctia-code-description">
+      <dt>Selector</dt>
+      <dd><pre><code><span data-copy="noctia-header">header.noctia-header</span></code></pre></dd>
+      <dt>Usage</dt>
+      <dd><pre><code>&lt;header class="noctia-header"&gt;
+
+&lt;/header&gt;</code></pre></dd>
+      <dt>Base Background Color</dt>
+      <dd><pre><code>:root {
+    --noctia-header-bg-color: #FFFFFF;
+}</code></pre></dd>
+      <dt>Utility</dt>
+      <dd>
+        <ul>
+          <li><a href="./utilities.html#space">Space</a></li>
+          <li><a href="./utilities.html#background-color">Background Color</a></li>
+        </ul>
+      </dd>
+    </dl>
+  </section>
+
+  <section id="footer">
+    <h2 class="noctia-title-2">Footer</h2>
+    <button class="noctia-sample-btn p-right-8 p-left-8 border-2 border-radius-999">Sample</button>
+    <dl class="noctia-code-description">
+      <dt>Selector</dt>
+      <dd><pre><code><span data-copy="noctia-footer">footer.noctia-footer</span></code></pre></dd>
+      <dt>Usage</dt>
+      <dd><pre><code>&lt;footer class="noctia-footer"&gt;
+
+&lt;/footer&gt;</code></pre></dd>
+      <dt>Base Background Color</dt>
+      <dd><pre><code>:root {
+    --noctia-footer-bg-color: #FFFFFF;
+}</code></pre></dd>
+      <dt>Utility</dt>
+      <dd>
+        <ul>
+          <li><a href="./utilities.html#space">Space</a></li>
+          <li><a href="./utilities.html#background-color">Background Color</a></li>
+        </ul>
+      </dd>
+    </dl>
+  </section>
+
+  <section id="fixed-layout">
+    <h2 class="noctia-title-2">Fixed Layout</h2>
+    <dl class="noctia-code-description">
+      <dt>Selector</dt>
+      <dd><pre><code><span data-copy="noctia-fixed-layout">body.noctia-fixed-layout</span> {
+    display: flex;
+    flex-direction: column;
+}</code></pre></dd>
+      <dt>Usage</dt>
+      <dd><pre><code>&lt;body class="noctia-fixed-layout"&gt;
+  &lt;header&gt;
+
+  &lt;/header&gt;
+  &lt;main&gt;
+
+  &lt;/main&gt;
+  &lt;footer&gt;
+
+  &lt;/footer&gt;
+&lt;/body&gt;</code></pre></dd>
+      <dt>Fixed Layout Header</dt>
+      <dd>
+        <pre><code>body.noctia-fixed-layout header,
+header.noctia-header</code></pre>
+        <a href="#header" class="clr-black">Header</a>
+      </dd>
+      <dt>Fixed Layout Main</dt>
+      <dd>
+        <pre><code>body.noctia-fixed-layout main { flex: 1; }</code></pre>
+        <p>Auto grow and shrink</p>
+      </dd>
+      <dt>Fixed Layout Footer</dt>
+      <dd>
+        <pre><code>body.noctia-fixed-layout footer,
+footer.noctia-footer</code></pre>
+        <a href="#footer" class="clr-black">Footer</a>
+      </dd>
+    </dl>
+  </section>
+
+  <section id="noctia-section">
+    <h2 class="noctia-title-2">Noctia Section</h2>
+    <div class="noctia-code-container">
+      <pre><code><span data-copy="noctia-section">.noctia-section</span> &gt; section {
+    margin: 2.5rem 0 5rem;
+}
+
+<span data-copy="noctia-section">.noctia-section</span> section:last-child {
+    margin-bottom: 0;
+}
+
+<span data-copy="noctia-section">.noctia-section</span> .noctia-section &gt; section {
+    margin-block: 2rem;
+}</code></pre>
+    </div>
+  </section>
+
+  <section id="fixed-navigation" class="noctia-section">
+    <h2 class="noctia-title-2">Fixed Navigation</h2>
+    <div class="noctia-fixed-nav-bot elm-flex justify-content-center">
+      <p class="noctia-fixed-text spc-0-i spc-top-32-i clr-gray text-small">This is the fixed navigation sample</p>
+    </div>
+    <button class="noctia-sample-btn p-right-8 p-left-8 border-2 border-radius-999">Sample</button>
+    <dl class="noctia-code-description">
+      <dt>Selector</dt>
+      <dd><pre><code><span data-copy="noctia-fixed-nav-top">.noctia-fixed-nav-top</span>,
+<span data-copy="noctia-fixed-nav-bot">.noctia-fixed-nav-bot</span></code></pre></dd>
+      <dt>Usage</dt>
+      <dd><pre><code>&lt;div class="noctia-fixed-nav-top"&gt; &lt;/div&gt;
+
+&lt;div class="noctia-fixed-nav-bot"&gt; &lt;/div&gt;</code></pre></dd>
+      <dt>Base Background Color</dt>
+      <dd><pre><code>:root {
+    --noctia-fixed-nav-bg-color: #FFFFFF;
+}</code></pre></dd>
+      <dt>Base Border Color</dt>
+      <dd><pre><code>:root {
+    --noctia-fixed-nav-border-color
+}</code></pre></dd>
+      <dt>Utility</dt>
+      <dd>
+        <ul>
+          <li><a href="./utilities.html#size">Size</a></li>
+          <li><a href="./utilities.html#space">Space</a></li>
+          <li><a href="./utilities.html#background-color">Background Color</a></li>
+          <li><a href="./utilities.html#border-color">Border Color</a></li>
+          <li><a href="./utilities.html#display">Display</a></li>
+        </ul>
+      </dd>
+    </dl>
+    <section>
+      <h3 class="noctia-title-3">Auto Hiding</h3>
+      <button class="noctia-sample-btn p-right-8 p-left-8 border-2 border-radius-999">Sample</button>
+      <dl class="noctia-code-description">
+        <dt>Selector</dt>
+        <dd><pre><code><span data-copy="noctia-fixed-nav-top auto-hiding">.noctia-fixed-nav-top.auto-hiding</span>
+
+<span data-copy="noctia-fixed-nav-bot auto-hiding">.noctia-fixed-nav-bot.auto-hiding</span></code></pre></dd>
+        <dt>Usage</dt>
+        <dd><pre><code>&lt;div class="noctia-fixed-nav-top auto-hiding"&gt; &lt;/div&gt;
+
+&lt;div class="noctia-fixed-nav-bot auto-hiding"&gt; &lt;/div&gt;</code></pre></dd>
+      </dl>
+    </section>
+  </section>
+
+</main>
+
+
+
+<footer>
+  <a href="/">Home</a>
+  <p class="noctia-license">Lanlanwi</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

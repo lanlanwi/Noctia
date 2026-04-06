@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Noctia Base</title>
+
+  <link rel="stylesheet" href="../noctia.css">
+  <script src="../noctia.js"></script>
+</head>
+
+
+
+
+
+<body class="noctia-fixed-layout">
+
+<div class="noctia-fixed-nav-top p-8 gap-8">
+  <div class="flex-1"></div>
+  <a href="index.html">Home</a>
+  <a href="/">Home</a>
+  <button class="noctia-scroll-top h-40px"></button>
+</div>
+
+<header>
+  <h1 class="noctia-title-1">Noctia Base</h1>
+</header>
+
+
+
+<main class="noctia-section">
+
+  <figure class="noctia-code-block">
+    <figcaption class="noctia-code-header">
+      <span class="noctia-code-title">:root</span>
+    </figcaption>
+    <div class="noctia-code-container">
+      <pre><code>:root {
+    --noctia-base-font: var(--noctia-sans, sans-serif);
+
+    --noctia-base-font-size: 16px;
+
+    --noctia-base-text-color: var(--noctia-dark, #252525);
+    --noctia-base-bg-color: var(--noctia-white, #FFF);
+
+    --noctia-base-code-font: var(--noctia-mono, monospace);
+
+    --noctia-base-hr-color: var(--noctia-neutral-color, #E5E7EB);
+}</code></pre>
+    </div>
+  </figure>
+
+  <dl class="noctia-code-description">
+    <dt><code>--noctia-base-font</code></dt>
+    <dd>Base font family</dd>
+    <dd><pre><code>html { font-family: var(--noctia-base-font); }</code></pre></dd>
+    <dt><code>--noctia-base-font-size</code></dt>
+    <dd>Base font size</dd>
+    <dd><pre><code>html { font-size: var(--noctia-base-font-size); }</code></pre></dd>
+    <dt><code>--noctia-base-text-color</code></dt>
+    <dd>Base text color</dd>
+    <dd><pre><code>body { color: var(--noctia-base-text-color); }</code></pre></dd>
+    <dt><code>--noctia-base-bg-color</code></dt>
+    <dd>Base background color</dd>
+    <dd><pre><code>body { background-color: var(--noctia-base-bg-color); }</code></pre></dd>
+  </dl>
+
+  <section>
+    <h3 class="noctia-title-4">Base &lt;pre&gt; style</h3>
+    <div class="border-1 border-gray">
+      <pre>This is a test sentence. It includes long words such as Supercalifragilisticexpialidocious and Pneumonoultramicroscopicsilicovolcanoconiosis, and uses SampleText123 to check display and layout. We will verify functionality with Version 2.0 and also test how difficult-to-fit words like ExtraordinaryLongWordExample are handled</pre>
+    </div>
+  </section>
+
+  <section class="spc-top-32">
+    <h3 class="noctia-title-4">Base &lt;code&gt; style</h3>
+    <div class="border-1 border-gray">
+      <code>color: red;</code>
+    </div>
+    <dl class="noctia-code-description spc-top-16">
+      <dt><code>--noctia-base-code-font</code></dt>
+      <dd>Base &lt;code&gt; font family</dd>
+      <dd><pre><code>code { font-family: var(--noctia-base-code-font); }</code></pre></dd>
+    </dl>
+  </section>
+
+  <section>
+    <h3 class="noctia-title-4">Base &lt;hr&gt; style</h3>
+    <div class="border-1 border-gray">
+      <hr>
+    </div>
+    <dl class="noctia-code-description">
+      <dt><code>--noctia-base-hr-color</code></dt>
+      <dd>Base &lt;hr&gt; color</dd>
+      <dd><pre><code>border-bottom: 1px solid var(--noctia-base-hr-color);</code></pre></dd>
+    </dl>
+  </section>
+
+</main>
+
+
+
+<footer>
+  <a href="/">Home</a>
+  <p class="noctia-license">Lanlanwi</p>
+</footer>
+
+</body>
+</html>
