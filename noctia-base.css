@@ -3,7 +3,7 @@
  * Version: 1.1.0
  * © 2026 Lanlanwi
  * Created: 2025-11-06
- * Last Updated: 2026-04-06
+ * Last Updated: 2026-04-07
  * Licensed under the MIT License
  * https://opensource.org/licenses/MIT
  */:root{--noctia-base-font:var(--noctia-sans,sans-serif);--noctia-base-font-size:16px;--noctia-base-text-color:var(--noctia-dark,#252525);--noctia-base-bg-color:var(--noctia-white,#fff);--noctia-base-code-font:var(--noctia-mono,monospace);--noctia-base-hr-color:var(--noctia-neutral-color,#e5e7eb)}*,:after,:before{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}html{font-family:var(--noctia-base-font);font-size:var(--noctia-base-font-size);scroll-behavior:smooth}body{background-color:var(--noctia-base-bg-color);color:var(--noctia-base-text-color);line-height:1.6;min-height:100vh;min-height:100dvh;overflow-wrap:break-word}p{margin-block:1em}ol,ul{margin-block:.25em;padding-left:1.5em}a{color:inherit;text-decoration:underline}pre{overflow-x:auto;scrollbar-gutter:stable;white-space:pre}code{font-family:var(--noctia-base-code-font)}audio,iframe,img,object,video{display:block;height:auto;max-width:100%}table{border-collapse:collapse}hr{border:none;border-bottom:1px solid var(--noctia-base-hr-color);margin-block:1rem}button,input[type=button],input[type=reset],input[type=submit]{appearance:none;background:none;border:none;cursor:pointer;font:inherit;user-select:none}button:disabled,input[type=button]:disabled,input[type=reset]:disabled,input[type=submit]:disabled{cursor:not-allowed;opacity:.5}:focus-visible{outline:2px solid currentColor;outline-offset:2px}

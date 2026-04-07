@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Noctia Components</title>
 
-  <link rel="stylesheet" href="../noctia.css">
-  <script src="../noctia.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lanlanwi/noctia@latest/noctia.css" onerror="this.onerror=null;this.href='../noctia.css'">
 </head>
 
 
@@ -18,7 +17,6 @@
 <div class="noctia-fixed-nav-top p-8 gap-8">
   <div class="flex-1"></div>
   <a href="index.html">Home</a>
-  <a href="/">Home</a>
   <button class="noctia-scroll-top h-40px"></button>
 </div>
 
@@ -1181,9 +1179,30 @@ form.noctia-fixed-form select,</span>
 
 
 <footer>
-  <a href="/">Home</a>
   <p class="noctia-license">Lanlanwi</p>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="base.html">Base</a></li>
+      <li><a href="utilities.html">Utilities</a></li>
+      <li><a href="components.html">Components</a></li>
+      <li><a href="layout.html">Layout</a></li>
+    </ul>
+  </nav>
 </footer>
 
+<script>
+function noctiaLoad(src) {
+  const s = document.createElement('script');
+  s.src = src;
+  s.onerror = () => {
+    s.remove();
+    noctiaLoad('../noctia.js');
+  }
+  document.head.appendChild(s);
+}
+noctiaLoad('https://cdn.jsdelivr.net/gh/lanlanwi/noctia@main/noctia.js');
+</script>
 </body>
 </html>

@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Noctia Utilities</title>
 
-  <link rel="stylesheet" href="../noctia.css">
-  <script src="../noctia.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lanlanwi/noctia@latest/noctia.css" onerror="this.onerror=null;this.href='../noctia.css'">
 </head>
 
 
@@ -18,7 +17,6 @@
 <div class="noctia-fixed-nav-top p-8 gap-8">
   <div class="flex-1"></div>
   <a href="index.html">Home</a>
-  <a href="/">Home</a>
   <button class="noctia-scroll-top h-40px"></button>
 </div>
 
@@ -411,18 +409,24 @@
     <section>
       <h3 class="noctia-title-3 border-orange">Font Size</h3>
       <div class="noctia-code-container">
-        <pre><code><span data-copy="text-small">.text-small { font-size: 0.875rem !important; }</span>
+        <pre><code><span data-copy="text-sml">.text-sml { font-size: 0.875rem !important; }</span>
 <span data-copy="text-normal">.text-normal { font-size: 1rem !important; }</span>
-<span data-copy="text-medium">.text-medium { font-size: 1.125rem !important; }</span>
-<span data-copy="text-large">.text-large { font-size: 1.25rem !important; }</span>
-<span data-copy="text-xlarge">.text-xlarge { font-size: 1.5rem !important; }</span></code></pre>
+<span data-copy="text-smdm">.text-smdm { font-size: 1.125rem !important; }</span>
+<span data-copy="text-mdm">.text-mdm { font-size: 1.25rem !important; }</span>
+<span data-copy="text-lrg">.text-lrg { font-size: 1.5rem !important; }</span>
+<span data-copy="text-xlrg">.text-xlrg { font-size: 2rem !important; }</span>
+<span data-copy="text-xxlrg">.text-xxlrg { font-size: 3rem !important; }</span>
+<span data-copy="text-xxxlrg">.text-xxxlrg { font-size: 4rem !important; }</span></code></pre>
       </div>
       <ul class="noctia-fixed-list">
-        <li class="text-small"><code>.text-small</code></li>
+        <li class="text-sml"><code>.text-sml</code></li>
         <li class="text-normal"><code>.text-normal</code></li>
-        <li class="text-medium"><code>.text-medium</code></li>
-        <li class="text-large"><code>.text-large</code></li>
-        <li class="text-xlarge"><code>.text-xlarge</code></li>
+        <li class="text-smdm"><code>.text-smdm</code></li>
+        <li class="text-mdm"><code>.text-mdm</code></li>
+        <li class="text-lrg"><code>.text-lrg</code></li>
+        <li class="text-xlrg"><code>.text-xlrg</code></li>
+        <li class="text-xxlrg"><code>.text-xxlrg</code></li>
+        <li class="text-xxxlrg"><code>.text-xxxlrg</code></li>
       </ul>
     </section>
 
@@ -914,10 +918,30 @@
 
 
 <footer>
-  <a href="/">Home</a>
   <p class="noctia-license">Lanlanwi</p>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="base.html">Base</a></li>
+      <li><a href="utilities.html">Utilities</a></li>
+      <li><a href="components.html">Components</a></li>
+      <li><a href="layout.html">Layout</a></li>
+    </ul>
+  </nav>
 </footer>
 
-<script src="js/script.js"></script>
+<script>
+function noctiaLoad(src) {
+  const s = document.createElement('script');
+  s.src = src;
+  s.onerror = () => {
+    s.remove();
+    noctiaLoad('../noctia.js');
+  }
+  document.head.appendChild(s);
+}
+noctiaLoad('https://cdn.jsdelivr.net/gh/lanlanwi/noctia@main/noctia.js');
+</script>
 </body>
 </html>
