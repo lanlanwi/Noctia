@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Noctia Base</title>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lanlanwi/noctia@latest/noctia.css" onerror="this.onerror=null;this.href='../noctia.css'">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lanlanwi/noctia@latest/noctia.css" onerror="this.onerror=null;this.href='../src/noctia.src.css'">
 </head>
 
 
@@ -14,13 +14,13 @@
 
 <body class="noctia-fixed-layout">
 
-<div class="noctia-fixed-nav-top p-8 gap-8">
+<div class="noctia-fixed-nav-top auto-hiding p-16 p-top-8 p-bot-8 align-items-end">
+  <a href="index.html" class="clr-dark">Home</a>
   <div class="flex-1"></div>
-  <a href="index.html">Home</a>
-  <button class="noctia-scroll-top h-40px"></button>
+  <button class="noctia-scroll-top h-32px"></button>
 </div>
 
-<header>
+<header class="bc-m-light-blue">
   <h1 class="noctia-title-1">Noctia Base</h1>
 </header>
 
@@ -98,18 +98,21 @@
 
 
 
-<footer>
+<footer class="bc-b-cyan">
   <p class="noctia-license">Lanlanwi</p>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="base.html">Base</a></li>
-      <li><a href="utilities.html">Utilities</a></li>
-      <li><a href="components.html">Components</a></li>
-      <li><a href="layout.html">Layout</a></li>
-    </ul>
-  </nav>
+  <div>
+    <h2 class="clr-dark text-lrg">Links</h2>
+    <nav>
+      <ul class="p-0 clr-dark-gray text-normal text-dec-none hide-list-style">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="base.html">Base</a></li>
+        <li><a href="utilities.html">Utilities</a></li>
+        <li><a href="components.html">Components</a></li>
+        <li><a href="layout.html">Layout</a></li>
+      </ul>
+    </nav>
+  </div>
 </footer>
 
 <script>

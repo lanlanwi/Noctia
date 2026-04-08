@@ -54,7 +54,7 @@ header.noctia-header {
     border: 0.01px solid transparent;
 
     background-color: var(--noctia-header-bg-color);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -69,7 +69,7 @@ footer.noctia-footer {
     border: 0.01px solid transparent;
 
     background-color: var(--noctia-footer-bg-color);
-    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.3);
 }
 
 

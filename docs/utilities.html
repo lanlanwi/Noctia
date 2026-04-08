@@ -164,20 +164,20 @@
       </figure>
 
       <dl class="noctia-code-description mdm-spc-top-16-i">
-        <dt><code>.h-x</code></dt>
-        <dd><pre><code>.h-x { height: x; }</code></pre></dd>
-        <dt><code>.w-x-i</code></dt>
-        <dd><pre><code>.w-x-i { width: x !important; }
-.h-x-i { height: x !important; }</code></pre></dd>
-        <dt><code>.mdm-x</code></dt>
+        <dt><code>.h-a</code></dt>
+        <dd><pre><code>.h-a { height: a; }</code></pre></dd>
+        <dt><code>.w-a-i</code></dt>
+        <dd><pre><code>.w-a-i { width: a !important; }
+.h-a-i { height: a !important; }</code></pre></dd>
+        <dt><code>.mdm-a</code></dt>
         <dd><pre><code>@media (min-width: 768px) {
-  .mdm-x-y { x: y; }
-  .mdm-x-y-i { x: y !important; }
+  .mdm-a-b { a: b; }
+  .mdm-a-b-i { a: b !important; }
 }</code></pre></dd>
-        <dt><code>.lrg-x</code></dt>
+        <dt><code>.lrg-a</code></dt>
         <dd><pre><code>@media (min-width: 1024px) {
-  .lrg-x-y { x: y; }
-  .lrg-x-y { x: y !important; }
+  .lrg-a-b { a: b; }
+  .lrg-a-b { a: b !important; }
 }</code></pre></dd>
       </dl>
     </section>
@@ -208,8 +208,8 @@
         </li>
       </ul>
       <dl class="noctia-code-description spc-top-32-i">
-        <dt><code>.ratio-x-y-i</code></dt>
-        <dd><pre><code>.ratio-x-y-i { aspect-ratio: x / y !important; }</code></pre></dd>
+        <dt><code>.ratio-a-b-i</code></dt>
+        <dd><pre><code>.ratio-a-b-i { aspect-ratio: a / b !important; }</code></pre></dd>
       </dl>
     </section>
   </section>
@@ -228,41 +228,47 @@
 <span data-copy="spc-48">.spc-48 { margin: 48px; }</span>
 <span data-copy="spc-56">.spc-56 { margin: 56px; }</span>
 <span data-copy="spc-64">.spc-64 { margin: 64px; }</span>
-<span data-copy="spc-center">.spc-center { margin-inline: auto; }</span></code></pre>
+<span data-copy="spc-center">.spc-center { margin: auto; }</span></code></pre>
     </div>
 
     <dl class="noctia-code-description">
-      <dt><code>.p-x</code></dt>
-      <dd><pre><code>.p-x { padding: x; }</code></pre></dd>
+      <dt><code>.p-a</code></dt>
+      <dd><pre><code>.p-a { padding: a; }</code></pre></dd>
       <dd>.p-center is not styled</dd>
       <dt><code>.spc-x-i</code></dt>
-      <dd><pre><code>.spc-x-i { margin: x !important; }
-.p-x-i { padding: x !important; }</code></pre></dd>
-      <dt><code>.x-top-y</code></dt>
-      <dd><pre><code>.x-top-y { x-top: y; }
-.x-top-y-i { x-top: y !important; }</code></pre></dd>
-      <dt><code>.x-right-y</code></dt>
-      <dd><pre><code>.x-right-y { x-right: y; }
-.x-right-y-i { x-right: y !important; }</code></pre></dd>
-      <dt><code>.x-bot-y</code></dt>
-      <dd><pre><code>.x-bot-y { x-bottom: y; }
-.x-bot-y-i { x-bottom: y !important; }</code></pre></dd>
-      <dt><code>.x-left-y</code></dt>
-      <dd><pre><code>.x-left-y { x-left: y; }
-.x-left-y-i { x-left: y !important; }</code></pre></dd>
-      <dt><code>.mdm-x-y-z</code></dt>
+      <dd><pre><code>.spc-a-i { margin: a !important; }
+.p-a-i { padding: a !important; }</code></pre></dd>
+      <dt><code>.a-x-b</code></dt>
+      <dd><pre><code>.a-x-b { a-inline: b; }
+.a-x-b-i { a-inline: b !important; }</code></pre></dd>
+      <dt><code>.a-y-b</code></dt>
+      <dd><pre><code>.a-y-b { a-block: b; }
+.a-y-b-i { a-block: b !important; }</code></pre></dd>
+      <dt><code>.a-top-b</code></dt>
+      <dd><pre><code>.a-top-b { a-top: b; }
+.a-top-b-i { a-top: b !important; }</code></pre></dd>
+      <dt><code>.a-right-b</code></dt>
+      <dd><pre><code>.a-right-b { a-right: b; }
+.a-right-b-i { a-right: b !important; }</code></pre></dd>
+      <dt><code>.a-bot-b</code></dt>
+      <dd><pre><code>.a-bot-b { a-bottom: b; }
+.a-bot-b-i { a-bottom: b !important; }</code></pre></dd>
+      <dt><code>.a-left-b</code></dt>
+      <dd><pre><code>.a-left-b { a-left: b; }
+.a-left-b-i { a-left: b !important; }</code></pre></dd>
+      <dt><code>.mdm-a-b-c</code></dt>
       <dd><pre><code>@media (min-width: 768px) {
-  .mdm-x-y { x: y; }
-  .mdm-x-y-i { x: y !important; }
-  .mdm-x-y-z { x-y: z; }
-  .mdm-x-y-z-i { x-y: z !important; }
+  .mdm-a-b { a: b; }
+  .mdm-a-b-i { a: b !important; }
+  .mdm-a-b-c { a-b: c; }
+  .mdm-a-b-c-i { a-b: c !important; }
 }</code></pre></dd>
-      <dt><code>.lrg-x-y-z</code></dt>
+      <dt><code>.lrg-a-b-c</code></dt>
       <dd><pre><code>@media (min-width: 1024px) {
-  .lrg-x-y { x: y; }
-  .lrg-x-y-i { x: y !important; }
-  .lrg-x-y-z { x-y: z; }
-  .lrg-x-y-z-i { x-y: z !important; }
+  .lrg-a-b { a: b; }
+  .lrg-a-b-i { a: b !important; }
+  .lrg-a-b-c { a-b: c; }
+  .lrg-a-b-c-i { a-b: c !important; }
 }</code></pre></dd>
     </dl>
   </section>
@@ -481,9 +487,14 @@
     <section>
       <h3 class="noctia-title-3 border-orange">Text Decoration</h3>
       <div class="noctia-code-container">
-        <pre><code><span data-copy="text-dec-none">.text-dec-none { text-decoration: none !important; }</span>
-<span data-copy="text-dec-under">.text-dec-under { text-decoration: underline !important; }</span>
-<span data-copy="text-dec-line-through">.text-dec-line-through { text-decoration: line-through !important; }</span></code></pre>
+        <pre><code><span data-copy="text-dec-none">.text-dec-none,
+.text-dec-none * { text-decoration: none !important; }</span>
+
+<span data-copy="text-dec-under">.text-dec-under,
+.text-dec-under * { text-decoration: underline !important; }</span>
+
+<span data-copy="text-dec-line-through">.text-dec-line-through,
+.text-dec-line-through * { text-decoration: line-through !important; }</span></code></pre>
       </div>
       <ul class="noctia-fixed-list">
         <li class="text-dec-none"><code>.text-dec-none</code></li>
@@ -651,13 +662,13 @@
 <span data-copy="elm-inline-grid">.elm-inline-grid { display: inline-grid !important; }</span></code></pre>
     </div>
     <dl class="noctia-code-description">
-      <dt><code>.mdm-elm-x</code></dt>
+      <dt><code>.mdm-elm-a</code></dt>
       <dd><pre><code>@media (min-width: 768px) {
-  .mdm-elm-x { display: x !important; }
+  .mdm-elm-a { display: a !important; }
 }</code></pre></dd>
-      <dt><code>.lrg-elm-x</code></dt>
+      <dt><code>.lrg-elm-a</code></dt>
       <dd><pre><code>@media (min-width: 1024px) {
-  .lrg-elm-x { display: x !important; }
+  .lrg-elm-a { display: a !important; }
 }</code></pre></dd>
     </dl>
 
@@ -688,13 +699,13 @@
 <span data-copy="flex-1">.flex-1 { flex: 1 !important; }</span></code></pre>
       </div>
       <dl class="noctia-code-description">
-        <dt><code>.mdm-x</code></dt>
+        <dt><code>.mdm-a</code></dt>
         <dd><pre><code>@media (min-width: 768px) {
-  .mdm-x { x }
+  .mdm-a { a }
 }</pre></code></dd>
-        <dt><code>.lrg-x</code></dt>
+        <dt><code>.lrg-a</code></dt>
         <dd><pre><code>@media (min-width: 1024px) {
-  .lrg-x { x }
+  .lrg-a { a }
 }</pre></code></dd>
       </dl>
     </section>
@@ -709,17 +720,17 @@
 <span data-copy="grid-col-5-auto">.grid-col-5-auto { grid-template-columns: repeat(5, auto) !important; }</span></code></pre>
       </div>
       <dl class="noctia-code-description">
-        <dt><code>.grid-col-x-fr</code></dt>
-        <dd><pre><code>.grid-col-x-fr { grid-template-columns: repeat(x, 1fr) !important; }</code></pre></dd>
-        <dt><code>.grid-row-x-y</code></dt>
-        <dd><pre><code>.grid-row-x-y { grid-template-rows: repeat(x, y) !important; }</code></pre></dd>
-        <dt><code>.mdm-grid-x-y-z</code></dt>
+        <dt><code>.grid-col-a-fr</code></dt>
+        <dd><pre><code>.grid-col-a-fr { grid-template-columns: repeat(a, 1fr) !important; }</code></pre></dd>
+        <dt><code>.grid-row-a-b</code></dt>
+        <dd><pre><code>.grid-row-a-b { grid-template-rows: repeat(a, b) !important; }</code></pre></dd>
+        <dt><code>.mdm-grid-a-b-c</code></dt>
         <dd><pre><code>@media (min-width: 768px) {
-  .mdm-grid-x-y-z { grid-template-x: repeat(y, z) !important; }
+  .mdm-grid-a-b-c { grid-template-a: repeat(b, c) !important; }
 }</code></pre></dd>
-        <dt><code>.lrg-grid-x-y-z</code></dt>
+        <dt><code>.lrg-grid-a-b-c</code></dt>
         <dd><pre><code>@media (min-width: 1024px) {
-  .lrg-grid-x-y-z { grid-template-x: repeat(y, z) !important; }
+  .lrg-grid-a-b-c { grid-template-a: repeat(b, c) !important; }
 }</code></pre></dd>
       </dl>
     </section>
@@ -839,19 +850,13 @@
       </figure>
 
       <dl class="noctia-code-description" style="grid-column: 1 / 3;">
-        <dt><code>.mdm-x-y</code></dt>
+        <dt><code>.mdm-a-b</code></dt>
         <dd><pre><code>@media (min-width: 1024px) {
-  .mdm-align-items-y { align-items: y !important; }
-  .mdm-justify-items-y { justify-items: y !important; }
-  .mdm-align-content-y { align-content: y !important; }
-  .mdm-justify-content-y { justify-content: y !important; }
+  .mdm-a-b { a: b !important; }
 }</code></pre></dd>
-        <dt><code>.lrg-x-y</code></dt>
+        <dt><code>.lrg-a-b</code></dt>
         <dd><pre><code>@media (min-width: 1024px) {
-  .lrg-align-items-y { align-items: y !important; }
-  .lrg-justify-items-y { justify-items: y !important; }
-  .lrg-align-content-y { align-content: y !important; }
-  .lrg-justify-content-y { justify-content: y !important; }
+  .lrg-a-b { a: b !important; }
 }</code></pre></dd>
       </dl>
     </section>
@@ -943,5 +948,6 @@ function noctiaLoad(src) {
 }
 noctiaLoad('https://cdn.jsdelivr.net/gh/lanlanwi/noctia@main/noctia.js');
 </script>
+<script src="js/script.js"></script>
 </body>
 </html>
