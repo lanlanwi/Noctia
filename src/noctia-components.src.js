@@ -322,7 +322,7 @@ document.querySelectorAll("p.noctia-license").forEach(lic => {
   const now = new Date().getFullYear();
 
   const holder = lic.querySelector(".noctia-license-holder");
-  holder.textContent += ". ";
+  if (holder) holder.textContent += ". ";
 
   lic.innerHTML = `© ${now} ${lic.innerHTML}.`;
 });

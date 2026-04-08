@@ -1178,18 +1178,21 @@ form.noctia-fixed-form select,</span>
 
 
 
-<footer>
-  <p class="noctia-license">Lanlanwi</p>
+<footer class="bc-b-cyan">
+  <p class="noctia-license"><span class="noctia-license-holder">Lanlanwi</span>Licensed under <a href="https://opensource.org/licenses/MIT">MIT License</a></p>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="base.html">Base</a></li>
-      <li><a href="utilities.html">Utilities</a></li>
-      <li><a href="components.html">Components</a></li>
-      <li><a href="layout.html">Layout</a></li>
-    </ul>
-  </nav>
+  <div>
+    <h2 class="clr-dark text-lrg">Links</h2>
+    <nav>
+      <ul class="p-0 clr-dark-gray text-normal hide-list-style">
+        <li><a href="index.html" class="text-dec-none">Home</a></li>
+        <li><a href="base.html" class="text-dec-none">Base</a></li>
+        <li><a href="utilities.html" class="text-dec-none">Utilities</a></li>
+        <li><a href="components.html" class="text-dec-none">Components</a></li>
+        <li><a href="layout.html" class="text-dec-none">Layout</a></li>
+      </ul>
+    </nav>
+  </div>
 </footer>
 
 <script>
@@ -1198,7 +1201,7 @@ function noctiaLoad(src) {
   s.src = src;
   s.onerror = () => {
     s.remove();
-    noctiaLoad('../noctia.js');
+    noctiaLoad('../src/noctia.src.js');
   }
   document.head.appendChild(s);
 }
