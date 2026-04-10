@@ -973,17 +973,23 @@
 </footer>
 
 <script>
-function noctiaLoad(src) {
-  const s = document.createElement('script');
-  s.src = src;
-  s.onerror = () => {
-    s.remove();
-    noctiaLoad('../noctia.js');
+(function () {
+  let stage = 0;
+  function load(src) {
+    const s = document.createElement("script");
+    s.src = src;
+    s.defer = true;
+    s.onerror = () => {
+      s.remove();
+      if (stage === 0) {
+        stage = 1;
+        load("../noctia.js");
+      }
+    }
+    document.head.appendChild(s);
   }
-  document.head.appendChild(s);
-}
-noctiaLoad('https://cdn.jsdelivr.net/gh/lanlanwi/noctia@main/noctia.js');
+  load("https://cdn.jsdelivr.net/gh/lanlanwi/noctia@1.0.0/noctia.js");
+})();
 </script>
-<script src="js/script.js"></script>
 </body>
 </html>
