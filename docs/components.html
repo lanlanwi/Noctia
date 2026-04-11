@@ -40,13 +40,31 @@
 
 
   <link rel="stylesheet" href="../noctia.css" id="local">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lanlanwi/noctia@1.0.0/noctia.css" id="cdn">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lanlanwi/noctia@v2.0.0/noctia.css" id="cdn">
       
   <script>
-    const cdn = document.getElementById('cdn');
-    const local = document.getElementById('local');
-    cdn.onload = () => local.remove();
-    cdn.onerror = () => cdn.remove();
+    (function () {
+      const cdn = document.getElementById('cdn');
+      const local = document.getElementById('local');
+      cdn.onload = () => local.remove();
+      cdn.onerror = () => cdn.remove();
+
+      let stage = 0;
+      function load(src) {
+        const s = document.createElement("script");
+        s.src = src;
+        s.defer = true;
+        s.onerror = () => {
+          s.remove();
+          if (stage === 0) {
+            stage = 1;
+            load("../noctia.js");
+          }
+        }
+        document.head.appendChild(s);
+      }
+      load("https://cdn.jsdelivr.net/gh/lanlanwi/noctia@v2.0.0/noctia.js");
+    })();
   </script>
 </head>
 
@@ -61,7 +79,7 @@
   <div class="noctia-burgermenu">
     <button class="noctia-burgermenu-close-btn h-32px"></button>
   </div>
-  <a href="index.html"><img src="assets/images/logo.png" alt="Noctia Logo" class="h-32px"></a>
+  <a href="index.html"><img src="assets/images/logo-transparent.png" alt="Noctia Logo" class="h-32px"></a>
   <button class="noctia-scroll-top h-32px clr-white"></button>
 </div>
 
@@ -1240,24 +1258,5 @@ form.noctia-fixed-form select,</span>
   </div>
 </footer>
 
-<script>
-(function () {
-  let stage = 0;
-  function load(src) {
-    const s = document.createElement("script");
-    s.src = src;
-    s.defer = true;
-    s.onerror = () => {
-      s.remove();
-      if (stage === 0) {
-        stage = 1;
-        load("../noctia.js");
-      }
-    }
-    document.head.appendChild(s);
-  }
-  load("https://cdn.jsdelivr.net/gh/lanlanwi/noctia@1.0.0/noctia.js");
-})();
-</script>
 </body>
 </html>

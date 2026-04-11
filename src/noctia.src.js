@@ -1,9 +1,9 @@
 /*!
  * Noctia JS
- * Version: 1.1.0
+ * Version: 2.0.0
  * © 2026 Lanlanwi
  * Created: 2025-11-06
- * Last Updated: 2026-04-07
+ * Last Updated: 2026-04-11
  * Licensed under the MIT License
  * https://opensource.org/licenses/MIT
  */

@@ -1,9 +1,9 @@
 /*!
  * Noctia Layout CSS
- * Version: 1.1.0
+ * Version: 2.0.0
  * © 2026 Lanlanwi
  * Created: 2025-11-06
- * Last Updated: 2026-04-07
+ * Last Updated: 2026-04-11
  * Licensed under the MIT License
  * https://opensource.org/licenses/MIT
  */:root{--noctia-header-bg-color:#fff;--noctia-footer-bg-color:#fff;--noctia-fixed-nav-bg-color:#fff;--noctia-fixed-nav-border-color:var(--noctia-neutral-color,#e5e7eb);--noctia-fixed-nav-z-index:var(--noctia-burgermenu-z-index,900);--noctia-fixed-nav-scroll-margin-top:0}body.noctia-fixed-layout{display:flex;flex-direction:column}body.noctia-fixed-layout main{flex:1;margin:0 .5rem;min-height:0}body.noctia-fixed-layout header,header.noctia-header{background-color:var(--noctia-header-bg-color);border:.01px solid transparent;box-shadow:0 1px 4px rgba(0,0,0,.3);margin-bottom:2rem;padding:0}body.noctia-fixed-layout footer,footer.noctia-footer{background-color:var(--noctia-footer-bg-color);border:.01px solid transparent;box-shadow:0 -1px 4px rgba(0,0,0,.3);margin-top:2rem;padding:2rem 1rem 1rem}.noctia-section>section{margin:2.5rem 0 5rem}.noctia-section section:last-child{margin-bottom:0}.noctia-section .noctia-section>section{margin-block:2rem}.noctia-fixed-nav-bot,.noctia-fixed-nav-top{align-items:center;background-color:var(--noctia-fixed-nav-bg-color);display:flex;flex-wrap:nowrap;justify-content:space-between;left:0;margin:0;max-width:100%;overflow:hidden;position:fixed;right:0;transition:transform .3s;width:100%;z-index:calc(var(--noctia-fixed-nav-z-index) - 2)}.noctia-fixed-nav-top{border-bottom:1px solid var(--noctia-fixed-nav-border-color);top:0}.noctia-fixed-nav-bot{border-top:1px solid var(--noctia-fixed-nav-border-color);bottom:0}*{scroll-margin-top:var(--noctia-fixed-nav-scroll-margin-top)}.noctia-fixed-nav-top.auto-hiding.hide{transform:translateY(-100%)}.noctia-fixed-nav-bot.auto-hiding.hide{transform:translateY(100%)}
