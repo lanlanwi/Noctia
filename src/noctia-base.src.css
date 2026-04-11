@@ -75,6 +75,8 @@ a {
     color: inherit;
 }
 
+a img { pointer-events: none; }
+
 pre {
     overflow-x: auto;
 

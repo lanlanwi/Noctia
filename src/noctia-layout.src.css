@@ -93,22 +93,19 @@ footer.noctia-footer {
     justify-content: space-between;
     flex-wrap: nowrap;
     z-index: calc(var(--noctia-fixed-nav-z-index) - 2);
-    overflow: hidden;    
+    overflow: hidden;
 
     width: 100%;
     max-width: 100%;
     position: fixed;
     right: 0;
     left: 0;
-    transform: translateY(0);
 
     margin: 0;
     
     background-color: var(--noctia-fixed-nav-bg-color);
 
     transition: transform 0.3s;
-
-    will-change: transform;
 }
 
 .noctia-fixed-nav-top {

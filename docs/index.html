@@ -39,7 +39,15 @@
   <meta name="theme-color" content="#252525" media="(prefers-color-scheme: dark)">
 
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lanlanwi/noctia@1.0.0/noctia.css" onerror="this.onerror=null; this.href='../noctia.css'">
+  <link rel="stylesheet" href="../noctia.css" id="local">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lanlanwi/noctia@1.0.0/noctia.css" id="cdn">
+      
+  <script>
+    const cdn = document.getElementById('cdn');
+    const local = document.getElementById('local');
+    cdn.onload = () => local.remove();
+    cdn.onerror = () => cdn.remove();
+  </script>
 </head>
 
 
@@ -48,8 +56,13 @@
 
 <body class="noctia-fixed-layout">
 
-<div class="noctia-fixed-nav-top auto-hiding p-x-16 p-y-8 align-items-end justify-content-end">
-  <button class="noctia-scroll-top h-32px"></button>
+<div class="noctia-fixed-nav-top auto-hiding p-8 bc-a-light-blue align-items-end justify-content-between">
+  <button class="noctia-burgermenu-btn h-32px clr-white"></button>
+  <div class="noctia-burgermenu">
+    <button class="noctia-burgermenu-close-btn h-32px"></button>
+  </div>
+  <a href="index.html"><img src="assets/images/logo.png" alt="Noctia Logo" class="h-32px"></a>
+  <button class="noctia-scroll-top h-32px clr-white"></button>
 </div>
 
 <header class="bc-m-light-blue">

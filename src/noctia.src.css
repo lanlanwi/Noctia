@@ -78,6 +78,8 @@ a {
     color: inherit;
 }
 
+a img { pointer-events: none; }
+
 pre {
     overflow-x: auto;
 
@@ -2480,7 +2482,7 @@ input[type="button"]:disabled {
 
     /* Burger Menu */
     --noctia-burgermenu-btn-color: #252525;
-    --noctia-burgermenu-active-btn-color: #DDDDDD;
+    --noctia-burgermenu-hover-btn-color: rgba(0, 0, 0, 0.1);;
     --noctia-burgermenu-z-index: 900;
     --noctia-burgermenu-bg-color: #FFFFFF;
 
@@ -2519,8 +2521,7 @@ input[type="button"]:disabled {
 
     /* Scroll Top */
     --noctia-scroll-top-color: #000000;
-    --noctia-scroll-top-active-color: #DDDDDD;
-    --noctia-scroll-top-hover-color: #EEEEEE;
+    --noctia-scroll-top-hover-color: rgba(0, 0, 0, 0.1);
 
     /* Toast Notification */
     --noctia-toast-text-color: #FFFFFF;
@@ -3099,6 +3100,7 @@ button.noctia-burgermenu-btn {
     color: var(--noctia-burgermenu-btn-color);
     background-color: transparent;
 }
+button.noctia-burgermenu-btn:hover { background-color: var(--noctia-burgermenu-hover-btn-color); }
 
 button.noctia-burgermenu-btn span {
     display: block;
@@ -3112,9 +3114,11 @@ button.noctia-burgermenu-btn span {
 
     color: inherit;
     background-color: currentColor;
+
+    transition: transform 0.15s ease;
 }
 
-button.noctia-burgermenu-btn:active { background-color: var(--noctia-burgermenu-active-btn-color); }
+button.noctia-burgermenu-btn:active span { transform: scale(1.2); }
 
 /* Menu */
 button.noctia-burgermenu-btn + .noctia-burgermenu {
@@ -3127,6 +3131,7 @@ button.noctia-burgermenu-btn + .noctia-burgermenu {
     max-height: 100vh;
     position: fixed;
     inset: 0;
+    bottom: 0;
     transform: translate(-100%, 0);
 
     padding: 0.5em;
@@ -3204,6 +3209,8 @@ button.noctia-burgermenu-btn + .noctia-burgermenu button.noctia-burgermenu-close
     background-color: transparent;
 }
 
+button.noctia-burgermenu-btn + .noctia-burgermenu button.noctia-burgermenu-close-btn:hover { background-color: var(--noctia-burgermenu-hover-btn-color); }
+
 button.noctia-burgermenu-btn + .noctia-burgermenu button.noctia-burgermenu-close-btn span {
     display: block;
 
@@ -3216,12 +3223,14 @@ button.noctia-burgermenu-btn + .noctia-burgermenu button.noctia-burgermenu-close
 
     color: inherit;
     background-color: currentColor;
+
+    transition: transform 0.15s ease;
 }
 
 button.noctia-burgermenu-btn + .noctia-burgermenu button.noctia-burgermenu-close-btn span:first-child { transform: rotate(45deg); }
 button.noctia-burgermenu-btn + .noctia-burgermenu button.noctia-burgermenu-close-btn span:last-child { transform: rotate(-45deg); }
 
-button.noctia-burgermenu-btn + .noctia-burgermenu button.noctia-burgermenu-close-btn:active { background-color: var(--noctia-burgermenu-active-btn-color); }
+button.noctia-burgermenu-btn + .noctia-burgermenu button.noctia-burgermenu-close-btn:active span { transform: scale(1.2); }
 
 
 
@@ -3595,8 +3604,7 @@ dl.noctia-code-description > :last-child { margin-bottom: 1em; }
 .noctia-scroll-top {
     display: flex;
     align-items: center;
-    justify-content: center;
-    overflow: hidden;
+    justify-content: center;    
 
     width: auto;
     min-height: 1rem;
@@ -3613,7 +3621,6 @@ dl.noctia-code-description > :last-child { margin-bottom: 1em; }
     cursor: pointer;
 }
 
-.noctia-scroll-top:active { background-color: var(--noctia-scroll-top-active-color); }
 .noctia-scroll-top:hover { background-color: var(--noctia-scroll-top-hover-color); }
 
 .noctia-scroll-top span {
@@ -3626,12 +3633,16 @@ dl.noctia-code-description > :last-child { margin-bottom: 1em; }
     color: inherit;
     background-color: currentColor;
 
+    transition: transform 0.15s ease;
+
     clip-path: polygon(
       50% 19.69%,
       15% 80.31%,
       85% 80.31%
     );
 }
+
+.noctia-scroll-top:active span { transform: scale(1.2); }
 
 
 
@@ -3781,22 +3792,19 @@ footer.noctia-footer {
     justify-content: space-between;
     flex-wrap: nowrap;
     z-index: calc(var(--noctia-fixed-nav-z-index) - 2);
-    overflow: hidden;    
+    overflow: hidden;
 
     width: 100%;
     max-width: 100%;
     position: fixed;
     right: 0;
     left: 0;
-    transform: translateY(0);
 
     margin: 0;
     
     background-color: var(--noctia-fixed-nav-bg-color);
 
     transition: transform 0.3s;
-
-    will-change: transform;
 }
 
 .noctia-fixed-nav-top {
