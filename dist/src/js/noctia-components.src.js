@@ -10,11 +10,6 @@
 
 
 
-let html = document.documentElement;
-let body = document.body;
-
-
-
 
 
 /* ===== Fixed Details ===== */
@@ -183,14 +178,14 @@ function noctiaOpenMenu(elm) {
   const overlay = menu.nextElementSibling;
   if (menu.querySelector("button.noctia-burgermenu-close-btn") !== null) {
     menu.classList.add("open");
-    html.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
     noctiaToggleBurgermenuOverlay(overlay, true);
   }
 }
 
 function noctiaCloseMenu(elm) {
   elm.classList.remove("open");
-  html.style.removeProperty("overflow")
+  document.documentElement.style.removeProperty("overflow")
   const overlay = elm.nextElementSibling;
   noctiaToggleBurgermenuOverlay(overlay, false);
 }
@@ -340,7 +335,7 @@ document.querySelectorAll("div.noctia-toast-notification").forEach(elm => elm.re
 const noctiaToastNot = document.createElement("div");
 noctiaToastNot.classList.add("noctia-toast-notification");
 noctiaToastNot.setAttribute("role", "status");
-body && body.append(noctiaToastNot);
+document.body && document.body.append(noctiaToastNot);
 
 let noctiaToastTimeout;
 

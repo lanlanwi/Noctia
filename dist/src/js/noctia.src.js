@@ -10,11 +10,6 @@
 
 
 
-let html = document.documentElement;
-let body = document.body;
-
-
-
 
 
 /*
@@ -186,14 +181,14 @@ function noctiaOpenMenu(elm) {
   const overlay = menu.nextElementSibling;
   if (menu.querySelector("button.noctia-burgermenu-close-btn") !== null) {
     menu.classList.add("open");
-    html.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
     noctiaToggleBurgermenuOverlay(overlay, true);
   }
 }
 
 function noctiaCloseMenu(elm) {
   elm.classList.remove("open");
-  html.style.removeProperty("overflow")
+  document.documentElement.style.removeProperty("overflow")
   const overlay = elm.nextElementSibling;
   noctiaToggleBurgermenuOverlay(overlay, false);
 }
@@ -343,7 +338,7 @@ document.querySelectorAll("div.noctia-toast-notification").forEach(elm => elm.re
 const noctiaToastNot = document.createElement("div");
 noctiaToastNot.classList.add("noctia-toast-notification");
 noctiaToastNot.setAttribute("role", "status");
-body && body.append(noctiaToastNot);
+document.body && document.body.append(noctiaToastNot);
 
 let noctiaToastTimeout;
 
@@ -408,8 +403,8 @@ function noctiaFixedNav() {
       if (j !== 0 || !hasContent) {
         nav.style.setProperty("display", "none", "important");
       } else {
-        body.style[padding] = `${nav.offsetHeight - 1}px`;
-        if (i === 0) html.style.setProperty("--noctia-fixed-nav-scroll-margin-top", `${nav.offsetHeight}px`);
+        document.body.style[padding] = `${nav.offsetHeight - 1}px`;
+        if (i === 0) document.documentElement.style.setProperty("--noctia-fixed-nav-scroll-margin-top", `${nav.offsetHeight}px`);
       }
     });
   });
@@ -451,7 +446,7 @@ function noctiaHideNav() {
       const scrolledUp = item.lastY - curY > delta;
 
       const atTop = curY <= 1;
-      const atBot = (window.innerHeight + curY) >= body.scrollHeight - 1;
+      const atBot = (window.innerHeight + curY) >= document.body.scrollHeight - 1;
 
       if (scrolledDown) {
         nav.classList.add("hide");

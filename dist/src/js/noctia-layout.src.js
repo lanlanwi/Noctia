@@ -10,11 +10,6 @@
 
 
 
-let html = document.documentElement;
-let body = document.body;
-
-
-
 
 
 /* ===== Debounce ===== */
@@ -44,8 +39,8 @@ function noctiaFixedNav() {
       if (j !== 0 || !hasContent) {
         nav.style.setProperty("display", "none", "important");
       } else {
-        body.style[padding] = `${nav.offsetHeight - 1}px`;
-        if (i === 0) html.style.setProperty("--noctia-fixed-nav-scroll-margin-top", `${nav.offsetHeight}px`);
+        document.body.style[padding] = `${nav.offsetHeight - 1}px`;
+        if (i === 0) document.documentElement.style.setProperty("--noctia-fixed-nav-scroll-margin-top", `${nav.offsetHeight}px`);
       }
     });
   });
@@ -87,7 +82,7 @@ function noctiaHideNav() {
       const scrolledUp = item.lastY - curY > delta;
 
       const atTop = curY <= 1;
-      const atBot = (window.innerHeight + curY) >= body.scrollHeight - 1;
+      const atBot = (window.innerHeight + curY) >= document.body.scrollHeight - 1;
 
       if (scrolledDown) {
         nav.classList.add("hide");
