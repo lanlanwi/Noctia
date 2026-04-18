@@ -13,7 +13,7 @@
 
 
 /*
-    <<<<< === BASE === >>>>>
+<<<<< === BASE === >>>>>
 */
 :root {
     --noctia-base-font: var(--noctia-sans, sans-serif);
@@ -140,7 +140,7 @@ input[type="button"]:disabled {
     outline-offset: 2px;
 }
 /*
-    <<<<< === BASE === >>>>>
+<<<<< === BASE === >>>>>
 */
 
 
@@ -153,7 +153,7 @@ input[type="button"]:disabled {
 
 
 /*
-    <<<<< === UTILITIES === >>>>>
+<<<<< === UTILITIES === >>>>>
 */
 :root {
     --noctia-base-border-color: #000000;
@@ -2412,7 +2412,7 @@ input[type="button"]:disabled {
 
 .hide-list-style::-webkit-details-marker { display: none !important; }
 /*
-    <<<<< === UTILITIES === >>>>>
+<<<<< === UTILITIES === >>>>>
 */
 
 
@@ -2425,7 +2425,7 @@ input[type="button"]:disabled {
 
 
 /*
-    <<<<< === COMPONENTS === >>>>>
+<<<<< === COMPONENTS === >>>>>
 */
 :root {
     --noctia-neutral-color: #E5E7EB;
@@ -3067,7 +3067,7 @@ nav.noctia-bread-crumb ul li {
     display: inline-block;
 }
 
-nav.noctia-bread-crumb ul .bread-crumb-separator {
+nav.noctia-bread-crumb ul .noctia-bread-crumb-separator {
     display: inline-flex;
     align-items: center;
 
@@ -3081,7 +3081,7 @@ nav.noctia-bread-crumb ul .bread-crumb-separator {
 /* ===== Hamburger Menu ===== */
 
 /* Menu Button */
-button.noctia-burgermenu-btn {
+button.noctia-hm-open-btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3100,9 +3100,10 @@ button.noctia-burgermenu-btn {
     color: var(--noctia-burgermenu-btn-color);
     background-color: transparent;
 }
-button.noctia-burgermenu-btn:hover { background-color: var(--noctia-burgermenu-hover-btn-color); }
 
-button.noctia-burgermenu-btn span {
+button.noctia-hm-open-btn:hover { background-color: var(--noctia-burgermenu-hover-btn-color); }
+
+button.noctia-hm-open-btn span {
     display: block;
 
     width: 90%;
@@ -3118,10 +3119,10 @@ button.noctia-burgermenu-btn span {
     transition: transform 0.15s ease;
 }
 
-button.noctia-burgermenu-btn:active span { transform: scale(1.2); }
+button.noctia-hm-open-btn:active span { transform: scale(1.2); }
 
 /* Menu */
-button.noctia-burgermenu-btn + .noctia-burgermenu {
+.noctia-hm-menu {
     display: inline-block;
     z-index: var(--noctia-burgermenu-z-index);
     overflow-x: hidden;
@@ -3147,30 +3148,30 @@ button.noctia-burgermenu-btn + .noctia-burgermenu {
     scrollbar-gutter: stable;
 }
 
-button.noctia-burgermenu-btn + .noctia-burgermenu.menu-top {
+.noctia-hm-menu.menu-top {
     inset: 0 auto auto 0;
     transform: translate(0, -100%);
 }
 
-button.noctia-burgermenu-btn + .noctia-burgermenu.menu-right {
+.noctia-hm-menu.menu-right {
     inset: 0 0 auto auto;
     transform: translate(100%, 0);
 }
 
-button.noctia-burgermenu-btn + .noctia-burgermenu.menu-bottom {
+.noctia-hm-menu.menu-bottom {
     inset: auto auto 0 0;
     transform: translate(0, 100%);
 }
 
-button.noctia-burgermenu-btn + .noctia-burgermenu.menu-left {
+.noctia-hm-menu.menu-left {
     inset: 0 auto auto 0;
     transform: translate(-100%, 0);
 }
 
-button.noctia-burgermenu-btn + .noctia-burgermenu.open { transform: translate(0, 0); }
+.noctia-hm-menu.open { transform: translate(0, 0); }
 
 /* Hamburger Overlay */
-button.noctia-burgermenu-btn + .noctia-burgermenu + .noctia-burgermenu-overlay {
+.noctia-hm-menu + .noctia-hm-overlay {
     z-index: calc(var(--noctia-burgermenu-z-index) - 1);
     opacity: 0;
 
@@ -3185,7 +3186,7 @@ button.noctia-burgermenu-btn + .noctia-burgermenu + .noctia-burgermenu-overlay {
     pointer-events: none;
 }
 
-button.noctia-burgermenu-btn + .noctia-burgermenu + .noctia-burgermenu-overlay.active {
+.noctia-hm-menu + .noctia-hm-overlay.active {
     opacity: 1;
 
     pointer-events: auto;
@@ -3193,7 +3194,7 @@ button.noctia-burgermenu-btn + .noctia-burgermenu + .noctia-burgermenu-overlay.a
 }
 
 /* Burger Close Button */
-button.noctia-burgermenu-btn + .noctia-burgermenu button.noctia-burgermenu-close-btn {
+.noctia-hm-menu button.noctia-hm-close-btn {
     display: flex;
 
     width: auto;
@@ -3209,9 +3210,9 @@ button.noctia-burgermenu-btn + .noctia-burgermenu button.noctia-burgermenu-close
     background-color: transparent;
 }
 
-button.noctia-burgermenu-btn + .noctia-burgermenu button.noctia-burgermenu-close-btn:hover { background-color: var(--noctia-burgermenu-hover-btn-color); }
+.noctia-hm-menu button.noctia-hm-close-btn:hover { background-color: var(--noctia-burgermenu-hover-btn-color); }
 
-button.noctia-burgermenu-btn + .noctia-burgermenu button.noctia-burgermenu-close-btn span {
+.noctia-hm-menu button.noctia-hm-close-btn span {
     display: block;
 
     width: 100%;
@@ -3227,10 +3228,10 @@ button.noctia-burgermenu-btn + .noctia-burgermenu button.noctia-burgermenu-close
     transition: transform 0.15s ease;
 }
 
-button.noctia-burgermenu-btn + .noctia-burgermenu button.noctia-burgermenu-close-btn span:first-child { transform: rotate(45deg); }
-button.noctia-burgermenu-btn + .noctia-burgermenu button.noctia-burgermenu-close-btn span:last-child { transform: rotate(-45deg); }
+.noctia-hm-menu button.noctia-hm-close-btn span:first-child { transform: rotate(45deg); }
+.noctia-hm-menu button.noctia-hm-close-btn span:last-child { transform: rotate(-45deg); }
 
-button.noctia-burgermenu-btn + .noctia-burgermenu button.noctia-burgermenu-close-btn:active span { transform: scale(1.2); }
+.noctia-hm-menu button.noctia-hm-close-btn:active span { transform: scale(1.2); }
 
 
 
@@ -3696,7 +3697,7 @@ p.noctia-license {
     color: var(--noctia-text-color);
 }
 /*
-    <<<<< === COMPONENTS === >>>>>
+<<<<< === COMPONENTS === >>>>>
 */
 
 
@@ -3709,7 +3710,7 @@ p.noctia-license {
 
 
 /*
-    <<<<< === LAYOUT === >>>>>
+<<<<< === LAYOUT === >>>>>
 */
 :root {
     --noctia-header-bg-color: #FFFFFF;
@@ -3825,5 +3826,5 @@ footer.noctia-footer {
 .noctia-fixed-nav-top.auto-hiding.hide { transform: translateY(-100%); }
 .noctia-fixed-nav-bot.auto-hiding.hide { transform: translateY(100%); }
 /*
-    <<<<< === LAYOUT === >>>>>
+<<<<< === LAYOUT === >>>>>
 */

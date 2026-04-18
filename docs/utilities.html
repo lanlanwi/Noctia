@@ -40,7 +40,7 @@
 
 
   <link rel="stylesheet" href="../dist/css/noctia.css" id="local">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lanlanwi/noctia@v2.0.0/dist/css/noctia.css" id="cdn">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lanlanwi/noctia@v2.0.0/dist/src/css/noctia.src.css" id="cdn">
 
   <script>
     (function () {
@@ -53,12 +53,11 @@
       function load(src) {
         const s = document.createElement("script");
         s.src = src;
-        s.defer = true;
         s.onerror = () => {
           s.remove();
           if (stage === 0) {
             stage = 1;
-            load("../dist/js/noctia.js");
+            load("../dist/src/js/noctia.src.js");
           }
         }
         document.head.appendChild(s);
@@ -76,7 +75,7 @@
 
 <div class="noctia-fixed-nav-top auto-hiding p-8 bc-a-light-blue align-items-end justify-content-between">
   <button class="noctia-burgermenu-btn h-32px clr-white"></button>
-  <div class="noctia-burgermenu">
+  <div class="noctia-burgermenu menu-top w-full h-50vh">
     <button class="noctia-burgermenu-close-btn h-32px"></button>
   </div>
   <a href="index.html"><img src="assets/images/logo-transparent.png" alt="Noctia Logo" class="h-32px"></a>

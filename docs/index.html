@@ -39,8 +39,8 @@
   <meta name="theme-color" content="#252525" media="(prefers-color-scheme: dark)">
 
 
-  <link rel="stylesheet" href="../dist/css/noctia.css" id="local">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lanlanwi/noctia@v2.0.0/dist/css/noctia.css" id="cdn">
+  <link rel="stylesheet" href="../dist/src/css/noctia.src.css" id="local">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lanlanwi/noctia@v2.0.0/dist/src/css/noctia.src.css" id="cdn">
 
   <script>
     (function () {
@@ -53,12 +53,11 @@
       function load(src) {
         const s = document.createElement("script");
         s.src = src;
-        s.defer = true;
         s.onerror = () => {
           s.remove();
           if (stage === 0) {
             stage = 1;
-            load("../dist/js/noctia.js");
+            load("../dist/src/js/noctia.src.js");
           }
         }
         document.head.appendChild(s);
@@ -74,18 +73,32 @@
 
 <body class="noctia-fixed-layout">
 
+<header class="bc-m-light-blue">
+  <nav class="noctia-bread-crumb">
+    <ul>
+      <li><a href="#">Noctia</a></li>
+      <li><a href="#">Noctia</a></li>
+      <li><a href="#">Noctia</a></li>
+      <li><a href="#">Noctia</a></li>
+      <li><a href="#">Noctia</a></li>
+    </ul>
+  </nav>
+  <h1 class="noctia-title-1">Noctia</h1>
+</header>
+
+
+
+<div id="nav-1" class="noctia-hm-menu menu-top w-full h-50vh">
+  <button class="noctia-hm-close-btn h-32px"></button>
+</div>
+
+
+
 <div class="noctia-fixed-nav-top auto-hiding p-8 bc-a-light-blue align-items-end justify-content-between">
-  <button class="noctia-burgermenu-btn h-32px clr-white"></button>
-  <div class="noctia-burgermenu">
-    <button class="noctia-burgermenu-close-btn h-32px"></button>
-  </div>
+  <button aria-controls="nav-1" class="noctia-hm-open-btn h-32px clr-white"></button>
   <a href="index.html"><img src="assets/images/logo-transparent.png" alt="Noctia Logo" class="h-32px"></a>
   <button class="noctia-scroll-top h-32px clr-white"></button>
 </div>
-
-<header class="bc-m-light-blue">
-  <h1 class="noctia-title-1">Noctia</h1>
-</header>
 
 
 
