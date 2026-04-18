@@ -39,8 +39,8 @@
   <meta name="theme-color" content="#252525" media="(prefers-color-scheme: dark)">
 
 
-  <link rel="stylesheet" href="../dist/src/css/noctia.src.css" id="local">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lanlanwi/noctia@v2.0.0/dist/src/css/noctia.src.css" id="cdn">
+  <link rel="stylesheet" href="../dist/css/noctia.css" id="local">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lanlanwi/noctia@v2.0.0/dist/css/noctia.css" id="cdn">
 
   <script>
     (function () {
@@ -57,7 +57,7 @@
           s.remove();
           if (stage === 0) {
             stage = 1;
-            load("../dist/src/js/noctia.src.js");
+            load("../dist/js/noctia.js");
           }
         }
         document.head.appendChild(s);
@@ -74,21 +74,12 @@
 <body class="noctia-fixed-layout">
 
 <header class="bc-m-light-blue">
-  <nav class="noctia-bread-crumb">
-    <ul>
-      <li><a href="#">Noctia</a></li>
-      <li><a href="#">Noctia</a></li>
-      <li><a href="#">Noctia</a></li>
-      <li><a href="#">Noctia</a></li>
-      <li><a href="#">Noctia</a></li>
-    </ul>
-  </nav>
   <h1 class="noctia-title-1">Noctia</h1>
 </header>
 
 
 
-<div id="nav-1" class="noctia-hm-menu menu-top w-full h-50vh">
+<div id="nav-1" class="noctia-hm-menu">
   <button class="noctia-hm-close-btn h-32px"></button>
 </div>
 
