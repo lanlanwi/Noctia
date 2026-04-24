@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+
+  <title>Noctia Components</title>
+  <meta name="description" content="UI components built with Noctia.">
+  <link rel="canonical" href="https://noctia.pages.dev/components">
+
+
+  <meta property="og:site_name" content="Noctia">
+  <meta property="og:title" content="Noctia Components">
+  <meta property="og:description" content="UI components built with Noctia.">
+  <meta property="og:url" content="https://noctia.pages.dev/components">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://noctia.pages.dev/assets/images/noctia-ogp.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+
+  <meta name="twitter:site" content="@LanlanwiRoasted">
+  <meta name="twitter:creator" content="@LanlanwiRoasted">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Noctia Components">
+  <meta name="twitter:description" content="UI components built with Noctia.">
+  <meta name="twitter:image" content="https://noctia.pages.dev/assets/images/noctia-ogp.png">
+  <meta name="twitter:image:alt" content="Noctia CSS Framework">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-chrome-192x192.png">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+  <meta name="theme-color" content="#3D99F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#252525" media="(prefers-color-scheme: dark)">
+
+
+  <!-- Local -- >
+  <link rel="stylesheet" href="../dist/css/noctia.css">
+  <script src="../dist/js/noctia.js"></script
+  <!-- Local -->
+
+  <!-- CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lanlanwi/noctia@v2.0.0/dist/css/noctia.css">
+  <script src="https://cdn.jsdelivr.net/gh/lanlanwi/noctia@v2.0.0/dist/js/noctia.js"></script>
+  <!-- CDN -->
+</head>
+
+
+
+
+
+<body class="noctia-layout">
+
+<header class="bc-m-light-blue">
+  <h1 class="noctia-title-1">Components</h1>
+</header>
+
+
+
+<div id="menu" class="noctia-hm-menu menu-right w-75vw h-full lrg-w-25vw bc-a-light-blue border-none border-left-1 border-white">
+  <div class="spc-bot-32 elm-flex align-items-center justify-content-between">
+    <a href="index.html" class="text-dec-none elm-inline-flex align-items-center gap-8">
+      <img src="assets/images/logo-blue-icon.png" alt="Noctia Logo" class="h-32px">
+      <p class="spc-0 clr-white text-normal">Noctia <span class="noctia-version"></span></p>
+    </a>
+
+    <button class="noctia-hm-close-btn h-32px clr-white"></button>
+  </div>
+
+  <nav class="noctia-nav">
+    <ul>
+      <li><a href="#text">Text</a></li>
+      <li><a href="#title">Noctia Title</a></li>
+      <li><a href="#table">Noctia Table</a></li>
+      <li><a href="#details">Noctia &lt;details&gt;</a></li>
+      <li><a href="#form">Noctia Form</a></li>
+      <li><a href="#input-block">Noctia Input（Block）</a></li>
+      <li><a href="#input-inline">Noctia Input（Inline）</a></li>
+      <li><a href="#bread-crumb">Bread Crumb</a></li>
+      <li><a href="#hamburger-menu">Hamburger Menu</a></li>
+      <li><a href="#card">Card</a></li>
+      <li><a href="#nav">Noctia Nav</a></li>
+      <li><a href="#copy-text">Copy Text</a></li>
+      <li><a href="#code-block">Code Block</a></li>
+      <li><a href="#code-description">Code Description</a></li>
+      <li><a href="#scroll-top">Scroll to Top Button</a></li>
+      <li><a href="#license">License</a></li>
+      <li><a href="#toast-notification">Toast Notification</a></li>
+    </ul>
+  </nav>
+
+  <div class="w-full spc-top-48">
+    <h2 class="noctia-title-4 p-0-i clr-white text-mdm">Links</h2>
+    <nav>
+      <ul class="p-0 clr-off-white text-smdm text-dec-none hide-list-style">
+        <li><a href="index.html">Noctia Official Page</a></li>
+        <li><a href="https://github.com/lanlanwi/Noctia">Githud</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="w-full spc-top-48">
+    <h2 class="noctia-title-4 p-0-i clr-white text-mdm">Guide</h2>
+    <nav>
+      <ul class="p-0 clr-off-white text-smdm text-dec-none hide-list-style">
+        <li><a href="base.html">Base</a></li>
+        <li><a href="utilities.html">Utilities</a></li>
+        <li><a href="components.html">Components</a></li>
+        <li><a href="layout.html">Layout</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<div class="noctia-fixed-nav-top auto-hiding p-8 bc-a-light-blue align-items-end justify-content-between">
+  <button class="noctia-scroll-top h-32px clr-white"></button>
+  <a href="index.html"><img src="assets/images/logo-transparent.png" alt="Noctia Logo" class="h-32px"></a>
+  <button aria-controls="menu" class="noctia-hm-open-btn h-32px clr-white"></button>
+</div>
+
+
+
+<main class="noctia-section">
+
+  <section id="text" class="noctia-section">
+    <h2 class="noctia-title-2 border-red">Text</h2>
+    <ul class="noctia-list">
+      <li><code data-copy="impo" class="impo p-4 font-sans">.impo</code></li>
+      <li><code data-copy="reco" class="reco p-4 font-sans">.reco</code></li>
+      <li><code data-copy="most-reco" class="most-reco p-4 font-sans">.most-reco</code></li>
+      <li><code data-copy="seo" class="seo p-4 font-sans">.seo</code></li>
+      <li><code data-copy="cost" class="cost p-4 font-sans">.cost</code></li>
+      <li><code data-copy="total-cost" class="total-cost p-4 font-sans">.total-cost</code></li>
+    </ul>
+    <section class="noctia-section mdm-elm-grid mdm-grid-col-2-fr mdm-gap-x-1rem">
+      <h3 class="noctia-title-3" style="grid-column: 1 / 3;">Noctia &lt;p&gt;</h3>
+      <div style="grid-column: 1 / 3;">
+        <p class="noctia-text"><code data-copy="noctia-text" class="font-sans">.noctia-text</code></p>
+        <dl class="noctia-code-description">
+          <dt>Selector</dt>
+          <dd><pre><code data-copy="noctia-text">p.noctia-text</code></pre></dd>
+          <dt>Usage</dt>
+          <dd><pre><code>&lt;p class="noctia-text"&gt;Noctia&lt;/p&gt;</code></pre></dd>
+          <dt>Base Text Color</dt>
+          <dd><pre><code>:root {
+    --noctia-text-color: #252525;
+}</code></pre></dd>
+          <dt>Base Text Font</dt>
+          <dd><pre><code>:root {
+    --noctia-text-font: var(--noctia-sans, sans-serif);
+}</code></pre></dd>
+          <dt>Utility</dt>
+          <dd>
+            <ul class="noctia-list">
+              <li><a href="./utilities.html#text-color">Text Color</a></li>
+              <li><a href="./utilities.html#font-text">Font・Text</a></li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+      <section>
+        <h4 class="noctia-title-4">Batch Apply</h4>
+        <dl class="noctia-code-description">
+          <dt>Selector</dt>
+          <dd><pre><code data-copy="noctia-text">.noctia-text p</code></pre></dd>
+          <dt>Usage</dt>
+          <dd><pre><code>&lt;div class="noctia-text"&gt;
+  &lt;p&gt;Noctia&lt;/p&gt;
+  &lt;p&gt;Noctia&lt;/p&gt;
+  &lt;p&gt;Noctia&lt;/p&gt;
+&lt;/div&gt;</code></pre></dd>
+        </dl>
+      </section>
+
+      <section>
+        <h4 class="noctia-title-4">Fixed Text Group</h4>
+        <dl class="noctia-code-description">
+          <dt>Selector</dt>
+          <dd><pre><code data-copy="noctia-text-group">.noctia-text-group p</code></pre></dd>
+          <dt>Usage</dt>
+          <dd><pre><code>&lt;div class="noctia-text-group"&gt;
+  &lt;p&gt;Noctia&lt;/p&gt;
+  &lt;p&gt;Noctia&lt;/p&gt;
+  &lt;p&gt;Noctia&lt;/p&gt;
+&lt;/div&gt;</code></pre></dd>
+        </dl>
+      </section>
+    </section>
+
+    <section>
+      <h3 class="noctia-title-3">Fixed List</h3>
+      <ul class="noctia-list">
+        <li>Noctia</li>
+        <li>Noctia</li>
+        <li>Noctia</li>
+      </ul>
+      <ol class="noctia-list">
+        <li>Noctia</li>
+        <li>Noctia</li>
+        <li>Noctia</li>
+      </ol>
+      <dl class="noctia-code-description">
+        <dt>Selector</dt>
+        <dd><pre><code data-copy="noctia-list">ul.noctia-list,
+ol.noctia-list</code></pre></dd>
+        <dt>Usage</dt>
+        <dd><pre><code>&lt;ul class="noctia-list"&gt;
+  &lt;li&gt;Noctia&lt;/li&gt;
+  &lt;li&gt;Noctia&lt;/li&gt;
+  &lt;li&gt;Noctia&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol class="noctia-list"&gt;
+  &lt;li&gt;Noctia&lt;/li&gt;
+  &lt;li&gt;Noctia&lt;/li&gt;
+  &lt;li&gt;Noctia&lt;/li&gt;
+&lt;/ol&gt;</code></pre></dd>
+        <dt>Base Text Color</dt>
+        <dd><pre><code>:root {
+    --noctia-text-color: #252525;
+}</code></pre></dd>
+        <dt>Base Text Font</dt>
+        <dd><pre><code>:root {
+    --noctia-text-font: var(--noctia-sans, sans-serif);
+}</code></pre></dd>
+        <dt>Utility</dt>
+        <dd>
+          <ul class="noctia-list">
+            <li><a href="./utilities.html#text-color">Text Color</a></li>
+            <li><a href="./utilities.html#font-text">Font・Text</a></li>
+            <li><a href="utilities.html#hide-marker">Hide Marker</a></li>
+          </ul>
+        </dd>
+      </dl>
+    </section>
+  </section>
+
+  <section id="title">
+    <h2 class="noctia-title-2 border-red">Noctia Title</h2>
+    <ul class="p-0 hide-list-style">
+      <li class="noctia-title-1">Title Level 1</li>
+      <li class="noctia-title-2">Title Level 2</li>
+      <li class="noctia-title-3">Title Level 3</li>
+      <li class="noctia-title-4">Title Level 4</li>
+      <li class="noctia-title-5">Title Level 5</li>
+      <li class="noctia-title-6">Title Level 6</li>
+    </ul>
+    <dl class="noctia-code-description">
+      <dt>Selector</dt>
+      <dd><pre><code><span data-copy="noctia-title-1">.noctia-title-1</span>
+<span data-copy="noctia-title-2">.noctia-title-2</span>
+<span data-copy="noctia-title-3">.noctia-title-3</span>
+<span data-copy="noctia-title-4">.noctia-title-4</span>
+<span data-copy="noctia-title-5">.noctia-title-5</span>
+<span data-copy="noctia-title-6">.noctia-title-6</span></code></pre></dd>
+      <dt>Usage</dt>
+      <dd><pre><code>&lt;h1 class="noctia-title-1"&gt;Noctia&lt;/h1&gt;</code></pre></dd>
+      <dt>Base Text Color</dt>
+      <dd><pre><code>:root {
+    --noctia-title-color: var(--noctia-dark, #252525);
+}</code></pre></dd>
+      <dt>Base Font</dt>
+      <dd><pre><code>:root {
+    --noctia-title-font: var(--noctia-sans, sans-serif);
+}</code></pre></dd>
+      <dt>Base Border Color</dt>
+      <dd><pre><code>:root {
+    --noctia-title-border-color: var(--noctia-black, #000);
+}</code></pre></dd>
+      <dt>Utility</dt>
+      <dd>
+        <ul class="noctia-list">
+          <li><a href="./utilities.html#space">Space</a></li>
+          <li><a href="./utilities.html#text-color">Text Color</a></li>
+          <li><a href="./utilities.html#font-text">Font・Text</a></li>
+          <li><a href="./utilities.html#border-color">Border Color</a></li>
+        </ul>
+      </dd>
+    </dl>
+  </section>
+
+  <section id="table">
+    <h2 class="noctia-title-2 border-red">Noctia Table</h2>
+    <table class="noctia-table">
+      <tr>
+        <th>Title</th>
+        <th>Title</th>
+        <th>Title</th>
+      </tr>
+      <tr>
+        <td>Noctia</td>
+        <td>Noctia</td>
+        <td>Noctia</td>
+      </tr>
+    </table>
+    <dl class="noctia-code-description">
+      <dt>Selector</dt>
+      <dd><pre><code data-copy="noctia-table">table.noctia-table</code></pre></dd>
+      <dt>Usage</dt>
+      <dd><pre><code>&lt;table class="noctia-table"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Title&lt;/th&gt;
+    &lt;th&gt;Title&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Noctia&lt;/td&gt;
+    &lt;td&gt;Noctia&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre></dd>
+      <dt>Base &lt;th&gt; Text Color</dt>
+      <dd><pre><code>:root {
+    --noctia-table-th-text-color: #252525;
+}</code></pre></dd>
+      <dt>Base &lt;td&gt; Text Color</dt>
+      <dd><pre><code>:root {
+    --noctia-table-td-text-color: #252525;
+}</code></pre></dd>
+      <dt>Base &lt;th&gt; Background Color</dt>
+      <dd><pre><code>:root {
+    --noctia-table-th-bg-color: #EEEEEE;
+}</code></pre></dd>
+      <dt>Base &lt;td&gt; Background Color</dt>
+      <dd><pre><code>:root {
+    --noctia-table-td-bg-color: #FFFFFF;
+}</code></pre></dd>
+      <dt>Base Text Font</dt>
+      <dd><pre><code>:root {
+    --noctia-table-font: var(--noctia-sans, sans-serif);
+}</code></pre></dd>
+      <dt>Base Table Border Color</dt>
+      <dd><pre><code>:root {
+    --noctia-table-border-color: #C0C0C0;
+}</code></pre></dd>
+      <dt>Utility</dt>
+      <dd>
+        <ul class="noctia-list">
+          <li><a href="./utilities.html#size">Size</a></li>
+          <li><a href="./utilities.html#space">Space</a></li>
+          <li><a href="./utilities.html#text-color">Text Color</a></li>
+          <li><a href="./utilities.html#background-color">Background Color</a></li>
+          <li><a href="./utilities.html#font-text">Font・Text</a></li>
+        </ul>
+      </dd>
+    </dl>
+  </section>
+
+  <section id="details">
+    <h2 class="noctia-title-2 border-red">Noctia &lt;details&gt;</h2>
+    <details class="noctia-details">
+      <summary>Open</summary>
+      <div class="noctia-details-content w-full">
+        <dl class="noctia-code-description spc-0-i">
+          <dt>Selector</dt>
+          <dd><pre><code><span data-copy="noctia-details">details.noctia-details</span></code></pre></dd>
+          <dt>Usage</dt>
+          <dd><pre><code>&lt;details class="noctia-details"&gt;
+  &lt;summary&gt;Open&lt;/summary&gt;
+  &lt;div class="noctia-details-content"&gt;
+    &lt;p&gt;Noctia&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/details&gt;</code></pre></dd>
+        </dl>
+      </div>
+    </details>
+    <dl class="noctia-code-description">
+      <dt>Base Details Color</dt>
+      <dd><pre><code>:root {
+    --noctia-ds-color: #252525;
+}</code></pre></dd>
+      <dt>Base Open Text Color</dt>
+      <dd><pre><code>:root {
+    --noctia-ds-open-text-color: #FFFFFF;
+}</code></pre></dd>
+      <dt>Base Closed Text Color</dt>
+      <dd><pre><code>:root {
+    --noctia-ds-closed-text-color: #252525;
+}</code></pre></dd>
+      <dt>Base Closed Background Color</dt>
+      <dd><pre><code>:root {
+    --noctia-ds-closed-bg-color: #EEEEEE;
+}</code></pre></dd>
+      <dt>Base Content Background Color</dt>
+      <dd><pre><code>:root {
+    --noctia-ds-content-bg-color: #FFFFFF;
+}</code></pre></dd>
+      <dt>Utility</dt>
+      <dd>
+        <ul class="noctia-list">
+          <li><a href="./utilities.html#space">Space</a></li>
+          <li><a href="./utilities.html#text-color">Text Color</a></li>
+          <li><a href="./utilities.html#background-color">Background Color</a></li>
+          <li><a href="./utilities.html#font-text">Font・Text</a></li>
+        </ul>
+      </dd>
+    </dl>
+  </section>
+
+  <section id="form" class="noctia-section mdm-elm-grid mdm-grid-col-2-fr mdm-gap-x-1rem">
+    <h2 class="noctia-title-2 border-red" style="grid-column: 1 / 3;">Noctia Form</h2>
+    <section>
+      <h3 class="noctia-title-3">Form</h3>
+      <form class="noctia-form">
+        <fieldset class="noctia-form-field">
+          <label for="form-input-1">Noctia</label>
+          <input type="text" id="form-input-1">
+        </fieldset>
+        <fieldset class="noctia-form-field">
+          <label for="form-input-2">Noctia</label>
+          <input type="text" id="form-input-2">
+        </fieldset>
+      </form>
+      <dl class="noctia-code-description">
+        <dt>Selector</dt>
+        <dd><pre><code><span data-copy="noctia-form">form.noctia-form</span></code></pre></dd>
+        <dt>Usage</dt>
+        <dd><pre><code>&lt;form class="noctia-form"&gt;
+
+&lt;/form&gt;</code></pre></dd>
+        <dt>Base Background Color</dt>
+        <dd><pre><code>:root {
+    --noctia-form-bg-color: #FFFFFF;
+}</code></pre></dd>
+        <dt>Utility</dt>
+        <dd>
+          <ul class="noctia-list">
+            <li><a href="./utilities.html#space">Space</a></li>
+            <li><a href="./utilities.html#background-color">Background Color</a></li>
+          </ul>
+        </dd>
+      </dl>
+    </section>
+
+    <section>
+      <h3 class="noctia-title-3">Field</h3>
+      <div class="noctia-code-container">
+        <pre><code>&lt;form class="noctia-form"&gt;
+  <span data-copy="noctia-form-field">&lt;fieldset class="noctia-form-field"&gt;
+
+  &lt;/fieldset&gt;</span>
+&lt;/form&gt;</code></pre>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="noctia-title-3">Label</h3>
+      <dl class="noctia-code-description">
+        <dt>Selector</dt>
+        <dd><pre><code><span data-copy="noctia-form">form.noctia-form label</span>,
+<span data-copy="noctia-label">label.noctia-label</span></code></pre></dd>
+        <dt>Usage</dt>
+        <dd>
+          <pre><code>&lt;form class="noctia-form"&gt;
+  &lt;label&gt;Noctia&lt;/label&gt;
+&lt;/form&gt;
+
+&lt;label class="noctia-label"&gt;Noctia&lt;/label&gt;</code></pre>
+        </dd>
+        <dt>Base Text Color</dt>
+        <dd><pre><code>:root {
+    --noctia-label-color: #252525;
+}</code></pre></dd>
+        <dt>Base Text Font</dt>
+        <dd><pre><code>:root {
+    --noctia-label-font: var(--noctia-sans, sans-serif);
+}</code></pre></dd>
+        <dt>Utility</dt>
+        <dd>
+          <ul class="noctia-list">
+            <li><a href="./utilities.html#text-color">Text Color</a></li>
+            <li><a href="./utilities.html#font-text">Font・Text</a></li>
+          </ul>
+        </dd>
+      </dl>
+    </section>
+  </section>
+
+  <section id="input-block">
+    <h2 class="noctia-title-2 border-red">Noctia Input（Block）</h2>
+    <form class="noctia-form">
+      <fieldset class="noctia-form-field">
+        <label for="form-textarea">textarea</label>
+        <textarea id="form-textarea" placeholder="Noctia"></textarea>
+      </fieldset>
+      <fieldset class="noctia-form-field">
+        <label for="form-input-text">type="text"</label>
+        <input type="text" id="form-input-text">
+      </fieldset>      
+      <fieldset class="noctia-form-field">
+        <label for="form-input-password">type="password"</label>
+        <input type="password" id="form-input-password">
+      </fieldset>
+      <fieldset class="noctia-form-field">
+        <label for="form-input-number">type="number"</label>
+        <input type="number" id="form-input-number">
+      </fieldset>
+      <fieldset class="noctia-form-field">
+        <label for="form-input-search">type="search"</label>
+        <input type="search" id="form-input-search">
+      </fieldset>
+      <fieldset class="noctia-form-field">
+        <label for="form-input-url">type="url"</label>
+        <input type="url" id="form-input-url">
+      </fieldset>
+      <fieldset class="noctia-form-field">
+        <label for="form-input-email">type="email"</label>
+        <input type="email" id="form-input-email">
+      </fieldset>
+      <fieldset class="noctia-form-field">
+        <label for="form-input-file">type="file"</label>
+        <input type="file" id="form-input-file">
+      </fieldset>
+    </form>
+    <dl class="noctia-code-description">
+      <dt>Selector</dt>
+      <dd><pre><code><span data-copy="noctia-form">form.noctia-form textarea,
+form.noctia-form input[type="x"],</span>
+<span data-copy="noctia-textarea">textarea.noctia-textarea</span>,
+<span data-copy="noctia-input">input[type="x"].noctia-input</span></code></pre></dd>
+      <dt>Usage</dt>
+      <dd>
+        <pre><code>&lt;form class="noctia-form"&gt;
+  &lt;input type="text"&gt;
+  &lt;textarea placeholder="Noctia"&gt;&lt;/textarea&gt;
+&lt;/form&gt;
+
+&lt;textarea class="noctia-textarea"&gt;&lt;/textarea&gt;
+
+&lt;input type="text" class="noctia-input"&gt;</code></pre></dd>
+      <dt>Base Text Color</dt>
+      <dd><pre><code>:root {
+    --noctia-input-text-color: #252525;
+}</code></pre></dd>
+      <dt>Base Background Color</dt>
+      <dd><pre><code>:root {
+    --noctia-input-bg-color: #FFFFFF;
+}</code></pre></dd>
+      <dt>Base Text Font</dt>
+      <dd><pre><code>:root {
+    --noctia-input-font: var(--noctia-sans, sans-serif);
+}</code></pre></dd>
+      <dt>Base Border Color</dt>
+      <dd><pre><code>:root {
+    --noctia-neutral-color: #E5E7EB;
+}</code></pre></dd>
+      <dt>Base Placeholder Color</dt>
+      <dd><pre><code>:root {
+    --noctia-input-placeholder-color: #AAAAAA;
+}</code></pre></dd>
+      <dt>Utility</dt>
+      <dd>
+        <ul class="noctia-list">
+          <li><a href="./utilities.html#text-color">Text Color</a></li>
+          <li><a href="./utilities.html#background-color">Background Color</a></li>
+          <li><a href="./utilities.html#font-text">Font・Text</a></li>
+          <li><a href="./utilities.html#border-color">Border Color</a></li>
+        </ul>
+      </dd>
+    </dl>
+  </section>
+
+  <section id="input-inline" class="noctia-section">
+    <h2 class="noctia-title-2 border-red">Noctia Input（Inline）</h2>
+    <form class="noctia-form">
+      <fieldset class="noctia-form-field">
+        <label for="form-input-date">date</label>
+        <input type="date" id="form-input-date">
+      </fieldset>
+      <fieldset class="noctia-form-field">
+        <label for="form-input-week">week</label>
+        <input type="week" id="form-input-week">
+      </fieldset>
+      <fieldset class="noctia-form-field">
+        <label for="form-input-month">month</label>
+        <input type="month" id="form-input-month">
+      </fieldset>
+      <fieldset class="noctia-form-field">
+        <label for="form-input-time">time</label>
+        <input type="time" id="form-input-time">
+      </fieldset>
+      <fieldset class="noctia-form-field">
+        <label for="form-input-color">color</label>
+        <input type="color" id="form-input-color">
+      </fieldset>
+      <fieldset class="noctia-form-field">
+        <label for="form-input-select">select</label>
+        <select id="form-input-select">
+          <option>Noctia1</option>
+          <option>Noctia2</option>
+          <option>Noctia3</option>
+        </select>
+      </fieldset>
+    </form>
+    <dl class="noctia-code-description">
+      <dt>Selector</dt>
+      <dd><pre><code><span data-copy="noctia-form">form.noctia-form input[type="x"],
+form.noctia-form select,</span>
+<span data-copy="noctia-input">input[type="x"].noctia-input</span>,
+<span data-copy="noctia-select">select.noctia-select</span></code></pre></dd>
+      <dt>Usage</dt>
+      <dd>
+        <pre><code>&lt;form class="noctia-form"&gt;
+  &lt;input type="date"&gt;
+  &lt;select&gt;&lt;/select&gt;
+&lt;/form&gt;
+
+&lt;input type="date" class="noctia-input"&gt;
+
+&lt;select class="noctia-select"&gt;&lt;/select&gt;</code></pre>
+      </dd>
+      <dt>Base Text Color</dt>
+      <dd><pre><code>:root {
+    --noctia-input-text-color: #252525;
+}</code></pre></dd>
+      <dt>Base Background Color</dt>
+      <dd><pre><code>:root {
+    --noctia-input-bg-color: #FFFFFF;
+}</code></pre></dd>
+      <dt>Base Text Font</dt>
+      <dd><pre><code>:root {
+    --noctia-input-font: var(--noctia-sans, sans-serif);
+}</code></pre></dd>
+      <dt>Base Border Color</dt>
+      <dd><pre><code>:root {
+    --noctia-neutral-color: #E5E7EB;
+}</code></pre></dd>
+      <dt>Utility</dt>
+      <dd>
+        <ul class="noctia-list">
+          <li><a href="./utilities.html#size">Size</a></li>
+          <li><a href="./utilities.html#text-color">Text Color</a></li>
+          <li><a href="./utilities.html#background-color">Background Color</a></li>
+          <li><a href="./utilities.html#font-text">Font・Text</a></li>
+          <li><a href="./utilities.html#border-color">Border Color</a></li>
+        </ul>
+      </dd>
+    </dl>
+    <section>
+      <h3 class="noctia-title-3">Radio and Checkbox</h3>
+      <form class="noctia-form">
+        <fieldset class="noctia-form-field">
+          <div>
+            <label for="form-input-radio1">radio1</label>          
+            <input type="radio" name="radio" id="form-input-radio1">
+          </div>
+          <div>
+            <label for="form-input-radio2">radio2</label>
+            <input type="radio" name="radio" id="form-input-radio2">
+          </div>
+          <div>
+            <label for="form-input-radio3">radio3</label>
+            <input type="radio" name="radio" id="form-input-radio3">
+          </div>
+        </fieldset>
+        <fieldset class="noctia-form-field">
+          <label for="form-input-checkbox">checkbox</label>
+          <input type="checkbox" id="form-input-checkbox">
+        </fieldset>
+      </form>
+      <dl class="noctia-code-description">
+        <dt>Selector</dt>
+        <dd><pre><code><span data-copy="noctia-form">form.noctia-form input[type="x"],</span>
+<span data-copy="noctia-input">input[type="x"].noctia-input</span></code></pre></dd>
+        <dt>Usage</dt>
+        <dd>
+          <pre><code>&lt;form class="noctia-form"&gt;
+  &lt;input type="checkbox"&gt;
+&lt;/form&gt;
+
+&lt;input type="checkbox" class="noctia-input"&gt;</code></pre>
+        </dd>
+      </dl>
+    </section>
+
+    <section>
+      <h3 class="noctia-title-3">Submit Button and Reset Button</h3>
+      <form class="noctia-form">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </form>
+      <dl class="noctia-code-description">
+        <dt>Selector</dt>
+        <dd><pre><code><span data-copy="noctia-form">form.noctia-form [type="x"],</span>
+<span data-copy="noctia-submit">[type="submit"].noctia-submit</span>,
+<span data-copy="noctia-reset">[type="reset"].noctia-reset</span></code></pre></dd>
+        <dt>Usage</dt>
+        <dd>
+          <pre><code>&lt;form class="noctia-form"&gt;
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+  &lt;button type="reset"&gt;Reset&lt;/button&gt;
+&lt;/form&gt;
+
+&lt;button type="submit" class="noctia-submit"&gt;Submit&lt;/button&gt;
+
+&lt;button type="reset" class="noctia-submit"&gt;Reset&lt;/button&gt;</code></pre>
+        </dd>
+        <dt>Base Text Color</dt>
+        <dd><pre><code>:root {
+    --noctia-form-btn-text-color: #252525;
+}</code></pre></dd>
+        <dt>Base Background Color</dt>
+        <dd><pre><code>:root {
+    --noctia-form-btn-bg-color: #FFFFFF;
+}</code></pre></dd>
+        <dt>Base Active Background Color</dt>
+        <dd><pre><code>:root {
+    --noctia-form-btn-active-bg-color: #EEEEEE;
+}</code></pre></dd>
+        <dt>Base Text Font</dt>
+        <dd><pre><code>:root {
+    --noctia-form-btn-font: var(--noctia-sans, sans-serif);
+}</code></pre></dd>
+        <dt>Utility</dt>
+        <dd>
+          <ul class="noctia-list">
+            <li><a href="./utilities.html#size">Size</a></li>
+            <li><a href="./utilities.html#text-color">Text Color</a></li>
+            <li><a href="./utilities.html#background-color">Background Color</a></li>
+            <li><a href="./utilities.html#font-text">Font・Text</a></li>
+          </ul>
+        </dd>
+      </dl>
+    </section>
+  </section>
+
+  <section id="bread-crumb">
+    <h2 class="noctia-title-2 border-red">Bread Crumb</h2>
+    <nav class="noctia-bread-crumb">
+      <ul>
+        <li><a href="#bread-crumb">Noctia 1</a></li>
+        <li><a href="#bread-crumb">Noctia 2</a></li>
+        <li><a href="#bread-crumb">Noctia 3</a></li>
+        <li><a href="#bread-crumb">Noctia 4</a></li>
+        <li><a href="#bread-crumb">Noctia 5</a></li>
+      </ul>
+    </nav>
+    <dl class="noctia-code-description">
+      <dt>Selector</dt>
+      <dd><pre><code><span data-copy="noctia-bread-crumb">nav.noctia-bread-crumb</span></code></pre></dd>
+      <dt>Usage</dt>
+      <dd><pre><code>&lt;nav class="noctia-bread-crumb"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#bread-crumb"&gt;Noctia 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#bread-crumb"&gt;Noctia 2&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre></dd>
+      <dt>Base Text Color</dt>
+      <dd><pre><code>:root {
+    --noctia-bread-crumb-color: #555555;
+}</code></pre></dd>
+      <dt>Base Text Font</dt>
+      <dd><pre><code>:root {
+    --noctia-bread-crumb-font: var(--noctia-sans, sans-serif);
+}</code></pre></dd>
+      <dt>Base Text Size</dt>
+      <dd><pre><code>:root {
+    --noctia-bread-crumb-font-size: 0.875rem;
+}</code></pre></dd>
+      <dt>Utility</dt>
+      <dd>
+        <ul class="noctia-list">
+          <li><a href="./utilities.html#text-color">Text Color</a></li>
+          <li><a href="./utilities.html#font-text">Font・Text</a></li>
+        </ul>
+      </dd>
+    </dl>
+  </section>
+
+  <section id="hamburger-menu" class="noctia-section">
+    <h2 class="noctia-title-2 border-red">Hamburger Menu</h2>
+    <button aria-controls="hamburger" class="noctia-hm-open-btn h-40px"></button>
+    <div id="hamburger" class="noctia-hm-menu">
+      <button class="noctia-hm-close-btn h-40px"></button>
+      <p class="noctia-text">Noctia</p>
+    </div>
+    <section>
+      <h3 class="noctia-title-3">Open Button and Close Button</h3>
+      <dl class="noctia-code-description">
+        <dt>Selector</dt>
+        <dd><pre><code data-copy="noctia-hm-open-btn">button.noctia-hm-open-btn</code>
+
+<code data-copy="noctia-hm-close-btn">button.noctia-hm-close-btn</code></pre></dd>
+        <dt>Usage</dt>
+        <dd><pre><code>&lt;button class="noctia-hm-open-btn"&gt;&lt;/button&gt;
+
+&lt;button class="noctia-hm-close-btn"&gt;&lt;/button&gt;</code></pre></dd>
+        <dt>Base Button Line Color</dt>
+        <dd><pre><code>:root {
+    --noctia-hm-btn-color: #252525;
+}</code></pre></dd>
+        <dt>Change Line Color</dt>
+        <dd>
+          <pre><code>&lt;button class="noctia-hm-open-btn clr-red"&gt;&lt;/button&gt;</code></pre>
+          <a href="./utilities.html#text-color">Text Color</a>
+        </dd>
+        <dt>Change Size</dt>
+        <dd>
+          <pre><code>&lt;button class="noctia-hm-open-btn h-40px"&gt;&lt;/button&gt;</code></pre>
+          <a href="./utilities.html#size">Size（Height）</a>
+          <p>Can’t resize with width</p>
+        </dd>
+      </dl>
+    </section>
+
+    <section>
+      <h3 class="noctia-title-3">Menu</h3>
+      <dl class="noctia-code-description">
+        <dt>Selector</dt>
+        <dd><pre><code><span data-copy="noctia-hm-menu">.noctia-hm-menu</span></code></pre></dd>
+        <dt>Usage</dt>
+        <dd><pre><code>&lt;button aria-controls="hamburger-menu" class="noctia-hm-open-btn"&gt;&lt;/button&gt;
+&lt;div id="hamburger-menu" class="noctia-hm-menu"&gt;
+  &lt;button class="noctia-hm-close-btn"&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre></dd>
+        <dd class="noctia-text">
+          <p>Pair with aria-controls</p>
+          <p>Can’t open without a Close button</p>
+        </dd>
+        <dt>Base Background Color</dt>
+        <dd><pre><code>:root {
+    --noctia-hm-bg-color: #FFFFFF;
+}</code></pre></dd>
+        <dt>Option</dt>
+        <dd>
+          <ul>
+            <li><pre><code><span data-copy="menu-top">.noctia-hm-menu.menu-top</span></code></pre></li>
+            <li><pre><code><span data-copy="menu-right">.noctia-hm-menu.menu-right</span></code></pre></li>
+            <li><pre><code><span data-copy="menu-bottom">.noctia-hm-menu.menu-bottom</span></code></pre></li>
+            <li><pre><code><span data-copy="menu-left">.noctia-hm-menu.menu-left</span></code></pre></li>
+          </ul>
+        </dd>
+        <dt>Utility</dt>
+        <dd>
+          <ul>
+            <li><a href="./utilities.html#size">Size</a></li>
+            <li><a href="./utilities.html#space">Space</a></li>
+            <li><a href="./utilities.html#background-color">Background Color</a></li>
+          </ul>
+        </dd>
+      </dl>
+    </section>
+  </section>
+
+  <section id="card" class="noctia-section">
+    <h2 class="noctia-title-2 border-red">Card</h2>
+    <section>
+      <h3 class="noctia-title-3">Basic Navigation</h3>
+      <nav class="noctia-card-container">
+        <ul>
+          <li><a href="#card">Noctia</a></li>
+          <li><a href="#card">Noctia</a></li>
+          <li><a href="#card">Noctia</a></li>
+          <li><a href="#card"><img src="./assets/images/logo.png" alt="Noctia Logo">Noctia</a></li>
+        </ul>
+      </nav>
+      <dl class="noctia-code-description">
+        <dt>Selector</dt>
+        <dd><pre><code><span data-copy="noctia-card-container">nav.noctia-card-container</span></code></pre></dd>
+        <dt>Usage</dt>
+        <dd><pre><code>&lt;nav class="noctia-card-container"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=""&gt;Noctia&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=""&gt;&lt;img src="" alt=""&gt;Noctia&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre></dd>
+        <dt>Base Background Color</dt>
+        <dd><pre><code>:root {
+    --noctia-card-bg-color: #FFFFFF;
+}</code></pre></dd>
+        <dt>Base Link Text Color</dt>
+        <dd><pre><code>:root {
+    --noctia-card-text-color: #252525;
+}</code></pre></dd>
+        <dt>Base Link Background Color</dt>
+        <dd><pre><code>:root {
+    --noctia-card-link-bg-color: #FAFAFA;
+}</code></pre></dd>
+        <dt>Base Link Active Background Color</dt>
+        <dd><pre><code>:root {
+    --noctia-card-link-active-bg-color: #DDDDDD;
+}</code></pre></dd>
+        <dt>Base Link Text Font</dt>
+        <dd><pre><code>:root {
+    --noctia-card-font: var(--noctia-sans, sans-serif);
+}</code></pre></dd>
+        <dt>Utility</dt>
+        <dd>
+          <ul>
+            <li><a href="./utilities.html#text-color">Text Color</a></li>
+            <li><a href="./utilities.html#background-color">Background Color</a></li>
+            <li><a href="./utilities.html#font-text">Font・Text</a></li>
+          </ul>
+        </dd>
+      </dl>
+    </section>
+
+    <section>
+      <h3 class="noctia-title-3">Card with Title</h3>
+      <div class="noctia-card">
+        <h4 class="noctia-card-title">Noctia</h4>
+        <nav class="noctia-card-container">
+          <ul>
+            <li><a href="#card">Noctia</a></li>
+            <li><a href="#card">Noctia</a></li>
+            <li><a href="#card">Noctia</a></li>
+            <li><a href="#card"><img src="./assets/images/logo.png" alt="Noctia Logo">Noctia</a></li>
+          </ul>
+        </nav>
+      </div>
+      <dl class="noctia-code-description">
+        <dt>Selector</dt>
+        <dd><pre><code><span data-copy="noctia-card-title">.noctia-card .noctia-card-title</span></code></pre></dd>
+        <dt>Usage</dt>
+        <dd><pre><code>&lt;div class="noctia-card"&gt;
+  &lt;h3 class="noctia-card-title"&gt;Noctia&lt;/h3&gt;
+  &lt;nav class="noctia-card-container"&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Noctia&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;&lt;img src="" alt=""&gt;Noctia&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/div&gt;</code></pre></dd>
+        <dt>Base Title Text Color</dt>
+        <dd><pre><code>:root {
+    --noctia-card-text-color: #252525;
+}</code></pre></dd>
+        <dt>Base Title Text Font</dt>
+        <dd><pre><code>:root {
+    --noctia-card-font: var(--noctia-sans, sans-serif);
+}</code></pre></dd>
+        <dt>Utility</dt>
+        <dd>
+          <ul>
+            <li><a href="./utilities.html#text-color">Text Color</a></li>
+            <li><a href="./utilities.html#font-text">Font・Text</a></li>
+          </ul>
+        </dd>
+      </dl>
+    </section>
+
+    <section>
+      <h3 class="noctia-title-3">Multi-Section Card</h3>
+      <div class="noctia-card">
+        <section>
+          <h4 class="noctia-card-title">Noctia</h4>
+          <nav class="noctia-card-container">
+            <ul>
+              <li><a href="#card">Noctia</a></li>
+              <li><a href="#card">Noctia</a></li>
+              <li><a href="#card">Noctia</a></li>
+              <li><a href="#card"><img src="./assets/images/logo.png" alt="Noctia Logo">Noctia</a></li>
+            </ul>
+          </nav>
+        </section>
+        <section>
+          <h4 class="noctia-card-title">Noctia</h4>
+          <nav class="noctia-card-container">
+            <ul>
+              <li><a href="#card">Noctia</a></li>
+              <li><a href="#card">Noctia</a></li>
+              <li><a href="#card">Noctia</a></li>
+              <li><a href="#card"><img src="./assets/images/logo.png" alt="Noctia Logo">Noctia</a></li>
+            </ul>
+          </nav>
+        </section>
+      </div>
+      <dl class="noctia-code-description">
+        <dt>Selector</dt>
+        <dd><pre><code>.noctia-card section</code></pre></dd>
+        <dt>Usage</dt>
+        <dd><pre><code>&lt;div class="noctia-card"&gt;
+  &lt;section&gt;
+    &lt;h3 class="noctia-card-title"&gt;Noctia&lt;/h3&gt;
+    &lt;nav class="noctia-card-container"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=""&gt;Noctia&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=""&gt;&lt;img src="" alt=""&gt;Noctia&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/section&gt;
+  &lt;section&gt;
+    &lt;h3 class="noctia-card-title"&gt;Noctia&lt;/h3&gt;
+    &lt;nav class="noctia-card-container"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=""&gt;Noctia&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=""&gt;&lt;img src="" alt=""&gt;Noctia&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/section&gt;
+&lt;/div&gt;</code></pre></dd>
+      </dl>
+    </section>
+  </section>
+
+  <section id="nav">
+    <h2 class="noctia-title-2 border-red">Noctia Nav</h2>
+    <nav class="noctia-nav">
+      <ul>
+        <li><a href="#nav">Noctia Nav</a></li>
+        <li><a href="#nav">Noctia Nav</a></li>
+      </ul>
+    </nav>
+    <dl class="noctia-code-description">
+      <dt>Selector</dt>
+      <dd><pre><code data-copy="noctia-nav">.noctia-nav</code></pre></dd>
+      <dt>Usage</dt>
+      <dd><pre><code>&lt;nav class="noctia-nav"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=""&gt;Noctia&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=""&gt;Noctia&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre></dd>
+      <dt>Base Size</dt>
+      <dd><pre><code>:root {
+    --noctia-nav-size: 1rem;
+}</code></pre></dd>
+      <dt>Base Text Color</dt>
+      <dd><pre><code>:root {
+    --noctia-nav-text-color: #252525;
+}</code></pre></dd>
+      <dt>Base Text Hover Color</dt>
+      <dd><pre><code>:root {
+    --noctia-nav-text-hover-color: #3D99F5;
+}</code></pre></dd>
+      <dt>Base Background Color</dt>
+      <dd><pre><code>:root {
+    --noctia-nav-bg-color: #FFFFFF;
+}</code></pre></dd>
+      <dt>Utility</dt>
+      <dd>
+        <ul>
+          <li><a href="./utilities.html#text-color">Text Color</a></li>
+          <li><a href="./utilities.html#background-color">Background Color</a></li>
+          <li><a href="./utilities.html#font-text">Font・Text</a></li>
+        </ul>
+      </dd>
+    </dl>
+  </section>
+
+  <section id="copy-text">
+    <h2 class="noctia-title-2 border-red">Copy Text</h2>
+    <button data-copy="Hello!" class="p-x-16 border-1 border-dark border-radius-999">Click to copy text</button>
+    <dl class="noctia-code-description">
+      <dt>Copy Text Content</dt>
+      <dd><pre><code>&lt;span data-copy&gt;Noctia&lt;/span&gt;</code></pre></dd>
+      <dt>Copy Attribute Value</dt>
+      <dd><pre><code>&lt;span data-copy="Hallo!"&gt;Noctia&lt;/span&gt;</code></pre></dd>
+    </dl>
+  </section>
+
+  <section id="code-block" class="noctia-section">
+    <h2 class="noctia-title-2 border-red">Code Block</h2>
+    <section>
+      <h3 class="noctia-title-3">Basic Code Block</h3>
+      <div class="noctia-code-container">
+        <pre><code>console.log("Noctia");
+<span data-copy>alert("Click me");</span></code></pre>
+      </div>
+      <dl class="noctia-code-description">
+        <dt>Selector</dt>
+        <dd><pre><code><span data-copy="noctia-code-container">.noctia-code-container</span></code></pre></dd>
+        <dt>Usage</dt>
+        <dd><pre><code>&lt;div class="noctia-code-container"&gt;
+  &lt;pre&gt;&lt;code&gt; &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</code></pre></dd>
+        <dt>Base Background Color</dt>
+        <dd><pre><code>:root {
+    --noctia-cb-bg-color: #252525;
+}</code></pre></dd>
+        <dt>Base Code Text Color</dt>
+        <dd><pre><code>:root {
+    --noctia-cb-code-text-color: #00BCD4;
+}</code></pre></dd>
+        <dt>Base Code Text Font</dt>
+        <dd><pre><code>:root {
+    --noctia-cb-code-font: var(--noctia-mono, monospace);
+}</code></pre></dd>
+        <dt>Base Code Selection Text Color</dt>
+        <dd><pre><code>:root {
+    --noctia-cb-code-selection-text-color: #252525;
+}</code></pre></dd>
+        <dt>Base Code Selection Background Color</dt>
+        <dd><pre><code>:root {
+    --noctia-cb-code-selection-bg-color: #EEEEEE;
+}</code></pre></dd>
+        <dt>Base Code Copy Text Color</dt>
+        <dd><pre><code>:root {
+    --noctia-cb-code-copy-text-color: #8BC34A;
+}</code></pre></dd>
+        <dt>Base Code Copy Active Background Color</dt>
+        <dd><pre><code>:root {
+    --noctia-cb-active-color: #808080;
+}</code></pre></dd>
+        <dt>Base Code Copy Hover Background Color</dt>
+        <dd><pre><code>:root {
+    --noctia-cb-hover-color: #555555;
+}</code></pre></dd>
+        <dt>Utility</dt>
+        <dd>
+          <ul>
+            <li><a href="./utilities.html#text-color">Text Color</a></li>
+            <li><a href="./utilities.html#font-text">Font・Text</a></li>
+          </ul>
+        </dd>
+      </dl>
+    </section>
+
+    <section>
+      <h3 class="noctia-title-3">Code Block with Title or Copy Button</h3>
+      <figure class="noctia-code-block">
+        <figcaption class="noctia-code-header">
+          <span class="noctia-code-title">Noctia</span>
+          <button data-copy-block></button>
+        </figcaption>
+        <div class="noctia-code-container">
+          <pre><code>console.log("Noctia");
+<span data-copy>alert("Click me");</span></code></pre>
+        </div>
+      </figure>
+      <dl class="noctia-code-description">
+        <dt>Selector（Title and Copy Button）</dt>
+        <dd><pre><code><span data-copy="noctia-code-title">figure.noctia-code-block &gt; figcaption.noctia-code-header .noctia-code-title</span>,
+<span data-copy="data-copy-block">figure.noctia-code-block &gt; figcaption.noctia-code-header button[data-copy-block]</span></code></pre></dd>
+        <dt>Usage</dt>
+        <dd><pre><code>&lt;figure class="noctia-code-block"&gt;
+  &lt;figcaption class="noctia-code-header"&gt;
+    &lt;span class="noctia-code-title"&gt;Noctia&lt;/span&gt;
+    &lt;button data-copy-block&gt;&lt;/button&gt;
+  &lt;/figcaption&gt;
+  &lt;div class="noctia-code-container"&gt;
+    &lt;pre&gt;&lt;code&gt; &lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+&lt;/figure&gt;</code></pre></dd>
+        <dt>Base Background Color</dt>
+        <dd><pre><code>:root {
+    --noctia-cb-bg-color: #252525;
+}</code></pre></dd>
+        <dt>Base Title and Copy Button Text Color</dt>
+        <dd><pre><code>:root {
+    --noctia-cb-header-text-color: #FFFFFF;
+}</code></pre></dd>
+        <dt>Base Title and Copy Button Text Font</dt>
+        <dd><pre><code>:root {
+    --noctia-cb-header-font: var(--noctia-sans, sans-serif);
+}</code></pre></dd>
+        <dt>Base Copy Button Active Color</dt>
+        <dd><pre><code>:root {
+    --noctia-cb-active-color: #808080;
+}</code></pre></dd>
+        <dt>Base Copy Button Hover Color</dt>
+        <dd><pre><code>:root {
+    --noctia-cb-hover-color: #555555;
+}</code></pre></dd>
+        <dt>Utility</dt>
+        <dd>
+          <ul>
+            <li><a href="./utilities.html#text-color">Text Color</a></li>
+            <li><a href="./utilities.html#font-text">Font・Text</a></li>
+          </ul>
+        </dd>
+      </dl>
+    </section>
+  </section>
+
+  <section id="code-description">
+    <h2 class="noctia-title-2 border-red">Code Description</h2>
+    <dl class="noctia-code-description">
+      <dt>Noctia</dt>
+      <dd>Noctia</dd>
+      <dt>Noctia</dt>
+      <dd>Noctia</dd>
+    </dl>
+    <dl class="noctia-code-description">
+      <dt>Selector</dt>
+      <dd><pre><code><span data-copy="noctia-code-description">dl.noctia-code-description</span></code></pre></dd>
+      <dt>Usage</dt>
+      <dd><pre><code>&lt;dl class="noctia-code-description"&gt;
+  &lt;dt&gt;Noctia&lt;/dt&gt;
+  &lt;dd&gt;Noctia&lt;/dd&gt;
+&lt;/dl&gt;</code></pre></dd>
+      <dt>Base Background Color</dt>
+      <dd><pre><code>:root {
+    --noctia-cd-bg-color: #FFFFFF;
+}</code></pre></dd>
+      <dt>Base Border Color</dt>
+      <dd><pre><code>:root {
+    --noctia-cd-border-color: #C0C0C0;
+}</code></pre></dd>
+      <dt>Base &lt;dt&gt; Text Color</dt>
+      <dd><pre><code>:root {
+    --noctia-cd-dt-text-color: #000000;
+}</code></pre></dd>
+      <dt>Base &lt;dd&gt; Text Color</dt>
+      <dd><pre><code>:root {
+    --noctia-cd-dd-text-color: #555555;
+}</code></pre></dd>
+      <dt>Base &lt;dt&gt; and &lt;dd&gt; Text Font</dt>
+      <dd><pre><code>:root {
+    --noctia-cd-font: var(--noctia-sans, sans-serif);
+}</code></pre></dd>
+      <dt>Base Separator Line Color</dt>
+      <dd><pre><code>:root {
+    --noctia-cd-separator-color: #E5E7EB;
+}</code></pre></dd>
+      <dt>Utility</dt>
+      <dd>
+        <ul>
+          <li><a href="./utilities.html#text-color">Text Color</a></li>
+          <li><a href="./utilities.html#background-color">Background Color</a></li>
+          <li><a href="./utilities.html#font-text">Font・Text</a></li>
+        </ul>
+      </dd>
+    </dl>
+  </section>
+
+  <section id="code-description">
+    <h2 class="noctia-title-2 border-red">Code Description</h2>
+    <dl class="noctia-code-description">
+      <dt>Noctia</dt>
+      <dd>Noctia</dd>
+      <dt>Noctia</dt>
+      <dd>Noctia</dd>
+    </dl>
+    <dl class="noctia-code-description">
+      <dt>Selector</dt>
+      <dd><pre><code><span data-copy="noctia-code-description">dl.noctia-code-description</span></code></pre></dd>
+      <dt>Usage</dt>
+      <dd><pre><code>&lt;dl class="noctia-code-description"&gt;
+  &lt;dt&gt;Noctia&lt;/dt&gt;
+  &lt;dd&gt;Noctia&lt;/dd&gt;
+&lt;/dl&gt;</code></pre></dd>
+      <dt>Base Background Color</dt>
+      <dd><pre><code>:root {
+    --noctia-cd-bg-color: #FFFFFF;
+}</code></pre></dd>
+      <dt>Base Border Color</dt>
+      <dd><pre><code>:root {
+    --noctia-cd-border-color: #C0C0C0;
+}</code></pre></dd>
+      <dt>Base &lt;dt&gt; Text Color</dt>
+      <dd><pre><code>:root {
+    --noctia-cd-dt-text-color: #000000;
+}</code></pre></dd>
+      <dt>Base &lt;dd&gt; Text Color</dt>
+      <dd><pre><code>:root {
+    --noctia-cd-dd-text-color: #555555;
+}</code></pre></dd>
+      <dt>Base &lt;dt&gt; and &lt;dd&gt; Text Font</dt>
+      <dd><pre><code>:root {
+    --noctia-cd-font: var(--noctia-sans, sans-serif);
+}</code></pre></dd>
+      <dt>Base Separator Line Color</dt>
+      <dd><pre><code>:root {
+    --noctia-cd-separator-color: var(--noctia-neutral-color, #E5E7EB);
+}</code></pre></dd>
+      <dt>Utility</dt>
+      <dd>
+        <ul>
+          <li><a href="./utilities.html#text-color">Text Color</a></li>
+          <li><a href="./utilities.html#background-color">Background Color</a></li>
+          <li><a href="./utilities.html#font-text">Font・Text</a></li>
+        </ul>
+      </dd>
+    </dl>
+  </section>
+
+  <section id="scroll-top">
+    <h2 class="noctia-title-2 border-red">Scroll to Top Button</h2>
+    <button class="noctia-scroll-top h-32px"></button>
+    <dl class="noctia-code-description">
+      <dt>Selector</dt>
+      <dd><pre><code><span data-copy="noctia-scroll-top">.noctia-scroll-top</span></code></pre></dd>
+      <dt>Usage</dt>
+      <dd><pre><code>&lt;button class="noctia-scroll-top"&gt;&lt;/button&gt;</code></pre></dd>
+      <dt>Base Color</dt>
+      <dd><pre><code>:root {
+    --noctia-scroll-top-color: #000000;
+}</code></pre></dd>
+      <dd>Can change with "color: ;"</dd>
+      <dt>Base Hover Background Color</dt>
+      <dd><pre><code>:root {
+    --noctia-scroll-top-hover-color: rgba(0, 0, 0, 0.1);
+}</code></pre></dd>
+      <dt>Change Size</dt>
+      <dd>
+        <pre><code>&lt;button class="noctia-scroll-top h-40px"&gt;&lt;/button&gt;</code></pre>
+        <a href="./utilities.html#size">Size（Height）</a>
+        <p>Can’t resize with width</p>
+      </dd>
+      <dt>Utility</dt>
+      <dd>
+        <ul>
+          <li><a href="./utilities.html#text-color">Text Color</a></li>
+        </ul>
+      </dd>
+    </dl>
+  </section>
+
+  <section id="license" class="noctia-section">
+    <h2 class="noctia-title-2 border-red">License</h2>
+    <section>
+      <h3 class="noctia-title-3">Basic</h3>
+      <p class="noctia-license">Lanlanwi</p>
+      <dl class="noctia-code-description">
+        <dt>Selector</dt>
+        <dd><pre><code data-copy="noctia-license">p.noctia-license</code></pre></dd>
+        <dt>Usage</dt>
+        <dd><pre><code>&lt;p class="noctia-license"&gt;Holder&lt;/p&gt;</code></pre></dd>
+        <dt>Base Text Color</dt>
+        <dd><pre><code>:root {
+    --noctia-text-color: #252525;
+}</code></pre></dd>
+        <dt>Base Text Font</dt>
+        <dd><pre><code>:root {
+    --noctia-text-font: var(--noctia-sans, sans-serif);
+}</code></pre></dd>
+        <dt>Utility</dt>
+        <dd>
+          <ul class="noctia-list">
+            <li><a href="./utilities.html#text-color">Text Color</a></li>
+            <li><a href="./utilities.html#font-text">Font・Text</a></li>
+          </ul>
+        </dd>
+      </dl>
+    </section>
+
+    <section>
+      <h3 class="noctia-title-3">With License Notice</h3>
+      <p class="noctia-license"><span class="noctia-license-holder">Lanlanwi</span>License Notice</p>
+      <dl class="noctia-code-description">
+        <dt>Selector</dt>
+        <dd><pre><code data-copy="noctia-license-holder">.noctia-license-holder</code></pre></dd>
+        <dt>Usage</dt>
+        <dd><pre><code>&lt;p class="noctia-license"&gt;&lt;span class="noctia-license-holder"&gt;Holder&lt;/span&gt;License Notice&lt;/p&gt;</code></pre></dd>
+      </dl>
+    </section>
+  </section>
+
+  <section id="toast-notification">
+    <h2 class="noctia-title-2 border-red">Toast Notification</h2>
+    <button onClick="Noctia.toast('Hello!')" class="p-x-16 clr-white bc-dark border-radius-32">Click me</button>
+    <figure class="noctia-code-block">
+      <figcaption class="noctia-code-header">
+        <span class="noctia-code-title">Usage（JavaScript）</span>
+        <button data-copy-block></button>
+      </figcaption>
+      <div class="noctia-code-container">
+        <pre><code>Noctia.toast("Hello!");</code></pre>
+      </div>
+    </figure>
+    <dl class="noctia-code-description">
+      <dt>Base Text Color</dt>
+      <dd><pre><code>:root {
+    --noctia-toast-text-color: #FFFFFF;
+}</code></pre></dd>
+      <dt>Base Background Color</dt>
+      <dd><pre><code>:root {
+    --noctia-toast-bg-color: rgba(0, 0, 0, 0.6);
+}</code></pre></dd>
+      <dt>Base Text Font</dt>
+      <dd><pre><code>:root {
+    --noctia-toast-font: var(--noctia-sans, sans-serif);
+}</code></pre></dd>
+    </dl>
+  </section>
+
+</main>
+
+
+
+<footer class="bc-mineshaft flex-column align-items-center">
+  <a href="index.html" class="text-dec-none elm-inline-flex flex-column align-items-center">
+    <img src="assets/images/logo-blue-transparent.png" alt="Noctia Logo" class="h-56px">
+    <p class="spc-0 clr-white text-lrg">Noctia <span class="noctia-version"></span></p>
+  </a>
+
+  <div class="w-full spc-y-16">
+    <h2 class="noctia-title-5 clr-white text-mdm border-white">Links</h2>
+    <nav>
+      <ul class="p-0 clr-very-light-gray text-smdm text-dec-none hide-list-style">
+        <li><a href="index.html">Noctia Official Page</a></li>
+        <li><a href="https://github.com/lanlanwi/Noctia">Githud</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="w-full spc-y-16">
+    <h2 class="noctia-title-5 clr-white text-mdm border-white">Guide</h2>
+    <nav>
+      <ul class="p-0 clr-very-light-gray text-smdm text-dec-none hide-list-style">
+        <li><a href="base.html">Base</a></li>
+        <li><a href="utilities.html">Utilities</a></li>
+        <li><a href="components.html">Components</a></li>
+        <li><a href="layout.html">Layout</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <p class="noctia-license clr-white text-sml"><span class="noctia-license-holder clr-light-blue">Lanlanwi</span> <a href="license.html">License</a></p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

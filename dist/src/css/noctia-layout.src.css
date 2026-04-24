@@ -1,0 +1,127 @@
+/*!
+ * Noctia Layout CSS
+ * Version: 2.0.0
+ * © 2026 Lanlanwi
+ * Created: 2025-11-06
+ * Last Updated: 2026-04-24
+ * Licensed under the MIT License
+ * https://opensource.org/licenses/MIT
+ */
+
+
+
+
+
+:root {
+    --noctia-header-bg-color: #FFFFFF;
+    --noctia-footer-bg-color: #FFFFFF;
+
+    /* Fixed Navigation */
+    --noctia-fixed-nav-bg-color: #FFFFFF;
+    --noctia-fixed-nav-border-color: var(--noctia-neutral-color, #E5E7EB);
+
+    --noctia-fixed-nav-z-index: var(--noctia-hm-z-index, 900);
+    --noctia-fixed-nav-scroll-margin-top: 0;
+}
+
+
+
+
+
+/* ===== Noctia Layout ===== */
+body.noctia-layout {
+    display: flex;
+    flex-direction: column;
+}
+
+body.noctia-layout main {
+    flex: 1;
+
+    min-height: 0;
+
+    margin: 0 0.5rem;
+}
+
+
+
+
+
+/* ===== Noctia Header ===== */
+body.noctia-layout header,
+header.noctia-header {
+    margin-bottom: 2rem;
+    padding: 0;
+    border: 0.01px solid transparent;
+
+    background-color: var(--noctia-header-bg-color);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+/* ===== Noctia Footer ===== */
+body.noctia-layout footer,
+footer.noctia-footer {
+    margin-top: 2rem;
+    padding: 2rem 1rem 1rem;
+    border: 0.01px solid transparent;
+
+    background-color: var(--noctia-footer-bg-color);
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+/* ===== Noctia Section ===== */
+.noctia-section > section { margin: 2.5rem 0 5rem; }
+.noctia-section section:last-child { margin-bottom: 0; }
+.noctia-section .noctia-section > section { margin-block: 2rem; }
+
+
+
+
+
+/* ===== Fixed Nav ===== */
+.noctia-fixed-nav-top,
+.noctia-fixed-nav-bot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    z-index: calc(var(--noctia-fixed-nav-z-index) - 2);
+    overflow: hidden;
+
+    width: 100%;
+    max-width: 100%;
+    position: fixed;
+    right: 0;
+    left: 0;
+
+    margin: 0;
+    
+    background-color: var(--noctia-fixed-nav-bg-color);
+
+    transition: transform 0.3s;
+}
+
+.noctia-fixed-nav-top {
+    top: 0;
+
+    border-bottom: 1px solid var(--noctia-fixed-nav-border-color);
+}
+
+.noctia-fixed-nav-bot {
+    bottom: 0;
+
+    border-top: 1px solid var(--noctia-fixed-nav-border-color);
+}
+
+* { scroll-margin-top: var(--noctia-fixed-nav-scroll-margin-top); }
+
+/* Auto Hiding */
+.noctia-fixed-nav-top.auto-hiding.hide { transform: translateY(-100%); }
+.noctia-fixed-nav-bot.auto-hiding.hide { transform: translateY(100%); }

@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+
+  <title>Noctia Utilities</title>
+  <meta name="description" content="Utility classes for fast styling in Noctia.">
+  <link rel="canonical" href="https://noctia.pages.dev/utilities">
+
+
+  <meta property="og:site_name" content="Noctia">
+  <meta property="og:title" content="Noctia Utilities">
+  <meta property="og:description" content="Utility classes for fast styling in Noctia.">
+  <meta property="og:url" content="https://noctia.pages.dev/utilities">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://noctia.pages.dev/assets/images/noctia-ogp.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+
+  <meta name="twitter:site" content="@LanlanwiRoasted">
+  <meta name="twitter:creator" content="@LanlanwiRoasted">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Noctia Utilities">
+  <meta name="twitter:description" content="Utility classes for fast styling in Noctia.">
+  <meta name="twitter:image" content="https://noctia.pages.dev/assets/images/noctia-ogp.png">
+  <meta name="twitter:image:alt" content="Noctia CSS Framework">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-chrome-192x192.png">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+  <meta name="theme-color" content="#3D99F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#252525" media="(prefers-color-scheme: dark)">
+
+
+  <!-- Local -- >
+  <link rel="stylesheet" href="../dist/css/noctia.css">
+  <script src="../dist/js/noctia.js"></script
+  <!-- Local -->
+
+  <!-- CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lanlanwi/noctia@v2.0.0/dist/css/noctia.css">
+  <script src="https://cdn.jsdelivr.net/gh/lanlanwi/noctia@v2.0.0/dist/js/noctia.js"></script>
+  <!-- CDN -->
+</head>
+
+
+
+
+
+<body class="noctia-layout">
+
+<header class="bc-m-light-blue">
+  <h1 class="noctia-title-1">Utilities</h1>
+</header>
+
+
+
+<div id="menu" class="noctia-hm-menu menu-right w-75vw h-full lrg-w-25vw bc-a-light-blue border-none border-left-1 border-white">
+  <div class="spc-bot-32 elm-flex align-items-center justify-content-between">
+    <a href="index.html" class="text-dec-none elm-inline-flex align-items-center gap-8">
+      <img src="assets/images/logo-blue-icon.png" alt="Noctia Logo" class="h-32px">
+      <p class="spc-0 clr-white text-normal">Noctia <span class="noctia-version"></span></p>
+    </a>
+
+    <button class="noctia-hm-close-btn h-32px clr-white"></button>
+  </div>
+
+  <nav class="noctia-nav">
+    <ul>
+      <li><a href="#color">Color</a></li>
+      <li><a href="#size">Size</a></li>
+      <li><a href="#space">Space</a></li>
+      <li><a href="#text-color">Text Color</a></li>
+      <li><a href="#background-color">Background Color</a></li>
+      <li><a href="#font-text">Font ・ Text</a></li>
+      <li><a href="#border">Border</a></li>
+      <li><a href="#display">Display</a></li>
+      <li><a href="#overflow">Overflow</a></li>
+      <li><a href="#hide">Hide</a></li>
+    </ul>
+  </nav>
+
+  <div class="w-full spc-top-48">
+    <h2 class="noctia-title-4 p-0-i clr-white text-mdm">Links</h2>
+    <nav>
+      <ul class="p-0 clr-off-white text-smdm text-dec-none hide-list-style">
+        <li><a href="index.html">Noctia Official Page</a></li>
+        <li><a href="https://github.com/lanlanwi/Noctia">Githud</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="w-full spc-top-48">
+    <h2 class="noctia-title-4 p-0-i clr-white text-mdm">Guide</h2>
+    <nav>
+      <ul class="p-0 clr-off-white text-smdm text-dec-none hide-list-style">
+        <li><a href="base.html">Base</a></li>
+        <li><a href="utilities.html">Utilities</a></li>
+        <li><a href="components.html">Components</a></li>
+        <li><a href="layout.html">Layout</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<div class="noctia-fixed-nav-top auto-hiding p-8 bc-a-light-blue align-items-end justify-content-between">
+  <button class="noctia-scroll-top h-32px clr-white"></button>
+  <a href="index.html"><img src="assets/images/logo-transparent.png" alt="Noctia Logo" class="h-32px"></a>
+  <button aria-controls="menu" class="noctia-hm-open-btn h-32px clr-white"></button>
+</div>
+
+
+
+<main class="noctia-section">
+
+  <section id="color" class="noctia-section mdm-elm-grid mdm-grid-col-2-fr mdm-gap-x-1rem">
+    <h2 class="noctia-title-2" style="grid-column: 1 / 3;">Color</h2>
+    <section id="achromatic-colors">
+      <h3 class="noctia-title-4">Achromatic Colors（+ Brown）</h3>
+      <ul class="p-0 clr-dark-gray hide-list-style">
+        <li class="h-32px flex-center bc-white"><code>-noctia-white</code></li>
+        <li class="h-32px flex-center bc-off-white"><code>-noctia-off-white</code></li>
+        <li class="h-32px flex-center bc-very-light-gray"><code>-noctia-very-light-gray</code></li>
+        <li class="h-32px flex-center bc-silver"><code>-noctia-silver</code></li>
+        <li class="h-32px flex-center bc-light-gray"><code>-noctia-light-gray</code></li>
+        <li class="h-32px flex-center bc-gray"><code>-noctia-gray</code></li>
+        <li class="h-32px clr-very-light-gray flex-center bc-dark-gray"><code>-noctia-dark-gray</code></li>
+        <li class="h-32px clr-very-light-gray flex-center bc-mineshaft"><code>-noctia-mineshaft</code></li>
+        <li class="h-32px clr-very-light-gray flex-center bc-dark"><code>-noctia-dark</code></li>
+        <li class="h-32px clr-very-light-gray flex-center bc-rich-black"><code>-noctia-rich-black</code></li>
+        <li class="h-32px clr-very-light-gray flex-center bc-black"><code>-noctia-black</code></li>
+        <li class="h-32px clr-very-light-gray flex-center bc-brown"><code>-noctia-brown</code></li>
+      </ul>
+    </section>
+
+    <section id="base-colors">
+      <h3 class="noctia-title-4">Base Colors</h3>
+      <ul class="p-0 clr-dark-gray hide-list-style">
+        <li class="h-32px flex-center bc-b-red"><code>-noctia-base-red</code></li>
+        <li class="h-32px flex-center bc-b-orange"><code>-noctia-base-orange</code></li>
+        <li class="h-32px flex-center bc-b-yellow"><code>-noctia-base-yellow</code></li>
+        <li class="h-32px flex-center bc-b-lime"><code>-noctia-base-lime</code></li>
+        <li class="h-32px flex-center bc-b-green"><code>-noctia-base-green</code></li>
+        <li class="h-32px flex-center bc-b-cyan"><code>-noctia-base-cyan</code></li>
+        <li class="h-32px flex-center bc-b-light-blue"><code>-noctia-base-light-blue</code></li>
+        <li class="h-32px flex-center bc-b-blue"><code>-noctia-base-blue</code></li>
+        <li class="h-32px flex-center bc-b-purple"><code>-noctia-base-purple</code></li>
+        <li class="h-32px flex-center bc-b-magenta"><code>-noctia-base-magenta</code></li>
+        <li class="h-32px flex-center bc-b-pink"><code>-noctia-base-pink</code></li>
+      </ul>
+    </section>
+
+    <section id="main-colors">
+      <h3 class="noctia-title-4">Main Colors</h3>
+      <ul class="p-0 clr-dark-gray hide-list-style">
+        <li class="h-32px flex-center bc-m-red"><code>-noctia-main-red</code></li>
+        <li class="h-32px flex-center bc-m-orange"><code>-noctia-main-orange</code></li>
+        <li class="h-32px flex-center bc-m-yellow"><code>-noctia-main-yellow</code></li>
+        <li class="h-32px flex-center bc-m-lime"><code>-noctia-main-lime</code></li>
+        <li class="h-32px flex-center bc-m-green"><code>-noctia-main-green</code></li>
+        <li class="h-32px flex-center bc-m-cyan"><code>-noctia-main-cyan</code></li>
+        <li class="h-32px flex-center bc-m-light-blue"><code>-noctia-main-light-blue</code></li>
+        <li class="h-32px flex-center bc-m-blue"><code>-noctia-main-blue</code></li>
+        <li class="h-32px flex-center bc-m-purple"><code>-noctia-main-purple</code></li>
+        <li class="h-32px flex-center bc-m-magenta"><code>-noctia-main-magenta</code></li>
+        <li class="h-32px flex-center bc-m-pink"><code>-noctia-main-pink</code></li>
+      </ul>
+    </section>
+
+    <section id="accent-colors">
+      <h3 class="noctia-title-4">Accent Colors</h3>
+      <ul class="p-0 clr-dark-gray hide-list-style">
+        <li class="h-32px flex-center bc-a-red"><code>-noctia-accent-red</code></li>
+        <li class="h-32px flex-center bc-a-orange"><code>-noctia-accent-orange</code></li>
+        <li class="h-32px flex-center bc-a-yellow"><code>-noctia-accent-yellow</code></li>
+        <li class="h-32px flex-center bc-a-lime"><code>-noctia-accent-lime</code></li>
+        <li class="h-32px flex-center bc-a-green"><code>-noctia-accent-green</code></li>
+        <li class="h-32px flex-center bc-a-cyan"><code>-noctia-accent-cyan</code></li>
+        <li class="h-32px clr-off-white flex-center bc-a-light-blue"><code>-noctia-accent-light-blue</code></li>
+        <li class="h-32px clr-off-white flex-center bc-a-blue"><code>-noctia-accent-blue</code></li>
+        <li class="h-32px clr-off-white flex-center bc-a-purple"><code>-noctia-accent-purple</code></li>
+        <li class="h-32px clr-off-white flex-center bc-a-magenta"><code>-noctia-accent-magenta</code></li>
+        <li class="h-32px clr-off-white flex-center bc-a-pink"><code>-noctia-accent-pink</code></li>
+      </ul>
+    </section>
+  </section>
+
+  <section id="size" class="noctia-section">
+    <h2 class="noctia-title-2">Size</h2>
+    <section class="mdm-elm-grid mdm-grid-col-2-fr mdm-gap-x-1rem">
+      <h3 class="noctia-title-3 border-lime" style="grid-column: 1 / 3;">Width / Height</h3>
+      <figure class="noctia-code-block mdm-spc-top-16-i">
+        <figcaption class="noctia-code-header">
+          <span class="noctia-code-title">Percent</span>
+        </figcaption>
+        <div class="noctia-code-container">
+          <pre><code><span data-copy="w-auto">.w-auto { width: auto; }</span>
+<span data-copy="w-25">.w-25 { width: 25%; }</span>
+<span data-copy="w-33">.w-33 { width: 33.333%; }</span>
+<span data-copy="w-50">.w-50 { width: 50%; }</span>
+<span data-copy="w-66">.w-66 { width: 66.666%; }</span>
+<span data-copy="w-75">.w-75 { width: 75%; }</span>
+<span data-copy="w-full">.w-full { width: 100%; }</span></code></pre>
+        </div>
+      </figure>
+
+      <figure class="noctia-code-block mdm-spc-top-16-i">
+        <figcaption class="noctia-code-header">
+          <span class="noctia-code-title">px</span>
+        </figcaption>
+        <div class="noctia-code-container">
+          <pre><code><span data-copy="w-8px">.w-8px { width: 8px; }</span>
+<span data-copy="w-16px">.w-16px { width: 16px; }</span>
+<span data-copy="w-24px">.w-24px { width: 24px; }</span>
+<span data-copy="w-32px">.w-32px { width: 32px; }</span>
+<span data-copy="w-40px">.w-40px { width: 40px; }</span>
+<span data-copy="w-48px">.w-48px { width: 48px; }</span>
+<span data-copy="w-56px">.w-56px { width: 56px; }</span>
+<span data-copy="w-64px">.w-64px { width: 64px; }</span></code></pre>
+        </div>
+      </figure>
+
+      <figure class="noctia-code-block mdm-spc-top-16-i">
+        <figcaption class="noctia-code-header">
+          <span class="noctia-code-title">Viewport</span>
+        </figcaption>
+        <div class="noctia-code-container">
+          <pre><code><span data-copy="w-10vw">.w-10vw { width: 10vw; width: 10dvw; }</span>
+<span data-copy="w-25vw">.w-25vw { width: 25vw; width: 25dvw; }</span>
+<span data-copy="w-50vw">.w-50vw { width: 50vw; width: 50dvw; }</span>
+<span data-copy="w-75vw">.w-75vw { width: 75vw; width: 75dvw; }</span>
+<span data-copy="w-100vw">.w-100vw { width: 100vw; width: 100dvw; }</span></code></pre>
+        </div>
+      </figure>
+
+      <dl class="noctia-code-description mdm-spc-top-16-i">
+        <dt><code>.h-a</code></dt>
+        <dd><pre><code>.h-a { height: a; }</code></pre></dd>
+        <dt><code>.w-a-i</code></dt>
+        <dd><pre><code>.w-a-i { width: a !important; }
+.h-a-i { height: a !important; }</code></pre></dd>
+        <dt><code>.mdm-a-b</code></dt>
+        <dd><pre><code>@media (min-width: 768px) {
+  .mdm-a-b { a: b; }
+  .mdm-a-b-i { a: b !important; }
+}</code></pre></dd>
+        <dt><code>.lrg-a-b</code></dt>
+        <dd><pre><code>@media (min-width: 1024px) {
+  .lrg-a-b { a: b; }
+  .lrg-a-b { a: b !important; }
+}</code></pre></dd>
+      </dl>
+    </section>
+
+    <section>
+      <h3 class="noctia-title-3 border-lime">Aspect Ratio</h3>
+      <ul class="p-0 elm-grid grid-col-3-fr mdm-grid-col-5-fr gap-0-5rem hide-list-style">
+        <li class="w-full-i h-auto-i ratio-1-1-i flex-center">
+          <code data-copy="ratio-1-1" class="w-full-i h-auto-i spc-0-i text-fixed-break border-1 flex-center overflow-hidden ratio-1-1-i">.ratio-1-1</code>
+        </li>
+        <li class="w-full-i h-auto-i ratio-1-1-i flex-center">
+          <code data-copy="ratio-16-9" class="w-full-i h-auto-i spc-0-i text-fixed-break border-1 flex-center overflow-hidden ratio-16-9-i">.ratio-16-9</code>
+        </li>
+        <li class="w-full-i h-auto-i ratio-1-1-i flex-center">
+          <code data-copy="ratio-9-16" class="w-auto-i h-full-i spc-0-i text-fixed-break border-1 flex-center overflow-hidden ratio-9-16-i">.ratio-9-16</code>
+        </li>
+        <li class="w-full-i h-auto-i ratio-1-1-i flex-center">
+          <code data-copy="ratio-4-3" class="w-full-i h-auto-i spc-0-i text-fixed-break border-1 flex-center overflow-hidden ratio-4-3-i">.ratio-4-3</code>
+        </li>
+        <li class="w-full-i h-auto-i ratio-1-1-i flex-center">
+          <code data-copy="ratio-3-4" class="w-auto-i h-full-i spc-0-i text-fixed-break border-1 flex-center overflow-hidden ratio-3-4-i">.ratio-3-4</code>
+        </li>
+        <li class="w-full-i h-auto-i ratio-1-1-i flex-center">
+          <code data-copy="ratio-3-2" class="w-full-i h-auto-i spc-0-i text-fixed-break border-1 flex-center overflow-hidden ratio-3-2-i">.ratio-3-2</code>
+        </li>
+        <li class="w-full-i h-auto-i ratio-1-1-i flex-center">
+          <code data-copy="ratio-2-3" class="w-auto-i h-full-i spc-0-i text-fixed-break border-1 flex-center overflow-hidden ratio-2-3-i">.ratio-2-3</code>
+        </li>
+      </ul>
+      <dl class="noctia-code-description spc-top-32-i">
+        <dt><code>.ratio-a-b-i</code></dt>
+        <dd><pre><code>.ratio-a-b-i { aspect-ratio: a / b !important; }</code></pre></dd>
+      </dl>
+    </section>
+  </section>
+
+  <section id="space">
+    <h2 class="noctia-title-2">Space</h2>
+    <div class="noctia-code-container">
+      <pre><code><span data-copy="spc-0">.spc-0 { margin: 0; }</span>
+<span data-copy="spc-2">.spc-2 { margin: 2px; }</span>
+<span data-copy="spc-4">.spc-4 { margin: 4px; }</span>
+<span data-copy="spc-8">.spc-8 { margin: 8px; }</span>
+<span data-copy="spc-16">.spc-16 { margin: 16px; }</span>
+<span data-copy="spc-24">.spc-24 { margin: 24px; }</span>
+<span data-copy="spc-32">.spc-32 { margin: 32px; }</span>
+<span data-copy="spc-40">.spc-40 { margin: 40px; }</span>
+<span data-copy="spc-48">.spc-48 { margin: 48px; }</span>
+<span data-copy="spc-56">.spc-56 { margin: 56px; }</span>
+<span data-copy="spc-64">.spc-64 { margin: 64px; }</span>
+<span data-copy="spc-center">.spc-center { margin: auto; }</span></code></pre>
+    </div>
+
+    <dl class="noctia-code-description">
+      <dt><code>.p-a</code></dt>
+      <dd><pre><code>.p-a { padding: a; }</code></pre></dd>
+      <dd>.p-center is not styled</dd>
+      <dt><code>.spc-a-i</code></dt>
+      <dd><pre><code>.spc-a-i { margin: a !important; }
+.p-a-i { padding: a !important; }</code></pre></dd>
+      <dt><code>.a-x-b</code></dt>
+      <dd><pre><code>.a-x-b { a-inline: b; }
+.a-x-b-i { a-inline: b !important; }</code></pre></dd>
+      <dt><code>.a-y-b</code></dt>
+      <dd><pre><code>.a-y-b { a-block: b; }
+.a-y-b-i { a-block: b !important; }</code></pre></dd>
+      <dt><code>.a-top-b</code></dt>
+      <dd><pre><code>.a-top-b { a-top: b; }
+.a-top-b-i { a-top: b !important; }</code></pre></dd>
+      <dt><code>.a-right-b</code></dt>
+      <dd><pre><code>.a-right-b { a-right: b; }
+.a-right-b-i { a-right: b !important; }</code></pre></dd>
+      <dt><code>.a-bot-b</code></dt>
+      <dd><pre><code>.a-bot-b { a-bottom: b; }
+.a-bot-b-i { a-bottom: b !important; }</code></pre></dd>
+      <dt><code>.a-left-b</code></dt>
+      <dd><pre><code>.a-left-b { a-left: b; }
+.a-left-b-i { a-left: b !important; }</code></pre></dd>
+      <dt><code>.mdm-a-b-c</code></dt>
+      <dd><pre><code>@media (min-width: 768px) {
+  .mdm-a-b { a: b; }
+  .mdm-a-b-i { a: b !important; }
+  .mdm-a-b-c { a-b: c; }
+  .mdm-a-b-c-i { a-b: c !important; }
+}</code></pre></dd>
+      <dt><code>.lrg-a-b-c</code></dt>
+      <dd><pre><code>@media (min-width: 1024px) {
+  .lrg-a-b { a: b; }
+  .lrg-a-b-i { a: b !important; }
+  .lrg-a-b-c { a-b: c; }
+  .lrg-a-b-c-i { a-b: c !important; }
+}</code></pre></dd>
+    </dl>
+  </section>
+
+  <section id="text-color" class="noctia-section mdm-elm-grid mdm-grid-col-2-fr mdm-gap-x-1rem">
+    <h2 class="noctia-title-2" style="grid-column: 1 / 3;">Text Color</h2>
+    <section>
+      <h3 class="noctia-title-4">Achromatic Colors（+ Brown）</h3>
+      <a href="#achromatic-colors" class="text-small">Achromatic Colors</a>
+      <ul>
+        <li class="bc-silver clr-white"><code data-copy="clr-white">.clr-white</code></li>
+        <li class="bc-silver clr-off-white"><code data-copy="clr-off-white">.clr-off-white</code></li>
+        <li class="bc-silver clr-very-light-gray"><code data-copy="clr-very-light-gray">.clr-very-light-gray</code></li>
+        <li class="clr-silver"><code data-copy="clr-silver">.clr-silver</code></li>
+        <li class="clr-light-gray"><code data-copy="clr-light-gray">.clr-light-gray</code></li>
+        <li class="clr-gray"><code data-copy="clr-gray">.clr-gray</code></li>
+        <li class="clr-dark-gray"><code data-copy="clr-dark-gray">.clr-dark-gray</code></li>
+        <li class="clr-mineshaft"><code data-copy="clr-mineshaft">.clr-mineshaft</code></li>
+        <li class="clr-dark"><code data-copy="clr-dark">.clr-dark</code></li>
+        <li class="clr-rich-black"><code data-copy="clr-rich-black">.clr-rich-black</code></li>
+        <li class="clr-black"><code data-copy="clr-black">.clr-black</code></li>
+        <li class="clr-brown"><code data-copy="clr-brown">.clr-brown</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h3 class="noctia-title-4">Chromatic Colors（Accent）</h3>
+      <a href="#accent-colors" class="text-small">Accent Colors</a>
+      <ul>
+        <li class="clr-red"><code data-copy="clr-red">.clr-red</code></li>
+        <li class="clr-orange"><code data-copy="clr-orange">.clr-orange</code></li>
+        <li class="clr-yellow"><code data-copy="clr-yellow">.clr-yellow</code></li>
+        <li class="clr-lime"><code data-copy="clr-lime">.clr-lime</code></li>
+        <li class="clr-green"><code data-copy="clr-green">.clr-green</code></li>
+        <li class="clr-cyan"><code data-copy="clr-cyan">.clr-cyan</code></li>
+        <li class="clr-light-blue"><code data-copy="clr-light-blue">.clr-light-blue</code></li>
+        <li class="clr-blue"><code data-copy="clr-blue">.clr-blue</code></li>
+        <li class="clr-purple"><code data-copy="clr-purple">.clr-purple</code></li>
+        <li class="clr-magenta"><code data-copy="clr-magenta">.clr-magenta</code></li>
+        <li class="clr-pink"><code data-copy="clr-pink">.clr-pink</code></li>
+      </ul>
+    </section>
+  </section>
+
+  <section id="background-color" class="noctia-section mdm-elm-grid mdm-grid-col-2-fr mdm-gap-x-1rem">
+    <h2 class="noctia-title-2" style="grid-column: 1 / 3;">Background Color</h2>
+    <section>
+      <h3 class="noctia-title-4">Achromatic Colors（+ Brown）</h3>
+      <a href="#achromatic-colors" class="text-small">Achromatic Colors</a>
+      <div class="noctia-code-container">
+        <pre><code><span data-copy="bc-transparent">.bc-transparent { background-color: transparent !important; }</span>
+<span data-copy="bc-white">.bc-white { background-color: var(--noctia-white) !important; }</span>
+<span data-copy="bc-off-white">.bc-off-white { background-color: var(--noctia-off-white) !important; }</span>
+<span data-copy="bc-very-light-gray">.bc-very-light-gray { background-color: var(--noctia-very-light-gray) !important; }</span>
+<span data-copy="bc-silver">.bc-silver { background-color: var(--noctia-silver) !important; }</span>
+<span data-copy="bc-light-gray">.bc-light-gray { background-color: var(--noctia-light-gray) !important; }</span>
+<span data-copy="bc-gray">.bc-gray { background-color: var(--noctia-gray) !important; }</span>
+<span data-copy="bc-dark-gray">.bc-dark-gray { background-color: var(--noctia-dark-gray) !important; }</span>
+<span data-copy="bc-mineshaft">.bc-mineshaft { background-color: var(--noctia-mineshaft) !important; }</span>
+<span data-copy="bc-dark">.bc-dark { background-color: var(--noctia-dark) !important; }</span>
+<span data-copy="bc-rich-black">.bc-rich-black { background-color: var(--noctia-rich-black) !important; }</span>
+<span data-copy="bc-black">.bc-black { background-color: var(--noctia-black) !important; }</span>
+<span data-copy="bc-brown">.bc-brown { background-color: var(--noctia-brown) !important; }</span></code></pre>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="noctia-title-4">Base Colors</h3>
+      <a href="#base-colors" class="text-small">Base Colors</a>
+      <div class="noctia-code-container">
+        <pre><code><span data-copy="bc-b-red">.bc-b-red { background-color: var(--noctia-base-red) !important; }</span>
+<span data-copy="bc-b-orange">.bc-b-orange { background-color: var(--noctia-base-orange) !important; }</span>
+<span data-copy="bc-b-yellow">.bc-b-yellow { background-color: var(--noctia-base-yellow) !important; }</span>
+<span data-copy="bc-b-lime">.bc-b-lime { background-color: var(--noctia-base-lime) !important; }</span>
+<span data-copy="bc-b-green">.bc-b-green { background-color: var(--noctia-base-green) !important; }</span>
+<span data-copy="bc-b-cyan">.bc-b-cyan { background-color: var(--noctia-base-cyan) !important; }</span>
+<span data-copy="bc-b-light-blue">.bc-b-light-blue { background-color: var(--noctia-base-light-blue) !important; }</span>
+<span data-copy="bc-b-blue">.bc-b-blue { background-color: var(--noctia-base-blue) !important; }</span>
+<span data-copy="bc-b-purple">.bc-b-purple { background-color: var(--noctia-base-purple) !important; }</span>
+<span data-copy="bc-b-magenta">.bc-b-magenta { background-color: var(--noctia-base-magenta) !important; }</span>
+<span data-copy="bc-b-pink">.bc-b-pink { background-color: var(--noctia-base-pink) !important; }</span></code></pre>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="noctia-title-4">Main Colors</h3>
+      <a href="#main-colors" class="text-small">Main Colors</a>
+      <div class="noctia-code-container">
+        <pre><code><span data-copy="bc-m-red">.bc-m-red { background-color: var(--noctia-main-red) !important; }</span>
+<span data-copy="bc-m-orange">.bc-m-orange { background-color: var(--noctia-main-orange) !important; }</span>
+<span data-copy="bc-m-yellow">.bc-m-yellow { background-color: var(--noctia-main-yellow) !important; }</span>
+<span data-copy="bc-m-lime">.bc-m-lime { background-color: var(--noctia-main-lime) !important; }</span>
+<span data-copy="bc-m-green">.bc-m-green { background-color: var(--noctia-main-green) !important; }</span>
+<span data-copy="bc-m-cyan">.bc-m-cyan { background-color: var(--noctia-main-cyan) !important; }</span>
+<span data-copy="bc-m-light-blue">.bc-m-light-blue { background-color: var(--noctia-main-light-blue) !important; }</span>
+<span data-copy="bc-m-blue">.bc-m-blue { background-color: var(--noctia-main-blue) !important; }</span>
+<span data-copy="bc-m-purple">.bc-m-purple { background-color: var(--noctia-main-purple) !important; }</span>
+<span data-copy="bc-m-magenta">.bc-m-magenta { background-color: var(--noctia-main-magenta) !important; }</span>
+<span data-copy="bc-m-pink">.bc-m-pink { background-color: var(--noctia-main-pink) !important; }</span></code></pre>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="noctia-title-4">Accent Colors</h3>
+      <a href="#accent-colors" class="text-small">Accent Colors</a>
+      <div class="noctia-code-container">
+        <pre><code><span data-copy="bc-a-red">.bc-a-red { background-color: var(--noctia-accent-red) !important; }</span>
+<span data-copy="bc-a-orange">.bc-a-orange { background-color: var(--noctia-accent-orange) !important; }</span>
+<span data-copy="bc-a-yellow">.bc-a-yellow { background-color: var(--noctia-accent-yellow) !important; }</span>
+<span data-copy="bc-a-lime">.bc-a-lime { background-color: var(--noctia-accent-lime) !important; }</span>
+<span data-copy="bc-a-green">.bc-a-green { background-color: var(--noctia-accent-green) !important; }</span>
+<span data-copy="bc-a-cyan">.bc-a-cyan { background-color: var(--noctia-accent-cyan) !important; }</span>
+<span data-copy="bc-a-light-blue">.bc-a-light-blue { background-color: var(--noctia-accent-light-blue) !important; }</span>
+<span data-copy="bc-a-blue">.bc-a-blue { background-color: var(--noctia-accent-blue) !important; }</span>
+<span data-copy="bc-a-purple">.bc-a-purple { background-color: var(--noctia-accent-purple) !important; }</span>
+<span data-copy="bc-a-magenta">.bc-a-magenta { background-color: var(--noctia-accent-magenta) !important; }</span>
+<span data-copy="bc-a-pink">.bc-a-pink { background-color: var(--noctia-accent-pink) !important; }</span></code></pre>
+      </div>
+    </section>
+  </section>
+
+  <section id="font-text" class="noctia-section">
+    <h2 class="noctia-title-2">Font ・ Text</h2>
+    <section>
+      <h3 class="noctia-title-3 border-orange">Font Family</h3>
+      <div class="noctia-code-container">
+        <pre><code>:root {
+    --noctia-sans: "Yu Gothic", "Meiryo", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    --noctia-serif: "Hiragino Mincho Pro", "Yu Mincho", "MS PMincho", Georgia, "Times New Roman", Times, serif;
+    --noctia-mono: "Yu Gothic UI", "MS Gothic", "Courier New", Courier, monospace;
+}
+
+<span data-copy="font-sans">.font-sans { font-family: var(--noctia-sans) !important; }</span>
+<span data-copy="font-serif">.font-serif { font-family: var(--noctia-serif) !important; }</span>
+<span data-copy="font-mono">.font-mono { font-family: var(--noctia-mono) !important; }</span></code></pre>
+      </div>
+      <ul class="noctia-list">
+        <li><code class="font-sans">.font-sans</code></li>
+        <li><code class="font-serif">.font-serif</code></li>
+        <li><code class="font-mono">.font-mono</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h3 class="noctia-title-3 border-orange">Font Size</h3>
+      <div class="noctia-code-container">
+        <pre><code><span data-copy="text-sml">.text-sml { font-size: 0.875rem !important; }</span>
+<span data-copy="text-normal">.text-normal { font-size: 1rem !important; }</span>
+<span data-copy="text-smdm">.text-smdm { font-size: 1.125rem !important; }</span>
+<span data-copy="text-mdm">.text-mdm { font-size: 1.25rem !important; }</span>
+<span data-copy="text-lrg">.text-lrg { font-size: 1.5rem !important; }</span>
+<span data-copy="text-xlrg">.text-xlrg { font-size: 2rem !important; }</span>
+<span data-copy="text-xxlrg">.text-xxlrg { font-size: 3rem !important; }</span>
+<span data-copy="text-xxxlrg">.text-xxxlrg { font-size: 4rem !important; }</span></code></pre>
+      </div>
+      <ul class="noctia-list">
+        <li><code class="text-sml">.text-sml</code></li>
+        <li><code class="text-normal">.text-normal</code></li>
+        <li><code class="text-smdm">.text-smdm</code></li>
+        <li><code class="text-mdm">.text-mdm</code></li>
+        <li><code class="text-lrg">.text-lrg</code></li>
+        <li><code class="text-xlrg">.text-xlrg</code></li>
+        <li><code class="text-xxlrg">.text-xxlrg</code></li>
+        <li><code class="text-xxxlrg">.text-xxxlrg</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h3 class="noctia-title-3 border-orange">Font Weight & Font Style</h3>
+      <div class="noctia-code-container">
+        <pre><code><span data-copy="font-normal">.font-normal { font-weight: normal !important; }</span>
+<span data-copy="font-bold">.font-bold { font-weight: bold !important; }</span>
+<span data-copy="font-italic">.font-italic { font-style: italic !important; }</span></code></pre>
+      </div>
+      <ul class="noctia-list">
+        <li><code class="font-normal">.font-normal</code></li>
+        <li><code class="font-bold">.font-bold</code></li>
+        <li><code class="font-italic">.font-italic</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h3 class="noctia-title-3 border-orange">Line Height</h3>
+      <div class="noctia-code-container">
+        <pre><code><span data-copy="line-h-normal">.line-h-normal { line-height: normal !important; }</span>
+<span data-copy="line-h-1">.line-h-1 { line-height: 1 !important; }</span>
+<span data-copy="line-h-1-4">.line-h-1-4 { line-height: 1.4 !important; }</span>
+<span data-copy="line-h-1-5">.line-h-1-5 { line-height: 1.5 !important; }</span>
+<span data-copy="line-h-1-6">.line-h-1-6 { line-height: 1.6 !important; }</span>
+<span data-copy="line-h-2">.line-h-2 { line-height: 2 !important; }</span></code></pre>
+      </div>
+      <ul class="noctia-list">
+        <li class="border-1 line-h-normal"><code>.line-h-normal</code></li>
+        <li class="border-1 line-h-1"><code>.line-h-1</code></li>
+        <li class="border-1 line-h-1-4"><code>.line-h-1-4</code></li>
+        <li class="border-1 line-h-1-5"><code>.line-h-1-5</code></li>
+        <li class="border-1 line-h-1-6"><code>.line-h-1-6</code></li>
+        <li class="border-1 line-h-2"><code>.line-h-2</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h3 class="noctia-title-3 border-orange">Text Align</h3>
+      <div class="noctia-code-container">
+        <pre><code><span data-copy="text-left">.text-left { text-align: left !important; }</span>
+<span data-copy="text-center">.text-center { text-align: center !important; }</span>
+<span data-copy="text-right">.text-right { text-align: right !important; }</span></code></pre>
+      </div>
+      <ul class="noctia-list">
+        <li class="text-left"><code>.text-left</code></li>
+        <li class="text-center"><code>.text-center</code></li>
+        <li class="text-right"><code>.text-right</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h3 class="noctia-title-3 border-orange">Text Decoration</h3>
+      <div class="noctia-code-container">
+        <pre><code><span data-copy="text-dec-none">.text-dec-none,
+.text-dec-none * { text-decoration: none !important; }</span>
+
+<span data-copy="text-dec-under">.text-dec-under,
+.text-dec-under * { text-decoration: underline !important; }</span>
+
+<span data-copy="text-dec-line-through">.text-dec-line-through,
+.text-dec-line-through * { text-decoration: line-through !important; }</span></code></pre>
+      </div>
+      <ul class="noctia-list">
+        <li><code class="text-dec-none">.text-dec-none</code></li>
+        <li><code class="text-dec-under">.text-dec-under</code></li>
+        <li><code class="text-dec-line-through">.text-dec-line-through</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h3 class="noctia-title-3 border-orange">White Space</h3>
+      <div class="noctia-code-container">
+        <pre><code><span data-copy="text-pre">.text-pre { white-space: pre !important; }</span>
+<span data-copy="text-pre-wrap">.text-pre-wrap { white-space: pre-wrap !important; }</span></code></pre>
+      </div>
+      <ul class="noctia-list">
+        <li><pre class="h-10vh p-8 text-small border-1 overflow-auto text-pre"><code>.text-pre</code>（This is a test sentence. It includes long words such as Supercalifragilisticexpialidocious and Pneumonoultramicroscopicsilicovolcanoconiosis, and uses SampleText123 to check display and layout. We will verify functionality with Version 2.0 and also test how difficult-to-fit words like ExtraordinaryLongWordExample are handled）</pre></li>
+        <li><pre class="h-10vh p-8 text-small border-1 overflow-auto text-pre-wrap"><code>.text-pre-wrap</code>（This is a test sentence. It includes long words such as Supercalifragilisticexpialidocious and Pneumonoultramicroscopicsilicovolcanoconiosis, and uses SampleText123 to check display and layout. We will verify functionality with Version 2.0 and also test how difficult-to-fit words like ExtraordinaryLongWordExample are handled）</pre></li>
+      </ul>
+    </section>
+
+    <section>
+      <h3 class="noctia-title-3 border-orange">Word Wrap & Word Break</h3>
+      <div class="noctia-code-container">
+        <pre><code><span data-copy="text-wrap">.text-wrap { overflow-wrap: break-word !important; }</span>
+
+<span data-copy="word-break-all">.word-break-all { word-break: break-all !important; }</span>
+<span data-copy="word-break-keep">.word-break-keep { word-break: keep-all !important; }</span>
+
+<span data-copy="text-fixed-break">.text-fixed-break {
+    overflow-wrap: break-word !important;
+    word-break: break-all !important;
+}</span></code></pre>
+      </div>
+      <ul class="noctia-list">
+        <li class="text-wrap"><code>.text-wrap</code>（This is a test sentence. It includes long words such as Supercalifragilisticexpialidocious and Pneumonoultramicroscopicsilicovolcanoconiosis）</li>
+        <li class="word-break-all"><code>.word-break-all</code>（This is a test sentence. It includes long words such as Supercalifragilisticexpialidocious and Pneumonoultramicroscopicsilicovolcanoconiosis）</li>
+        <li class="word-break-keep"><code>.word-break-keep</code>（This is a test sentence. It includes long words such as Supercalifragilisticexpialidocious and Pneumonoultramicroscopicsilicovolcanoconiosis）</li>
+        <li class="text-fixed-break"><code>.text-fixed-break</code>（This is a test sentence. It includes long words such as Supercalifragilisticexpialidocious and Pneumonoultramicroscopicsilicovolcanoconiosis）</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3 class="noctia-title-3 border-orange">Text Overflow</h3>
+      <div class="noctia-code-container">
+        <pre><code><span data-copy="text-ellipsis">.text-ellipsis {
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+}</span></code></pre>
+      </div>
+      <ul class="noctia-list">
+        <li><p class="text-ellipsis"><code>.text-ellipsis</code>（This is a test sentence. It includes long words such as Supercalifragilisticexpialidocious and Pneumonoultramicroscopicsilicovolcanoconiosis, and uses SampleText123 to check display and layout. We will verify functionality with Version 2.0 and also test how difficult-to-fit words like ExtraordinaryLongWordExample are handled）</p></li>
+      </ul>
+    </section>
+  </section>
+
+  <section id="border" class="noctia-section">
+    <h2 class="noctia-title-2">Border</h2>
+    <section>
+      <h3 class="noctia-title-3 border-light-blue">Size</h3>
+      <div class="noctia-code-container">
+        <pre><code><span data-copy="border-none">.border-none { border: none !important; }</span>
+<span data-copy="border-0-5">.border-0-5 { border: 0.5px solid var(--noctia-base-border-color) !important; }</span>
+<span data-copy="border-1">.border-1 { border: 1px solid var(--noctia-base-border-color) !important; }</span>
+<span data-copy="border-2">.border-2 { border: 2px solid var(--noctia-base-border-color) !important; }</span>
+<span data-copy="border-4">.border-4 { border: 4px solid var(--noctia-base-border-color) !important; }</span>
+<span data-copy="border-8">.border-8 { border: 8px solid var(--noctia-base-border-color) !important; }</span></code></pre>
+      </div>
+      <ul class="noctia-list">
+        <li class="p-4 border-none"><code>.border-none</code></li>
+        <li class="p-4 border-0-5"><code>.border-0-5</code></li>
+        <li class="p-4 border-1"><code>.border-1</code></li>
+        <li class="p-4 border-2"><code>.border-2</code></li>
+        <li class="p-4 border-4"><code>.border-4</code></li>
+        <li class="p-4 border-8"><code>.border-8</code></li>
+      </ul>
+      <dl class="noctia-code-description">
+        <dt>Default Border Color</dt>
+        <dd><pre class="text-pre-wrap"><code>:root {
+    --noctia-base-border-color: #000000;
+}</code></pre></dd>
+        <dt><code>.border-top-a</code></dt>
+        <dd><pre><code>.border-top-a { border-top: a !important; }</code></pre></dd>
+        <dt><code>.border-right-a</code></dt>
+        <dd><pre><code>.border-right-a { border-right: a !important; }</code></pre></dd>
+        <dt><code>.border-bot-a</code></dt>
+        <dd><pre><code>.border-bot-a { border-bottom: a !important; }</code></pre></dd>
+        <dt><code>.border-left-a</code></dt>
+        <dd><pre><code>.border-left-a { border-left: a !important; }</code></pre></dd>
+      </dl>
+    </section>
+
+    <section>
+      <h3 class="noctia-title-3 border-light-blue">Radius</h3>
+      <div class="noctia-code-container">
+        <pre><code><span data-copy="border-r-0">.border-r-0 { border-radius: 0 !important; }</span>
+<span data-copy="border-r-1">.border-r-1 { border-radius: 1px !important; }</span>
+<span data-copy="border-r-2">.border-r-2 { border-radius: 2px !important; }</span>
+<span data-copy="border-r-4">.border-r-4 { border-radius: 4px !important; }</span>
+<span data-copy="border-r-8">.border-r-8 { border-radius: 8px !important; }</span>
+<span data-copy="border-r-16">.border-r-16 { border-radius: 16px !important; }</span>
+<span data-copy="border-r-24">.border-r-24 { border-radius: 24px !important; }</span>
+<span data-copy="border-r-32">.border-r-32 { border-radius: 32px !important; }</span>
+<span data-copy="border-r-40">.border-r-40 { border-radius: 40px !important; }</span>
+<span data-copy="border-r-48">.border-r-48 { border-radius: 48px !important; }</span>
+<span data-copy="border-r-56">.border-r-56 { border-radius: 56px !important; }</span>
+<span data-copy="border-r-64">.border-r-64 { border-radius: 64px !important; }</span>
+<span data-copy="border-r-999">.border-r-999 { border-radius: 99999px !important; }</span></code></pre>
+      </div>
+    </section>
+
+    <section id="border-color" class="mdm-elm-grid mdm-grid-col-2-fr mdm-gap-x-1rem">
+      <h3 class="noctia-title-3 border-light-blue" style="grid-column: 1 / 3;">Color</h3>
+      <section>
+        <h4 class="noctia-title-4">Achromatic Colors（+ Brown）</h4>
+        <a href="#achromatic-colors" class="text-small">Achromatic Colors</a>
+        <ul class="noctia-list">
+          <li class="p-4 bc-very-light-gray border-4 border-white" style="outline: 2px solid var(--noctia-very-light-gray)"><code data-copy="border-white">.border-white</code></li>
+          <li class="p-4 border-4 border-off-white"><code data-copy="border-off-white">.border-off-white</code></li>
+          <li class="p-4 border-4 border-very-light-gray"><code data-copy="border-very-light-gray">.border-very-light-gray</code></li>
+          <li class="p-4 border-4 border-silver"><code data-copy="border-silver">.border-silver</code></li>
+          <li class="p-4 border-4 border-light-gray"><code data-copy="border-light-gray">.border-light-gray</code></li>
+          <li class="p-4 border-4 border-gray"><code data-copy="border-gray">.border-gray</code></li>
+          <li class="p-4 border-4 border-dark-gray"><code data-copy="border-dark-gray">.border-dark-gray</code></li>
+          <li class="p-4 border-4 border-mineshaft"><code data-copy="border-mineshaft">.border-mineshaft</code></li>
+          <li class="p-4 border-4 border-dark"><code data-copy="border-dark">.border-dark</code></li>
+          <li class="p-4 border-4 border-rich-black"><code data-copy="border-rich-black">.border-rich-black</code></li>
+          <li class="p-4 border-4 border-black"><code data-copy="border-black">.border-black</code></li>
+          <li class="p-4 border-4 border-brown"><code data-copy="border-brown">.border-brown</code></li>
+        </ul>
+      </section>
+
+      <section>
+        <h4 class="noctia-title-4">Chromatic Colors（Accent）</h4>
+        <a href="#accent-colors" class="text-small">Accent Colors</a>
+        <ul class="noctia-list">
+          <li class="p-4 border-4 border-red"><code data-copy="border-red">.border-red</code></li>
+          <li class="p-4 border-4 border-orange"><code data-copy="border-orange">.border-orange</code></li>
+          <li class="p-4 border-4 border-yellow"><code data-copy="border-yellow">.border-yellow</code></li>
+          <li class="p-4 border-4 border-lime"><code data-copy="border-lime">.border-lime</code></li>
+          <li class="p-4 border-4 border-green"><code data-copy="border-green">.border-green</code></li>
+          <li class="p-4 border-4 border-cyan"><code data-copy="border-cyan">.border-cyan</code></li>
+          <li class="p-4 border-4 border-light-blue"><code data-copy="border-light-blue">.border-light-blue</code></li>
+          <li class="p-4 border-4 border-blue"><code data-copy="border-blue">.border-blue</code></li>
+          <li class="p-4 border-4 border-purple"><code data-copy="border-purple">.border-purple</code></li>
+          <li class="p-4 border-4 border-magenta"><code data-copy="border-magenta">.border-magenta</code></li>
+          <li class="p-4 border-4 border-pink"><code data-copy="border-pink">.border-pink</code></li>
+        </ul>
+      </section>
+    </section>
+  </section>
+
+  <section id="display" class="noctia-section">
+    <h2 class="noctia-title-2">Display</h2>
+    <div class="noctia-code-container">
+      <pre><code><span data-copy="elm-none">.elm-none { display: none !important; }</span>
+<span data-copy="elm-block">.elm-block { display: block !important; }</span>
+<span data-copy="elm-inline">.elm-inline { display: inline !important; }</span>
+<span data-copy="elm-inline-block">.elm-inline-block { display: inline-block !important; }</span>
+
+<span data-copy="elm-flex">.elm-flex { display: flex !important; }</span>
+<span data-copy="elm-inline-flex">.elm-inline-flex { display: inline-flex !important; }</span>
+
+<span data-copy="elm-grid">.elm-grid { display: grid !important; }</span>
+<span data-copy="elm-inline-grid">.elm-inline-grid { display: inline-grid !important; }</span></code></pre>
+    </div>
+    <dl class="noctia-code-description">
+      <dt><code>.mdm-elm-a</code></dt>
+      <dd><pre><code>@media (min-width: 768px) {
+  .mdm-elm-a { display: a !important; }
+}</code></pre></dd>
+      <dt><code>.lrg-elm-a</code></dt>
+      <dd><pre><code>@media (min-width: 1024px) {
+  .lrg-elm-a { display: a !important; }
+}</code></pre></dd>
+    </dl>
+
+    <section>
+      <h3 class="noctia-title-3 border-red">Flex Option</h3>
+      <div class="noctia-code-container">
+        <pre><code><span data-copy="flex-center">.flex-center {
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+}</span>
+
+<span data-copy="flex-column">.flex-column {
+    display: flex;
+    flex-direction: column !important;
+}</span>
+
+<span data-copy="flex-wrap">.flex-wrap {
+    display: flex;
+    flex-wrap: wrap !important;
+}</span>
+
+<span data-copy="flex-flow-fixed">.flex-flow-fixed {
+    display: flex;
+    flex-flow: column wrap !important;
+}</span>
+
+<span data-copy="flex-1">.flex-1 { flex: 1 !important; }</span></code></pre>
+      </div>
+      <dl class="noctia-code-description">
+        <dt><code>.mdm-a</code></dt>
+        <dd><pre><code>@media (min-width: 768px) {
+  .mdm-a { a }
+}</pre></code></dd>
+        <dt><code>.lrg-a</code></dt>
+        <dd><pre><code>@media (min-width: 1024px) {
+  .lrg-a { a }
+}</pre></code></dd>
+      </dl>
+    </section>
+
+    <section>
+      <h3 class="noctia-title-3 border-red">Grid Template</h3>
+      <div class="noctia-code-container">
+        <pre><code><span data-copy="grid-col-1-auto">.grid-col-1-auto { grid-template-columns: auto !important; }</span>
+<span data-copy="grid-col-2-auto">.grid-col-2-auto { grid-template-columns: repeat(2, auto) !important; }</span>
+<span data-copy="grid-col-3-auto">.grid-col-3-auto { grid-template-columns: repeat(3, auto) !important; }</span>
+<span data-copy="grid-col-4-auto">.grid-col-4-auto { grid-template-columns: repeat(4, auto) !important; }</span>
+<span data-copy="grid-col-5-auto">.grid-col-5-auto { grid-template-columns: repeat(5, auto) !important; }</span></code></pre>
+      </div>
+      <dl class="noctia-code-description">
+        <dt><code>.grid-col-a-fr</code></dt>
+        <dd><pre><code>.grid-col-a-fr { grid-template-columns: repeat(a, 1fr) !important; }</code></pre></dd>
+        <dt><code>.grid-row-a-b</code></dt>
+        <dd><pre><code>.grid-row-a-b { grid-template-rows: repeat(a, b) !important; }</code></pre></dd>
+        <dt><code>.mdm-grid-a-b-c</code></dt>
+        <dd><pre><code>@media (min-width: 768px) {
+  .mdm-grid-a-b-c { grid-template-a: repeat(b, c) !important; }
+}</code></pre></dd>
+        <dt><code>.lrg-grid-a-b-c</code></dt>
+        <dd><pre><code>@media (min-width: 1024px) {
+  .lrg-grid-a-b-c { grid-template-a: repeat(b, c) !important; }
+}</code></pre></dd>
+      </dl>
+    </section>
+
+    <section class="mdm-elm-grid mdm-grid-col-2-fr mdm-gap-x-1rem">
+      <h3 class="noctia-title-3 border-red" style="grid-column: 1 / 3;">Gap</h3>
+      <figure class="noctia-code-block">
+        <figcaption class="noctia-code-header">
+          <span class="noctia-code-title">px</span>
+        </figcaption>
+        <div class="noctia-code-container">
+          <pre><code><span data-copy="gap-0">.gap-0 { gap: 0 !important; }</span>
+<span data-copy="gap-2">.gap-2 { gap: 2px !important; }</span>
+<span data-copy="gap-4">.gap-4 { gap: 4px !important; }</span>
+<span data-copy="gap-8">.gap-8 { gap: 8px !important; }</span>
+<span data-copy="gap-16">.gap-16 { gap: 16px !important; }</span>
+<span data-copy="gap-24">.gap-24 { gap: 24px !important; }</span>
+<span data-copy="gap-32">.gap-32 { gap: 32px !important; }</span>
+<span data-copy="gap-40">.gap-40 { gap: 40px !important; }</span>
+<span data-copy="gap-48">.gap-48 { gap: 48px !important; }</span>
+<span data-copy="gap-56">.gap-56 { gap: 56px !important; }</span>
+<span data-copy="gap-64">.gap-64 { gap: 64px !important; }</span></code></pre>
+        </div>
+      </figure>
+
+      <figure class="noctia-code-block">
+        <figcaption class="noctia-code-header">
+          <span class="noctia-code-title">rem</span>
+        </figcaption>
+        <div class="noctia-code-container">
+          <pre><code><span data-copy="gap-0-125rem">.gap-0-125rem { gap: 0.125rem !important; }</span>
+<span data-copy="gap-0-25rem">.gap-0-25rem { gap: 0.25rem !important; }</span>
+<span data-copy="gap-0-5rem">.gap-0-5rem { gap: 0.5rem !important; }</span>
+<span data-copy="gap-1rem">.gap-1rem { gap: 1rem !important; }</span>
+<span data-copy="gap-1-5rem">.gap-1-5rem { gap: 1.5rem !important; }</span>
+<span data-copy="gap-2rem">.gap-2rem { gap: 2rem !important; }</span>
+<span data-copy="gap-2-5rem">.gap-2-5rem { gap: 2.5rem !important; }</span>
+<span data-copy="gap-3rem">.gap-3rem { gap: 3rem !important; }</span>
+<span data-copy="gap-4rem">.gap-4rem { gap: 4rem !important; }</span></code></pre>
+        </div>
+      </figure>
+
+      <dl class="noctia-code-description" style="grid-column: 1 / 3;">
+        <dt><code>.gap-x-a</code></dt>
+        <dd><pre><code>.gap-x-a { column-gap: a !important; }</code></pre></dd>
+        <dt><code>.gap-y-a</code></dt>
+        <dd><pre><code>.gap-y-a { row-gap: a !important; }</code></pre></dd>
+        <dt><code>.mdm-gap-a</code></dt>
+        <dd><pre><code>@media (min-width: 768px) {
+  .mdm-gap-a { gap: a !important; }
+  .mdm-gap-x-a { column-gap: a !important; }
+  .mdm-gap-y-a { row-gap: a !important; }
+}</code></pre></dd>
+        <dt><code>.lrg-gap-a</code></dt>
+        <dd><pre><code>@media (min-width: 1024px) {
+  .lrg-gap-a { gap: a !important; }
+  .lrg-gap-x-a { column-gap: a !important; }
+  .lrg-gap-y-a { row-gap: a !important; }
+}</code></pre></dd>
+      </dl>
+    </section>
+
+    <section class="noctia-section mdm-elm-grid mdm-grid-col-2-fr mdm-gap-x-1rem">
+      <h3 class="noctia-title-3 border-red" style="grid-column: 1 / 3;">Flex & Grid Option</h3>
+      <figure class="noctia-code-block">
+        <figcaption class="noctia-code-header">
+          <span class="noctia-code-title">Align Items</span>
+        </figcaption>
+        <div class="noctia-code-container">
+          <pre><code><span data-copy="align-items-start">.align-items-start { align-items: start !important; }</span>
+<span data-copy="align-items-center">.align-items-center { align-items: center !important; }</span>
+<span data-copy="align-items-end">.align-items-end { align-items: end !important; }</span>
+<span data-copy="align-items-stretch">.align-items-stretch { align-items: stretch !important; }</span></code></pre>
+        </div>
+      </figure>
+
+      <figure class="noctia-code-block">
+        <figcaption class="noctia-code-header">
+          <span class="noctia-code-title">Justify Items</span>
+        </figcaption>
+        <div class="noctia-code-container">
+          <pre><code><span data-copy="justify-items-start">.justify-items-start { justify-items: start !important; }</span>
+<span data-copy="justify-items-center">.justify-items-center { justify-items: center !important; }</span>
+<span data-copy="justify-items-end">.justify-items-end { justify-items: end !important; }</span>
+<span data-copy="justify-items-stretch">.justify-items-stretch { justify-items: stretch !important; }</span></code></pre>
+        </div>
+      </figure>
+
+      <figure class="noctia-code-block">
+        <figcaption class="noctia-code-header">
+          <span class="noctia-code-title">Align Content</span>
+        </figcaption>
+        <div class="noctia-code-container">
+          <pre><code><span data-copy="align-content-start">.align-content-start { align-content: start !important; }</span>
+<span data-copy="align-content-center">.align-content-center { align-content: center !important; }</span>
+<span data-copy="align-content-end">.align-content-end { align-content: end !important; }</span>
+<span data-copy="align-content-stretch">.align-content-stretch { align-content: stretch !important; }</span>
+<span data-copy="align-content-between">.align-content-between { align-content: space-between !important; }</span>
+<span data-copy="align-content-around">.align-content-around { align-content: space-around !important; }</span>
+<span data-copy="align-content-evenly">.align-content-evenly { align-content: space-evenly !important; }</span></code></pre>
+        </div>
+      </figure>
+
+      <figure class="noctia-code-block">
+        <figcaption class="noctia-code-header">
+          <span class="noctia-code-title">Justify Content</span>
+        </figcaption>
+        <div class="noctia-code-container">
+          <pre><code><span data-copy="justify-content-start">.justify-content-start { justify-content: start !important; }</span>
+<span data-copy="justify-content-center">.justify-content-center { justify-content: center !important; }</span>
+<span data-copy="justify-content-end">.justify-content-end { justify-content: end !important; }</span>
+<span data-copy="justify-content-stretch">.justify-content-stretch { justify-content: stretch !important; }</span>
+<span data-copy="justify-content-between">.justify-content-between { justify-content: space-between !important; }</span>
+<span data-copy="justify-content-around">.justify-content-around { justify-content: space-around !important; }</span>
+<span data-copy="justify-content-evenly">.justify-content-evenly { justify-content: space-evenly !important; }</span></code></pre>
+        </div>
+      </figure>
+
+      <dl class="noctia-code-description" style="grid-column: 1 / 3;">
+        <dt><code>.mdm-a-b</code></dt>
+        <dd><pre><code>@media (min-width: 1024px) {
+  .mdm-a-b { a: b !important; }
+}</code></pre></dd>
+        <dt><code>.lrg-a-b</code></dt>
+        <dd><pre><code>@media (min-width: 1024px) {
+  .lrg-a-b { a: b !important; }
+}</code></pre></dd>
+      </dl>
+    </section>
+  </section>
+
+  <section id="overflow">
+    <h2 class="noctia-title-2">Overflow</h2>
+    <div class="noctia-code-container">
+      <pre><code><span data-copy="overflow-hidden">.overflow-hidden { overflow: hidden !important; }</span>
+<span data-copy="overflow-auto">.overflow-auto { overflow: auto !important; }</span>
+
+<span data-copy="overflow-x-hidden">.overflow-x-hidden { overflow-x: hidden !important; }</span>
+<span data-copy="overflow-x-auto">.overflow-x-auto { overflow-x: auto !important; }</span>
+
+<span data-copy="overflow-y-hidden">.overflow-y-hidden { overflow-y: hidden !important; }</span>
+<span data-copy="overflow-y-auto">.overflow-y-auto { overflow-y: auto !important; }</span></code></pre>
+    </div>
+  </section>
+
+  <section id="hide" class="noctia-section mdm-elm-grid mdm-grid-col-2-fr mdm-gap-x-1rem">
+    <h2 class="noctia-title-2" style="grid-column: 1 / 3;">Hide</h2>
+    <section>
+      <h3 class="noctia-title-3 border-purple">Hide Scroll Bar</h3>
+      <div class="noctia-code-container">
+        <pre><code><span data-copy="hide-scrollbar">.hide-scrollbar {
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+}
+.hide-scrollbar::-webkit-scrollbar { display: none !important; }</span>
+--------------------------------------------------------------------
+<span data-copy="hide-scrollbar-all">.hide-scrollbar-all,
+.hide-scrollbar-all * {
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+}
+.hide-scrollbar-all::-webkit-scrollbar,
+.hide-scrollbar-all *::-webkit-scrollbar { display: none !important; }</span></code></pre>
+      </div>
+      <dl class="noctia-code-description">
+        <dt><code>.hide-scrollbar</code></dt>
+        <dd>Hides an element’s scrollbar</dd>
+        <dt><code>.hide-scrollbar-all</code></dt>
+        <dd>Hides scrollbars on all child elements</dd>
+      </dl>
+    </section>
+
+    <section id="hide-marker">
+      <h3 class="noctia-title-3 border-purple">Hide Marker</h3>
+      <div class="noctia-code-container">
+        <pre><code><span data-copy="hide-list-style">.hide-list-style,
+.hide-list-style &gt; li { list-style: none !important; }
+
+.hide-list-style::-webkit-details-marker { display: none !important; }</span></code></pre>
+      </div>
+      <dl class="noctia-code-description">
+        <dt><code>.hide-list-style</code></dt>
+        <dd>Removes markers from &lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;, and &lt;summary&gt;</dd>
+      </dl>
+    </section>
+  </section>
+
+</main>
+
+
+
+<footer class="bc-mineshaft flex-column align-items-center">
+  <a href="index.html" class="text-dec-none elm-inline-flex flex-column align-items-center">
+    <img src="assets/images/logo-blue-transparent.png" alt="Noctia Logo" class="h-56px">
+    <p class="spc-0 clr-white text-lrg">Noctia <span class="noctia-version"></span></p>
+  </a>
+
+  <div class="w-full spc-y-16">
+    <h2 class="noctia-title-5 clr-white text-mdm border-white">Links</h2>
+    <nav>
+      <ul class="p-0 clr-very-light-gray text-smdm text-dec-none hide-list-style">
+        <li><a href="index.html">Noctia Official Page</a></li>
+        <li><a href="https://github.com/lanlanwi/Noctia">Githud</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="w-full spc-y-16">
+    <h2 class="noctia-title-5 clr-white text-mdm border-white">Guide</h2>
+    <nav>
+      <ul class="p-0 clr-very-light-gray text-smdm text-dec-none hide-list-style">
+        <li><a href="base.html">Base</a></li>
+        <li><a href="utilities.html">Utilities</a></li>
+        <li><a href="components.html">Components</a></li>
+        <li><a href="layout.html">Layout</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <p class="noctia-license clr-white text-sml"><span class="noctia-license-holder clr-light-blue">Lanlanwi</span> <a href="license.html">License</a></p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
