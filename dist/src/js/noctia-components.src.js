@@ -1,6 +1,6 @@
 /*!
  * Noctia Components JS
- * Version: 2.0.0
+ * Version: 2.0.1
  * © 2026 Lanlanwi
  * Created: 2025-11-06
  * Last Updated: 2026-04-24
@@ -14,7 +14,7 @@
 
 (function (global) {
 
-const version = "v2.0.0";
+const version = "v2.0.1";
 
 const NoctiaDev = false;
 function log(text) {
