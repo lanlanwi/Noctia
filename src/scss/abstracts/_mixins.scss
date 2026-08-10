@@ -1,0 +1,68 @@
+// ------------------------------------
+// Accessibility
+// ------------------------------------
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+// ------------------------------------
+// Center
+// ------------------------------------
+
+@mixin center {
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin center-i {
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+@mixin flex-center {
+  display: flex;
+  @include center;
+}
+
+// ------------------------------------
+// Theme
+// ------------------------------------
+
+@mixin when-theme($theme) {
+  html[data-theme='#{$theme}'] & {
+    @content;
+  }
+}
+
+@mixin when-light {
+  html[data-theme='light'] & {
+    @content;
+  }
+
+  @media (prefers-color-scheme: light) {
+    html:not([data-theme]) & {
+      @content;
+    }
+  }
+}
+
+@mixin when-dark {
+  html[data-theme='dark'] & {
+    @content;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    html:not([data-theme]) & {
+      @content;
+    }
+  }
+}

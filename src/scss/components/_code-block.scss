@@ -1,0 +1,110 @@
+@use '../abstracts' as abs;
+
+.nc-code-block {
+  margin-block: 1em;
+  border: 0.1em solid var(--nc-neutral);
+  border-radius: 0.25em;
+
+  font-size: 1rem;
+
+  background-color: var(
+    --nc-background
+  );
+
+  @include abs.when-dark {
+    border: none;
+
+    background-color: var(--nc-surface);
+  }
+
+  & .nc-header {
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+
+    border-bottom: 0.1em solid
+      var(--nc-neutral);
+
+    & .nc-title,
+    & button[data-copy-target] {
+      padding: 0.25em 0.5em;
+
+      font-family: abs.$font-sans;
+      font-size: inherit;
+      line-height: 1.5;
+      overflow-wrap: break-word;
+
+      color: var(--nc-text);
+
+      user-select: none;
+    }
+
+    & button[data-copy-target] {
+      margin-left: auto;
+
+      &:active {
+        background-color: var(
+          --nc-active
+        );
+      }
+
+      &:focus-visible {
+        outline: 0.1em solid
+          var(--nc-focus-ring);
+        outline-offset: -0.1em;
+      }
+    }
+  }
+
+  & pre {
+    display: block;
+    overflow: hidden;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 0.75em 1em;
+
+    font-size: 0.75em;
+    white-space: pre-wrap;
+
+    scrollbar-gutter: stable;
+
+    & code {
+      font-family: abs.$font-mono;
+      line-height: 1.5;
+
+      color: var(--nc-text);
+
+      & [data-copy] {
+        background-color: var(
+          --nc-hover
+        );
+
+        outline: none;
+      }
+
+      & .token-string {
+        color: #2563eb;
+
+        @include abs.when-dark {
+          color: #82aaff;
+        }
+      }
+
+      & .token-comment {
+        color: #6b7280;
+
+        @include abs.when-dark {
+          color: #6c7086;
+        }
+      }
+    }
+
+    &.nowrap {
+      overflow-x: auto;
+
+      white-space: pre;
+    }
+  }
+}

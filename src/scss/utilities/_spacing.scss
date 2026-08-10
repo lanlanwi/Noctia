@@ -1,0 +1,96 @@
+@use 'sass:map';
+
+@use './tools' as tool;
+
+// ------------------------------------
+// Values
+// ------------------------------------
+
+$spacing-values: (
+  0: 0,
+  2: 2px,
+  4: 4px,
+  8: 8px,
+  16: 16px,
+  24: 24px,
+  32: 32px,
+  40: 40px,
+  48: 48px,
+  56: 56px,
+  64: 64px,
+);
+
+$spacing-relative: (
+  '0-5': 0.5,
+  '0-75': 0.75,
+  '0-875': 0.875,
+  1: 1,
+  '1-1': 1.1,
+  '1-2': 1.2,
+  '1-5': 1.5,
+  2: 2,
+);
+
+$spacing-relative-units: (em, rem);
+
+$spacing-values-relative: tool.append-units(
+  $spacing-relative,
+  $spacing-relative-units
+);
+
+$spacing-values: map.merge(
+  $spacing-values,
+  $spacing-values-relative
+);
+
+$margin-values: map.merge(
+  (
+    auto: auto,
+  ),
+  $spacing-values
+);
+
+// ------------------------------------
+// Config
+// ------------------------------------
+
+$margin-variants: (
+  x: margin-inline,
+  y: margin-block,
+  t: margin-top,
+  r: margin-right,
+  b: margin-bottom,
+  l: margin-left,
+);
+
+$padding-variants: (
+  x: padding-inline,
+  y: padding-block,
+  t: padding-top,
+  r: padding-right,
+  b: padding-bottom,
+  l: padding-left,
+);
+
+$spacing-utilities: (
+  (
+    class: spc,
+    property: margin,
+    variants: $margin-variants,
+    values: $margin-values,
+    important: none,
+    responsive: both,
+  ),
+  (
+    class: p,
+    property: padding,
+    variants: $padding-variants,
+    values: $spacing-values,
+    important: none,
+    responsive: both,
+  )
+);
+
+@include tool.dispatch(
+  $spacing-utilities
+);

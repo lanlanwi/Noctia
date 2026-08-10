@@ -1,0 +1,191 @@
+@use '../abstracts' as abs;
+
+// ------------------------------------
+// Paragraph
+// ------------------------------------
+
+p.nc-text,
+.nc-text p {
+  padding-inline: 0.25em;
+
+  font-family: abs.$font-sans;
+  font-size: 1rem;
+  line-height: 2;
+  overflow-wrap: break-word;
+
+  color: var(--nc-text);
+
+  & + p {
+    margin-top: 1em;
+  }
+}
+
+.nc-text-group {
+  margin-block: 2em;
+
+  font-family: abs.$font-sans;
+  font-size: 1rem;
+
+  color: var(--nc-text);
+
+  & p {
+    margin-bottom: 0.5em;
+    padding-inline: 0.25em;
+
+    font: inherit;
+    overflow-wrap: break-word;
+
+    color: inherit;
+  }
+}
+
+// ------------------------------------
+// List
+// ------------------------------------
+
+ul.nc-list,
+ol.nc-list {
+  padding-left: 1.5em;
+
+  font-family: abs.$font-sans;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+
+  color: var(--nc-text);
+
+  & li {
+    font: inherit;
+
+    color: inherit;
+
+    & + li {
+      margin-top: 0.5em;
+    }
+  }
+
+  & ul,
+  & ol {
+    padding-right: 1em;
+
+    font-size: 0.75rem;
+
+    color: inherit;
+  }
+}
+
+// ------------------------------------
+// Title
+// ------------------------------------
+
+$-title-border-color: var(--nc-border);
+$-title-bg-color: var(--nc-surface);
+
+@mixin -title-style {
+  margin-top: 1em;
+
+  font-family: abs.$font-sans;
+  font-weight: bold;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+
+  color: var(--nc-text);
+
+  cursor: default;
+  user-select: none;
+}
+
+.nc-title-1 {
+  @include -title-style;
+
+  padding-inline: 1em;
+
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.nc-title-2 {
+  @include -title-style;
+
+  margin-bottom: 0.5em;
+  padding-top: 0.5em;
+  padding-inline: 0.25em;
+  border-top: 0.1em solid
+    $-title-border-color;
+  border-bottom: 0.1em solid
+    $-title-border-color;
+
+  font-size: 2rem;
+}
+
+.nc-title-3 {
+  @include -title-style;
+
+  margin-bottom: 0.5em;
+  padding-top: 0.25em;
+  padding-inline: 0.25em;
+  border-left: 0.2em solid
+    $-title-border-color;
+
+  font-size: 1.5rem;
+
+  box-shadow: 0 0 0.2em var(--nc-shadow);
+
+  @include abs.when-dark {
+    background-color: $-title-bg-color;
+  }
+}
+
+.nc-title-4 {
+  @include -title-style;
+
+  margin-bottom: 0.5em;
+  padding: 0.2em 1em;
+
+  font-size: 1.25rem;
+
+  background-color: $-title-border-color;
+}
+
+.nc-title-5 {
+  @include -title-style;
+
+  margin-bottom: 0.5em;
+  padding-top: 0.25em;
+  padding-inline: 0.25em;
+  border-bottom: 0.125em solid
+    $-title-border-color;
+
+  font-size: 1rem;
+}
+
+.nc-title-6 {
+  @include -title-style;
+
+  display: inline-block;
+
+  width: auto;
+  max-width: calc(100% - 1em);
+
+  margin-bottom: 0.5em;
+  margin-inline: 0.5em;
+  padding-top: 0.25em;
+  padding-inline: 0.5em;
+  border-bottom: 0.2em solid
+    $-title-border-color;
+
+  font-size: 0.875rem;
+}
+
+// ------------------------------------
+// License
+// ------------------------------------
+
+p[data-license] {
+  font-family: abs.$font-sans;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+
+  color: var(--nc-text);
+}

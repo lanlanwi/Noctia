@@ -1,0 +1,146 @@
+@use '../abstracts' as abs;
+
+@mixin -text-style {
+  font-family: abs.$font-sans;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+
+  color: var(--nc-text);
+}
+
+form.nc-form {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 0.5em;
+
+  margin-block: 1em;
+  padding: 1em;
+  border: 0.1em solid var(--nc-neutral);
+  border-radius: 0.5em;
+
+  font-size: 1rem;
+  @include -text-style;
+
+  background-color: var(
+    --nc-background
+  );
+
+  & .nc-field {
+    display: flex;
+    align-items: center;
+    place-content: center space-between;
+    flex-wrap: wrap;
+
+    width: 100%;
+
+    border: none;
+
+    & + .nc-field {
+      margin-top: 1em;
+    }
+  }
+
+  & input[type='radio'],
+  & input[type='checkbox'] {
+    margin-inline: 0.25em;
+  }
+}
+
+@mixin -noctia-label {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+
+  max-width: 100%;
+
+  font-size: 1.2em;
+  @include -text-style;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+label {
+  form.nc-form &,
+  &.nc-label {
+    @include -noctia-label;
+  }
+}
+
+@mixin -noctia-input-block {
+  display: block;
+
+  width: 100%;
+
+  border: 0.1em solid var(--nc-neutral);
+  border-radius: 0.25em;
+  padding: 0.25em;
+
+  font-size: 1em;
+  @include -text-style;
+
+  background-color: var(
+    --nc-background
+  );
+
+  resize: none;
+
+  outline: none;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='number'],
+input[type='search'],
+input[type='url'],
+input[type='email'],
+input[type='file'] {
+  form.nc-form &,
+  &.nc-input {
+    @include -noctia-input-block;
+  }
+}
+
+textarea {
+  form.nc-form &,
+  &.nc-textarea {
+    @include -noctia-input-block;
+  }
+}
+
+@mixin -noctia-input-inline {
+  display: inline-block;
+
+  height: 2.5em;
+  max-width: 100%;
+
+  padding: 0.25em 0.5em;
+  border: 0.1em solid var(--nc-neutral);
+  border-radius: 0.25em;
+
+  font-size: 0.875em;
+  @include -text-style;
+
+  background-color: var(
+    --nc-background
+  );
+}
+
+input[type='date'],
+input[type='week'],
+input[type='month'],
+input[type='time'],
+input[type='color'] {
+  form.nc-form &,
+  &.nc-input {
+    @include -noctia-input-inline;
+  }
+}
+
+select {
+  form.nc-form &,
+  &.nc-select {
+    @include -noctia-input-inline;
+  }
+}

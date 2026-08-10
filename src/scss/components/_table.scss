@@ -1,0 +1,42 @@
+@use '../abstracts' as abs;
+
+table.nc-table {
+  width: 100%;
+
+  margin-block: 1em;
+  border-collapse: collapse;
+
+  font-size: 1rem;
+  overflow-wrap: break-word;
+
+  background-color: var(
+    --nc-background
+  );
+  box-shadow: 0 0 0.25em
+    var(--nc-shadow);
+
+  & th,
+  & td {
+    padding: 1em;
+    border: 0.05em solid
+      var(--nc-neutral);
+
+    font-family: abs.$font-sans;
+    line-height: 1.5;
+
+    color: var(--nc-text);
+  }
+
+  & th {
+    font-size: 1em;
+    text-align: center;
+
+    background-color: var(--nc-surface);
+
+    user-select: none;
+  }
+
+  & td {
+    font-size: 0.875em;
+  }
+}

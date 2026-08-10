@@ -1,0 +1,70 @@
+{
+  "name": "noctia",
+  "version": "1.0.0",
+  "description": "A lightweight and customizable CSS framework with optional JavaScript.",
+  "license": "MIT",
+  "author": "Lanlanwi",
+  "files": [
+    "dist",
+    "src/scss/",
+    "README.md",
+    "LICENSE"
+  ],
+  "type": "module",
+  "main": "./dist/js/noctia.js",
+  "types": "./dist/types/index.d.ts",
+  "style": "./dist/css/noctia.css",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/js/noctia.js",
+      "default": "./dist/js/noctia.js"
+    }
+  },
+  "scripts": {
+    "clean": "rimraf dev dist",
+    "clean:dev": "rimraf dev",
+    "clean:dist": "rimraf dist",
+    "clean:scss": "rimraf dev/css dist/css",
+    "clean:ts": "rimraf dev/js  dist/js",
+    "clean:types": "rimraf dev/types dist/types",
+    "build:scss:dev": "node scripts/build-scss.js",
+    "build:scss:dist": "node scripts/build-scss.js --dist",
+    "build:scss": "npm run clean:scss && npm run build:scss:dev && npm run build:scss:dist",
+    "build:ts:dev": "node scripts/build-ts.js",
+    "build:ts:dist": "node scripts/build-ts.js --dist",
+    "build:ts": "npm run clean:ts && npm run build:ts:dev && npm run build:ts:dist",
+    "build:types:dev": "tsc -p tsconfig.types.json --outDir dev/types",
+    "build:types:dist": "tsc -p tsconfig.types.json --outDir dist/types",
+    "build:types": "npm run clean:types && npm run build:types:dev && npm run build:types:dist",
+    "build:dev": "npm run clean:dev && npm run build:scss:dev && npm run build:ts:dev && npm run build:types:dev",
+    "build:dist": "npm run clean:dist && npm run build:scss:dist && npm run build:ts:dist && npm run build:types:dist && npm run banner",
+    "build": "npm run check && npm run build:dev && npm run build:dist",
+    "banner": "node scripts/add-banner.js",
+    "format": "prettier . --write",
+    "lint": "eslint .",
+    "lint:css": "stylelint \"src/**/*.scss\"",
+    "lint:css:fix": "stylelint \"src/**/*.scss\" --fix",
+    "typecheck": "npx tsc --watch",
+    "check": "npm run lint && npm run lint:css && npx tsc"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "autoprefixer": "^10.5.4",
+    "esbuild": "^0.28.2",
+    "eslint": "^10.8.0",
+    "globals": "^17.9.0",
+    "postcss": "^8.5.26",
+    "prettier": "^3.9.6",
+    "rimraf": "^6.x",
+    "sass": "^1.102.0",
+    "stylelint": "^17.14.1",
+    "stylelint-config-standard-scss": "^17.0.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.66.0"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead"
+  ]
+}

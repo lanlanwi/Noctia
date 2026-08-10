@@ -1,0 +1,37 @@
+@use './tools' as tool;
+
+// ------------------------------------
+// Values
+// ------------------------------------
+
+$overflow-values: (
+  visible: visible,
+  hidden: hidden,
+  clip: clip,
+  scroll: scroll,
+  auto: auto,
+);
+
+// ------------------------------------
+// Config
+// ------------------------------------
+
+$overflow-variants: (
+  x: overflow-x,
+  y: overflow-y,
+);
+
+$overflow-utilities: (
+  (
+    class: overflow,
+    property: overflow,
+    variants: $overflow-variants,
+    values: $overflow-values,
+    important: only,
+    responsive: none,
+  )
+);
+
+@include tool.dispatch(
+  $overflow-utilities
+);

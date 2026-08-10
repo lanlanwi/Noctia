@@ -1,0 +1,136 @@
+@use 'sass:map';
+
+$theme: var(--nc-theme, #ffffff);
+$theme-inverse: var(
+  --nc-theme-inverse,
+  #000000
+);
+
+$white: #ffffff;
+$off-white: #f5f5f5;
+$very-light-gray: #eeeeee;
+$silver: #c0c0c0;
+$light-gray: #aaaaaa;
+$gray: #808080;
+$dark-gray: #555555;
+$mineshaft: #333333;
+$dark: #252525;
+$rich-black: #111111;
+$black: #000000;
+$brown: #8b5e3c;
+
+$base-red: hsl(0deg 75% 95%);
+$base-orange: hsl(30deg 70% 95%);
+$base-yellow: hsl(60deg 75% 95%);
+$base-lime: hsl(90deg 75% 95%);
+$base-green: hsl(120deg 70% 92.5%);
+$base-cyan: hsl(180deg 75% 95%);
+$base-light-blue: hsl(200deg 70% 95%);
+$base-blue: hsl(240deg 70% 92.5%);
+$base-purple: hsl(270deg 70% 92.5%);
+$base-magenta: hsl(300deg 70% 95%);
+$base-pink: hsl(330deg 70% 97.5%);
+
+$main-red: hsl(0deg 80% 87%);
+$main-orange: hsl(30deg 80% 87%);
+$main-yellow: hsl(60deg 85% 90%);
+$main-lime: hsl(90deg 85% 90%);
+$main-green: hsl(120deg 80% 87%);
+$main-cyan: hsl(180deg 80% 90%);
+$main-light-blue: hsl(200deg 80% 90%);
+$main-blue: hsl(240deg 80% 87%);
+$main-purple: hsl(270deg 80% 87%);
+$main-magenta: hsl(300deg 80% 90%);
+$main-pink: hsl(330deg 80% 95%);
+
+$accent-red: hsl(0deg 95% 55%);
+$accent-orange: hsl(30deg 95% 55%);
+$accent-yellow: hsl(60deg 90% 55%);
+$accent-lime: hsl(90deg 90% 60%);
+$accent-green: hsl(120deg 95% 40%);
+$accent-cyan: hsl(180deg 90% 55%);
+$accent-light-blue: hsl(210deg 90% 60%);
+$accent-blue: hsl(240deg 90% 50%);
+$accent-purple: hsl(270deg 90% 50%);
+$accent-magenta: hsl(300deg 90% 55%);
+$accent-pink: hsl(330deg 90% 75%);
+
+$theme-colors: (
+  'theme': $theme,
+  'theme-inverse': $theme-inverse,
+);
+
+$neutral-colors: (
+  'white': $white,
+  'off-white': $off-white,
+  'very-light-gray': $very-light-gray,
+  'silver': $silver,
+  'light-gray': $light-gray,
+  'gray': $gray,
+  'dark-gray': $dark-gray,
+  'mineshaft': $mineshaft,
+  'dark': $dark,
+  'rich-black': $rich-black,
+  'black': $black,
+  'brown': $brown,
+);
+
+$base-colors: (
+  'b-red': $base-red,
+  'b-orange': $base-orange,
+  'b-yellow': $base-yellow,
+  'b-lime': $base-lime,
+  'b-green': $base-green,
+  'b-cyan': $base-cyan,
+  'b-light-blue': $base-light-blue,
+  'b-blue': $base-blue,
+  'b-purple': $base-purple,
+  'b-magenta': $base-magenta,
+  'b-pink': $base-pink,
+);
+
+$main-colors: (
+  'm-red': $main-red,
+  'm-orange': $main-orange,
+  'm-yellow': $main-yellow,
+  'm-lime': $main-lime,
+  'm-green': $main-green,
+  'm-cyan': $main-cyan,
+  'm-light-blue': $main-light-blue,
+  'm-blue': $main-blue,
+  'm-purple': $main-purple,
+  'm-magenta': $main-magenta,
+  'm-pink': $main-pink,
+);
+
+$accent-colors: (
+  'a-red': $accent-red,
+  'a-orange': $accent-orange,
+  'a-yellow': $accent-yellow,
+  'a-lime': $accent-lime,
+  'a-green': $accent-green,
+  'a-cyan': $accent-cyan,
+  'a-light-blue': $accent-light-blue,
+  'a-blue': $accent-blue,
+  'a-purple': $accent-purple,
+  'a-magenta': $accent-magenta,
+  'a-pink': $accent-pink,
+);
+
+$chromatic-colors: map.merge(
+  $base-colors,
+  map.merge(
+    $main-colors,
+    $accent-colors
+  )
+);
+
+$static-colors: map.merge(
+  $neutral-colors,
+  $chromatic-colors
+);
+
+$colors: map.merge(
+  $theme-colors,
+  $static-colors
+);

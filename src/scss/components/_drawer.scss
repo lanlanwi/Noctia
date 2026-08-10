@@ -1,0 +1,54 @@
+@use '../abstracts' as abs;
+
+.nc-drawer {
+  inset: 0;
+  transform: translate(-100%, 0);
+
+  &,
+  &-top,
+  &-right,
+  &-bottom,
+  &-left {
+    display: inline-block;
+    z-index: abs.$z-drawer;
+    overflow: hidden auto;
+
+    max-width: 100vw;
+    max-height: 100vh;
+    position: fixed;
+
+    font-size: 1rem;
+
+    background-color: var(
+      --nc-background
+    );
+
+    transition: transform 0.4s ease;
+
+    scrollbar-gutter: stable;
+
+    &.is-active {
+      transform: translate(0, 0);
+    }
+  }
+
+  &-top {
+    inset: 0 auto auto 0;
+    transform: translate(0, -100%);
+  }
+
+  &-right {
+    inset: 0 0 auto auto;
+    transform: translate(100%, 0);
+  }
+
+  &-bottom {
+    inset: auto auto 0 0;
+    transform: translate(0, 100%);
+  }
+
+  &-left {
+    inset: 0 auto auto 0;
+    transform: translate(-100%, 0);
+  }
+}

@@ -1,0 +1,102 @@
+@use '../abstracts' as abs;
+
+$border-style: 0.1rem solid
+  var(--nc-neutral);
+
+dl.nc-description {
+  container-type: inline-size;
+
+  display: grid;
+  grid-template-columns: 33.333% 1fr;
+
+  margin-block: 1em;
+  border: $border-style;
+  border-radius: 0.25em;
+
+  font-size: 1rem;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+
+  background-color: var(
+    --nc-background
+  );
+
+  scrollbar-gutter: stable;
+
+  & dt {
+    display: flex;
+    align-items: center;
+    grid-column: 1 / 3;
+    z-index: 0;
+
+    position: relative;
+
+    padding: 1em 0.5em 0;
+
+    font-family: abs.$font-sans;
+    font-size: 1em;
+
+    color: var(--nc-text);
+
+    &::after {
+      content: '';
+
+      display: block;
+      z-index: 1;
+
+      width: auto;
+      height: 0.01em;
+      position: absolute;
+      inset: auto 2% 0;
+
+      background-color: var(
+        --nc-neutral
+      );
+    }
+  }
+
+  & dd {
+    grid-column: 1 / 3;
+    overflow-y: auto;
+
+    padding: 0.5em;
+
+    font-family: abs.$font-sans;
+    font-size: 0.875em;
+
+    color: var(--nc-text);
+
+    scrollbar-gutter: stable;
+
+    & + dt {
+      border-top: $border-style;
+    }
+  }
+}
+
+@container (min-width: 768px) {
+  dl.nc-description {
+    & dt {
+      grid-column: 1 / 2;
+      overflow: hidden;
+
+      padding-block: 0;
+
+      &::after {
+        width: 0.5px;
+        height: auto;
+        inset: 5% 0 5% auto;
+      }
+    }
+
+    & dd {
+      grid-column: 2 / 3;
+
+      border-top: $border-style;
+
+      &:nth-of-type(1) {
+        border-top: none;
+      }
+    }
+  }
+}

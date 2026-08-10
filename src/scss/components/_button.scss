@@ -1,0 +1,79 @@
+@use '../abstracts' as abs;
+
+.nc-btn {
+  display: inline-flex;
+  @include abs.center;
+
+  width: auto;
+  max-width: 100%;
+
+  padding: 0.25em 0.5em;
+  border: 0.1em solid var(--nc-border);
+  border-radius: 0.25em;
+
+  font-family: abs.$font-sans;
+  font-size: 1em;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+
+  color: var(--nc-text);
+
+  transition: transform 0.2s ease;
+
+  cursor: pointer;
+  user-select: none;
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &:focus-visible {
+    outline: 0.1rem solid
+      var(--nc-focus-ring);
+  }
+
+  &[data-style='form'] {
+    border: 0.1em solid
+      var(--nc-neutral);
+
+    background-color: var(
+      --nc-background
+    );
+
+    &:hover {
+      background-color: var(--nc-hover);
+    }
+
+    &:focus-visible {
+      outline: 0.2em solid
+        var(--nc-focus-ring);
+      outline-offset: -0.1em;
+    }
+  }
+
+  &[data-style='neon'] {
+    border: none;
+
+    color: #ffffff;
+    background-color: var(
+      --nc-bg-alpha
+    );
+
+    transition:
+      transform 0.2s ease-in-out,
+      background-color 0.2s ease-in-out,
+      box-shadow 0.2s ease-in-out;
+
+    &:active {
+      transform: scale(1.2);
+
+      background-color: rgb(
+        255 0 150 / 0.6
+      );
+      box-shadow:
+        0 0.75em 1.875em
+          rgb(0 0 0 / 0.5),
+        0 0 1em rgb(255 0 150 / 0.7);
+    }
+  }
+}

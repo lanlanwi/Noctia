@@ -1,0 +1,88 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-family: "Segoe UI", "Hiragino Sans", "Yu Gothic", "Meiryo", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(16px, min(4.5vw, 5vh), 32px);
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  line-height: 1.6;
+  overflow-wrap: break-word;
+  color: var(--nc-text, #252525);
+  background-color: var(--nc-background, #ffffff);
+}
+
+ul,
+ol {
+  padding-left: 1.5em;
+}
+
+a {
+  text-decoration: underline;
+  color: inherit;
+}
+a img {
+  pointer-events: none;
+}
+
+pre {
+  overflow-x: auto;
+  scrollbar-gutter: stable;
+}
+
+img,
+video,
+audio,
+iframe,
+object {
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+button,
+input[type=submit],
+input[type=reset],
+input[type=button] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  touch-action: manipulation;
+}
+button:disabled,
+input[type=submit]:disabled,
+input[type=reset]:disabled,
+input[type=button]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+button:focus-visible {
+  outline: 0.15em solid var(--nc-focus-ring, #000000);
+  outline-offset: 0.1em;
+}

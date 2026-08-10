@@ -1,0 +1,44 @@
+@use '../abstracts' as abs;
+
+.nc-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  overflow: hidden;
+
+  width: 100%;
+  max-width: 100%;
+
+  background-color: var(
+    --nc-surface-strong
+  );
+}
+
+[data-bar] {
+  z-index: abs.$z-sticky;
+  overflow: hidden;
+
+  width: 100%;
+  max-width: 100%;
+
+  position: fixed;
+  inset: 0 0 auto;
+
+  margin: 0;
+
+  transition: transform 0.3s;
+
+  &[data-auto].is-hide {
+    transform: translateY(-100%);
+  }
+}
+
+[data-bar='bottom'] {
+  top: auto;
+  bottom: 0;
+
+  &[data-auto].is-hide {
+    transform: translateY(100%);
+  }
+}

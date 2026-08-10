@@ -1,0 +1,26 @@
+@use '../abstracts' as abs;
+@use './tools' as tool;
+
+// ------------------------------------
+// Values
+// ------------------------------------
+
+$bg-color-values: abs.$colors;
+
+// ------------------------------------
+// Config
+// ------------------------------------
+
+$bg-color-utilities: (
+  (
+    class: bc,
+    property: background-color,
+    values: $bg-color-values,
+    important: only,
+    responsive: none,
+  )
+);
+
+@include tool.dispatch(
+  $bg-color-utilities
+);

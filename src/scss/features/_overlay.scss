@@ -1,0 +1,24 @@
+@use '../abstracts' as abs;
+
+.nc-overlay {
+  z-index: abs.$z-overlay;
+  opacity: 0;
+
+  position: fixed;
+  inset: 0;
+
+  color: var(--nc-overlay-text);
+  background-color: var(--nc-overlay);
+
+  transition: opacity 0.4s ease;
+
+  cursor: pointer;
+  pointer-events: none;
+
+  &.is-active {
+    opacity: 1;
+
+    pointer-events: auto;
+    touch-action: none;
+  }
+}

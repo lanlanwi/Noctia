@@ -1,0 +1,34 @@
+@mixin -theme-light {
+  --nc-theme: #ffffff;
+  --nc-theme-inverse: #252525;
+
+  --nc-text: #252525;
+  --nc-text-sub: #666666;
+  --nc-text-inverse: #ffffff;
+
+  --nc-background: #ffffff;
+  --nc-surface: #f5f5f5;
+  --nc-surface-strong: #f0f0f0;
+  --nc-bg-alpha: rgb(0 0 0 / 0.35);
+
+  --nc-active: #eeeeee;
+  --nc-hover: #dddddd;
+  --nc-focus-ring: #2563eb;
+
+  --nc-neutral: #c0c0c0;
+
+  --nc-shadow: rgb(0 0 0 / 0.2);
+
+  --nc-border: #000000;
+
+  --nc-overlay: rgb(0 0 0 / 0.6);
+  --nc-overlay-text: #ffffff;
+}
+
+:root {
+  @include -theme-light;
+}
+
+html[data-theme='light'] {
+  @include -theme-light;
+}

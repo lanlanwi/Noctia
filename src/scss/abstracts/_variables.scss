@@ -1,0 +1,55 @@
+// ------------------------------------
+// Breakpoint
+// ------------------------------------
+
+$breakpoints: (
+  sml: 640px,
+  mdm: 768px,
+  lrg: 1024px,
+);
+
+// ------------------------------------
+// z-index
+// ------------------------------------
+
+$z-base: 0;
+$z-dropdown: 100;
+$z-sticky: 200;
+$z-fixed: 300;
+$z-overlay: 400;
+$z-drawer: 500;
+$z-modal: 600;
+$z-popover: 700;
+$z-tooltip: 800;
+$z-toast: 900;
+
+// ------------------------------------
+// Font
+// ------------------------------------
+
+$font-sans:
+  'Segoe UI', 'Hiragino Sans',
+  'Yu Gothic', 'Meiryo', Roboto,
+  'Helvetica Neue', Arial, sans-serif;
+
+$font-serif:
+  'Hiragino Mincho ProN', 'Yu Mincho',
+  'YuMincho', 'MS PMincho', Georgia,
+  'Times New Roman', Times, serif;
+
+$font-mono:
+  Consolas, 'SFMono-Regular', Menlo,
+  Monaco, 'Cascadia Mono',
+  'Ubuntu Mono', 'Liberation Mono',
+  'Courier New', Courier, monospace;
+
+$font-system:
+  system-ui,
+  -apple-system,
+  BlinkMacSystemFont,
+  'Segoe UI',
+  sans-serif;
+
+$font-cursive: cursive;
+
+$font-fantasy: fantasy;

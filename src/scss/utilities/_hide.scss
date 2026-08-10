@@ -1,0 +1,26 @@
+// ------------------------------------
+// Hide Scrollbar
+// ------------------------------------
+
+.hide-scrollbar {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+
+  &::-webkit-scrollbar {
+    display: none !important;
+  }
+}
+
+// ------------------------------------
+// Hide List Style
+// ------------------------------------
+
+.hide-list-style {
+  list-style: none !important;
+
+  padding-left: 0;
+
+  & > li {
+    list-style: none !important;
+  }
+}

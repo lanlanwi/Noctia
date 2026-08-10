@@ -1,0 +1,38 @@
+@use '../abstracts' as abs;
+
+.nc-toast-notification {
+  display: inline-block;
+  z-index: abs.$z-toast;
+  opacity: 0;
+  overflow: hidden;
+
+  max-width: 80vw; /* Fallback */
+  max-width: 80dvw;
+  max-height: 80vh; /* Fallback */
+  max-height: 80dvh;
+  position: fixed;
+  bottom: 10vh; /* Fallback */
+  bottom: 10dvh;
+  left: 50%;
+  transform: translateX(-50%);
+
+  padding: 0.5em;
+  border-radius: 0.25em;
+
+  font-family: abs.$font-sans;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+
+  color: var(--nc-overlay-text);
+  background-color: var(--nc-overlay);
+
+  transition: opacity 0.4s ease;
+
+  user-select: none;
+  pointer-events: none;
+
+  &.is-active {
+    opacity: 1;
+  }
+}

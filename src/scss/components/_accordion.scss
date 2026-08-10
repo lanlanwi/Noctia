@@ -1,0 +1,69 @@
+@use '../abstracts' as abs;
+
+details.nc-accordion {
+  overflow: hidden;
+
+  margin-block: 1em;
+  border-radius: 0.2em;
+
+  font-family: abs.$font-sans;
+  font-size: 1rem;
+
+  color: var(--nc-text);
+  background-color: var(
+    --nc-background
+  );
+
+  & summary {
+    list-style: none;
+
+    padding: 0.5em 1em;
+
+    font-size: 1em;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+
+    transition: background-color 0.1s
+      ease;
+
+    user-select: none;
+
+    outline: none;
+  }
+
+  & summary::-webkit-details-marker {
+    display: none;
+  }
+
+  & summary:active {
+    background-color: var(--nc-active);
+  }
+
+  & summary:focus-visible {
+    outline: 0.1em solid
+      var(--nc-focus-ring);
+    outline-offset: -0.1em;
+  }
+
+  &:open {
+    background-color: var(--nc-surface);
+
+    @include abs.when-dark {
+      border: 0.1em solid
+        var(--nc-neutral);
+    }
+  }
+}
+
+[data-accordion-content] {
+  display: block;
+  overflow: hidden;
+
+  padding: 0 !important;
+
+  font-size: 0.875em;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+
+  transition: height 0.2s ease;
+}

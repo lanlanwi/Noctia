@@ -1,0 +1,91 @@
+@use '../abstracts' as abs;
+@use './tools' as tool;
+
+// ------------------------------------
+// Values
+// ------------------------------------
+
+$align-items-values: (
+  start: start,
+  center: center,
+  end: end,
+  stretch: stretch,
+  base: baseline,
+);
+
+$align-content-values: (
+  start: start,
+  center: center,
+  end: end,
+  stretch: stretch,
+  between: space-between,
+  around: space-around,
+  evenly: space-evenly,
+);
+
+$justify-items-values: (
+  start: start,
+  center: center,
+  end: end,
+  stretch: stretch,
+);
+
+$justify-content-values: (
+  start: start,
+  center: center,
+  end: end,
+  between: space-between,
+  around: space-around,
+  evenly: space-evenly,
+);
+
+// ------------------------------------
+// Config
+// ------------------------------------
+
+$alignment-utilities: (
+  (
+    class: align-items,
+    property: align-items,
+    values: $align-items-values,
+    important: only,
+    responsive: both,
+  ),
+  (
+    class: align-content,
+    property: align-content,
+    values: $align-content-values,
+    important: only,
+    responsive: both,
+  ),
+  (
+    class: justify-items,
+    property: justify-items,
+    values: $justify-items-values,
+    important: only,
+    responsive: both,
+  ),
+  (
+    class: justify-content,
+    property: justify-content,
+    values: $justify-content-values,
+    important: only,
+    responsive: both,
+  )
+);
+
+@include tool.dispatch(
+  $alignment-utilities
+);
+
+// ------------------------------------
+// Utilities
+// ------------------------------------
+
+.item-center {
+  @include abs.center;
+}
+
+.item-center-i {
+  @include abs.center-i;
+}

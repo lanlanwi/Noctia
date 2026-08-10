@@ -1,0 +1,41 @@
+nav.nc-breadcrumb {
+  padding-inline: 0.5em;
+
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1.2;
+  overflow-wrap: break-word;
+
+  color: inherit;
+
+  & ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    column-gap: 1em;
+
+    padding: 0;
+
+    & li {
+      list-style: none;
+
+      & a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+nav[data-breadcrumb-sep] {
+  & ul {
+    column-gap: 1em;
+
+    & li .nc-separator {
+      display: inline-flex;
+      align-items: center;
+
+      margin-right: 1em;
+    }
+  }
+}

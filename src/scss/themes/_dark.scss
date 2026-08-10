@@ -1,0 +1,38 @@
+@mixin -theme-dark {
+  --nc-theme: #252525;
+  --nc-theme-inverse: #ffffff;
+
+  --nc-text: #ffffff;
+  --nc-text-sub: #b3b3b3;
+  --nc-text-inverse: #252525;
+
+  --nc-background: #252525;
+  --nc-surface: #353535;
+  --nc-surface-strong: #454545;
+  --nc-bg-alpha: rgb(
+    255 255 255 / 0.35
+  );
+
+  --nc-active: #444444;
+  --nc-hover: #555555;
+  --nc-focus-ring: #60a5fa;
+
+  --nc-neutral: #666666;
+
+  --nc-shadow: rgb(255 255 255 / 0.2);
+
+  --nc-border: #ffffff;
+
+  --nc-overlay: rgb(0 0 0 / 0.6);
+  --nc-overlay-text: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    @include -theme-dark;
+  }
+}
+
+html[data-theme='dark'] {
+  @include -theme-dark;
+}

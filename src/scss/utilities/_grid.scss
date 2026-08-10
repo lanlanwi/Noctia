@@ -1,0 +1,53 @@
+@use './tools' as tool;
+
+// ------------------------------------
+// Values
+// ------------------------------------
+
+$grid-display-values: (
+  grid: grid,
+  inline-grid: inline-grid,
+);
+
+$grid-template-values: (
+  auto: auto,
+  2-auto: repeat(2, auto),
+  3-auto: repeat(3, auto),
+  4-auto: repeat(4, auto),
+  5-auto: repeat(5, auto),
+  1-fr: 1fr,
+  2-fr: repeat(2, 1fr),
+  3-fr: repeat(3, 1fr),
+  4-fr: repeat(4, 1fr),
+  5-fr: repeat(5, 1fr),
+);
+
+// ------------------------------------
+// Config
+// ------------------------------------
+
+$grid-utilities: (
+  (
+    class: elm,
+    property: display,
+    values: $grid-display-values,
+    important: only,
+    responsive: both,
+  ),
+  (
+    class: grid-col,
+    property: grid-template-columns,
+    values: $grid-template-values,
+    important: only,
+    responsive: both,
+  ),
+  (
+    class: grid-row,
+    property: grid-template-rows,
+    values: $grid-template-values,
+    important: only,
+    responsive: both,
+  )
+);
+
+@include tool.dispatch($grid-utilities);

@@ -1,0 +1,117 @@
+@use 'sass:map';
+
+@use '../abstracts' as abs;
+@use './tools' as tool;
+
+// ------------------------------------
+// Values
+// ------------------------------------
+
+$-border-color: var(
+  --nc-border,
+  #000000
+);
+
+$border-values: (
+  none: none,
+  '0-5': '0.5px solid '
+    #{$-border-color},
+  1: '1px solid ' #{$-border-color},
+  2: '2px solid ' #{$-border-color},
+  4: '4px solid ' #{$-border-color},
+  8: '8px solid ' #{$-border-color},
+);
+
+$border-radius-values: (
+  0: 0,
+  1: 1px,
+  2: 2px,
+  4: 4px,
+  8: 8px,
+  16: 16px,
+  24: 24px,
+  32: 32px,
+  40: 40px,
+  48: 48px,
+  56: 56px,
+  64: 64px,
+  999: 999999999px,
+);
+
+$border-relative: (
+  '0-05': 0.05,
+  '0-1': 0.1,
+  '0-2': 0.2,
+  '0-25': 0.25,
+  '0-5': 0.5,
+  1: 1,
+  '1-5': 1.5,
+  2: 2,
+);
+
+$border-relative-units: (em, rem);
+
+$border-values-relative: tool.append-units(
+  $border-relative,
+  $border-relative-units
+);
+
+$border-values: map.merge(
+  $border-values,
+  $border-values-relative
+);
+
+$border-radius-values: map.merge(
+  $border-radius-values,
+  $border-values-relative
+);
+
+$border-color-values: abs.$colors;
+
+// ------------------------------------
+// Config
+// ------------------------------------
+
+$border-variants: (
+  t: border-top,
+  r: border-right,
+  b: border-bottom,
+  l: border-left,
+);
+
+$border-color-variants: (
+  t: border-top-color,
+  r: border-right-color,
+  b: border-bottom-color,
+  l: border-left-color,
+);
+
+$border-utilities: (
+  (
+    class: border,
+    property: border,
+    variants: $border-variants,
+    values: $border-values,
+    important: only,
+    responsive: none,
+  ),
+  (
+    class: border-radius,
+    property: border-radius,
+    values: $border-radius-values,
+    important: only,
+    responsive: none,
+  ),
+  (
+    class: border,
+    property: border-color,
+    variants: $border-color-variants,
+    values: $border-color-values,
+    important: only,
+    responsive: none,
+  )
+);
+
+@include tool.dispatch(
+  $border-utilities
+);

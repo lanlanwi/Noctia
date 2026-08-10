@@ -1,0 +1,26 @@
+@use '../abstracts' as abs;
+@use './tools' as tool;
+
+// ------------------------------------
+// Values
+// ------------------------------------
+
+$text-color-values: abs.$colors;
+
+// ------------------------------------
+// Config
+// ------------------------------------
+
+$text-color-utilities: (
+  (
+    class: clr,
+    property: color,
+    values: $text-color-values,
+    important: only,
+    responsive: none,
+  )
+);
+
+@include tool.dispatch(
+  $text-color-utilities
+);

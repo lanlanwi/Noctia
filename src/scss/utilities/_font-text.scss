@@ -1,0 +1,204 @@
+@use '../abstracts' as abs;
+@use './tools' as tool;
+
+// ------------------------------------
+// Values
+// ------------------------------------
+
+$font-family-values: (
+  sans: abs.$font-sans,
+  serif: abs.$font-serif,
+  mono: abs.$font-mono,
+  system: abs.$font-system,
+  cursive: abs.$font-cursive,
+  fantasy: abs.$font-fantasy,
+);
+
+$font-size-values: (
+  sml: 0.875rem,
+  normal: 1rem,
+  smdm: 1.125rem,
+  mdm: 1.25rem,
+  lrg: 1.5rem,
+  xlrg: 2rem,
+  xxlrg: 3rem,
+  xxxlrg: 4rem,
+);
+
+$font-size-em-values: (
+  sml-em: 0.875em,
+  normal-em: 1em,
+  smdm-em: 1.125em,
+  mdm-em: 1.25em,
+  lrg-em: 1.5em,
+  xlrg-em: 2em,
+  xxlrg-em: 3em,
+  xxxlrg-em: 4em,
+);
+
+$font-weight-values: (
+  normal: normal,
+  bold: bold,
+  100: 100,
+  200: 200,
+  300: 300,
+  400: 400,
+  500: 500,
+  600: 600,
+  700: 700,
+  800: 800,
+  900: 900,
+);
+
+$font-style-values: (
+  italic: italic,
+  oblique: oblique,
+);
+
+$line-height-values: (
+  normal: normal,
+  1: 1,
+  '1-4': 1.4,
+  '1-5': 1.5,
+  '1-6': 1.6,
+  2: 2,
+);
+
+$text-align-values: (
+  left: left,
+  center: center,
+  right: right,
+);
+
+$text-decoration-values: (
+  none: none,
+  under: underline,
+  line-through: line-through,
+);
+
+$white-space-values: (
+  nowrap: nowrap,
+  pre: pre,
+  pre-wrap: pre-wrap,
+  pre-line: pre-line,
+);
+
+$overflow-wrap-values: (
+  break-word: break-word,
+  anywhere: anywhere,
+);
+
+$word-break-values: (
+  all: break-all,
+  keep: keep-all,
+);
+
+// ------------------------------------
+// Config
+// ------------------------------------
+
+$font-text-utilities: (
+  (
+    class: font,
+    property: font-family,
+    values: $font-family-values,
+    important: only,
+    responsive: none,
+  ),
+  (
+    class: text,
+    property: font-size,
+    values: $font-size-values,
+    important: only,
+    responsive: none,
+  ),
+  (
+    class: text,
+    property: font-size,
+    values: $font-size-em-values,
+    important: only,
+    responsive: none,
+  ),
+  (
+    class: font,
+    property: font-weight,
+    values: $font-weight-values,
+    important: only,
+    responsive: none,
+  ),
+  (
+    class: font,
+    property: font-style,
+    values: $font-style-values,
+    important: only,
+    responsive: none,
+  ),
+  (
+    class: line-h,
+    property: line-height,
+    values: $line-height-values,
+    important: only,
+    responsive: none,
+  ),
+  (
+    class: text,
+    property: text-align,
+    values: $text-align-values,
+    important: only,
+    responsive: none,
+  ),
+  (
+    class: text-dec,
+    property: text-decoration,
+    values: $text-decoration-values,
+    important: only,
+    responsive: none,
+  ),
+  (
+    class: text,
+    property: white-space,
+    values: $white-space-values,
+    important: only,
+    responsive: none,
+  ),
+  (
+    class: text,
+    property: overflow-wrap,
+    values: $overflow-wrap-values,
+    important: only,
+    responsive: none,
+  ),
+  (
+    class: word-break,
+    property: word-break,
+    values: $word-break-values,
+    important: only,
+    responsive: none,
+  )
+);
+
+@include tool.dispatch(
+  $font-text-utilities
+);
+
+// ------------------------------------
+// Utilities
+// ------------------------------------
+
+.text-ellipsis {
+  overflow: hidden;
+
+  min-width: 0;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.text-ellipsis-i {
+  overflow: hidden !important;
+
+  min-width: 0 !important;
+
+  white-space: nowrap !important;
+  text-overflow: ellipsis !important;
+}

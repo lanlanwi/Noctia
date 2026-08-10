@@ -1,0 +1,69 @@
+@use 'sass:map';
+
+@use './tools' as tool;
+
+// ------------------------------------
+// Values
+// ------------------------------------
+
+$gap-values: (
+  0: 0,
+  2: 2px,
+  4: 4px,
+  8: 8px,
+  16: 16px,
+  24: 24px,
+  32: 32px,
+  40: 40px,
+  48: 48px,
+  56: 56px,
+  64: 64px,
+);
+
+$gap-relative: (
+  '0-125': 0.125,
+  '0-25': 0.25,
+  '0-5': 0.5,
+  '0-75': 0.75,
+  '0-875': 0.875,
+  1: 1,
+  '1-5': 1.5,
+  2: 2,
+  '2-5': 2.5,
+  3: 3,
+  4: 4,
+);
+
+$gap-relative-units: (em, rem);
+
+$gap-values-relative: tool.append-units(
+  $gap-relative,
+  $gap-relative-units
+);
+
+$gap-values: map.merge(
+  $gap-values,
+  $gap-values-relative
+);
+
+// ------------------------------------
+// Config
+// ------------------------------------
+
+$gap-variants: (
+  x: column-gap,
+  y: row-gap,
+);
+
+$gap-utilities: (
+  (
+    class: gap,
+    property: gap,
+    variants: $gap-variants,
+    values: $gap-values,
+    important: only,
+    responsive: both,
+  )
+);
+
+@include tool.dispatch($gap-utilities);

@@ -1,0 +1,73 @@
+@use './tools' as tool;
+
+// ------------------------------------
+// Values
+// ------------------------------------
+
+$layout-display-values: (
+  none: none,
+  block: block,
+  inline: inline,
+  inline-block: inline-block,
+  flex: flex,
+  inline-flex: inline-flex,
+);
+
+$flex-direction-values: (
+  row: row,
+  row-r: row-reverse,
+  col: column,
+  col-r: column-reverse,
+);
+
+$flex-wrap-values: (
+  nowrap: nowrap,
+  wrap: wrap,
+  wrap-r: wrap-reverse,
+);
+
+$flex-values: (
+  none: none,
+  0: 0,
+  1: 1,
+  2: 2,
+);
+
+// ------------------------------------
+// Config
+// ------------------------------------
+
+$layout-utilities: (
+  (
+    class: elm,
+    property: display,
+    values: $layout-display-values,
+    important: only,
+    responsive: both,
+  ),
+  (
+    class: flex,
+    property: flex-direction,
+    values: $flex-direction-values,
+    important: only,
+    responsive: both,
+  ),
+  (
+    class: flex,
+    property: flex-wrap,
+    values: $flex-wrap-values,
+    important: only,
+    responsive: both,
+  ),
+  (
+    class: flex,
+    property: flex,
+    values: $flex-values,
+    important: only,
+    responsive: both,
+  )
+);
+
+@include tool.dispatch(
+  $layout-utilities
+);
