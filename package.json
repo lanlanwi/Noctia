@@ -6,7 +6,7 @@
   "author": "Lanlanwi",
   "files": [
     "dist",
-    "src/scss/",
+    "src/scss",
     "README.md",
     "LICENSE"
   ],
@@ -19,7 +19,9 @@
       "types": "./dist/types/index.d.ts",
       "import": "./dist/js/noctia.js",
       "default": "./dist/js/noctia.js"
-    }
+    },
+    "./css": "./dist/css/noctia.css",
+    "./scss": "./src/scss/index.scss"
   },
   "scripts": {
     "clean": "rimraf dev dist",
