@@ -20,6 +20,7 @@
       "import": "./dist/js/noctia.js",
       "default": "./dist/js/noctia.js"
     },
+    "./auto": "./dist/js/noctia-auto.js",
     "./css": "./dist/css/noctia.css",
     "./scss": "./src/scss/index.scss"
   },
