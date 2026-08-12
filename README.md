@@ -40,8 +40,8 @@ npm install noctia
 ### CDN
 
 ```html
-<link rel="stylesheet" href="YOUR_CDN_URL">
-<script src="YOUR_CDN_URL"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/noctia@1.0.0/dist/css/noctia.css">
+<script type="module" src="https://cdn.jsdelivr.net/npm/noctia@1.0.0/dist/js/noctia.js"></script>
 ```
 
 > npm and CDN packages are coming soon.
