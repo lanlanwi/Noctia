@@ -1,7 +1,7 @@
 # Noctia
 
 <p align="center">
-  <img src="./assets/logo.svg" alt="Noctia" width="180">
+  <img src="./assets/logo/logo-icon.png" alt="Noctia" width="180">
 </p>
 
 <p align="center">
