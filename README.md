@@ -44,14 +44,17 @@ npm install noctia
 ```
 
 ```js
-<script type="module" src="https://cdn.jsdelivr.net/npm/noctia@1.0.0/dist/js/noctia.js"></script>
+<script
+  type="module"
+  src="https://cdn.jsdelivr.net/npm/noctia@1.0.0/dist/js/noctia.js"
+></script>
 ```
 
 ## 📚 Documentation
 
 [**Read the Documentation →**](https://noctia-docs.pages.dev/)
 
-The documentation covers installation, usage, utilities, components, themes, JavaScript, customization, and API references.
+The documentation covers usage, utilities, components, themes, JavaScript, customization, and API references.
 
 ## 📄 License
 
