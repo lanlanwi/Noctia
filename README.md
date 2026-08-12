@@ -39,12 +39,13 @@ npm install noctia
 
 ### CDN
 
-```html
+```css
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/noctia@1.0.0/dist/css/noctia.css">
-<script type="module" src="https://cdn.jsdelivr.net/npm/noctia@1.0.0/dist/js/noctia.js"></script>
 ```
 
-> npm and CDN packages are coming soon.
+```js
+<script type="module" src="https://cdn.jsdelivr.net/npm/noctia@1.0.0/dist/js/noctia.js"></script>
+```
 
 ## 🧩 Modular by Design
 
