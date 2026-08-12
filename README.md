@@ -16,7 +16,7 @@
 
 Noctia is a lightweight and modular frontend framework for building modern web interfaces.
 
-It provides **Base, Layout, Utilities, Components, Themes, and JavaScript** as independent modules that can be used individually or together.
+From Base styles and layouts to utilities, components, themes, and optional JavaScript, Noctia gives you the building blocks to create and customize your interface.
 
 ## ✨ Features
 
