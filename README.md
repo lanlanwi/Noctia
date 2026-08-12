@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  A modular frontend framework for building modern web interfaces.
+  A lightweight and customizable CSS framework with optional JavaScript.
 </p>
 
 <p align="center">
