@@ -37,6 +37,18 @@ From Base styles and layouts to utilities, components, themes, and optional Java
 npm install noctia
 ```
 
+```css
+import "noctia/css";
+```
+
+```js
+import 'noctia';
+```
+
+```Auto Initialization
+import "noctia/auto";
+```
+
 ### CDN
 
 ```css
@@ -47,6 +59,13 @@ npm install noctia
 <script
   type="module"
   src="https://cdn.jsdelivr.net/npm/noctia@1.0.0/dist/js/noctia.js"
+></script>
+```
+
+```Auto Initialization
+<script
+  type="module"
+  src="https://cdn.jsdelivr.net/npm/noctia@1.0.0/dist/js/noctia-auto.js"
 ></script>
 ```
 
