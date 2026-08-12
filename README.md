@@ -47,22 +47,6 @@ npm install noctia
 <script type="module" src="https://cdn.jsdelivr.net/npm/noctia@1.0.0/dist/js/noctia.js"></script>
 ```
 
-## 🧩 Modular by Design
-
-Noctia is designed to give you control over what you use.
-
-```text
-Noctia
-├── Base
-├── Layout
-├── Utilities
-├── Components
-├── Themes
-└── JavaScript
-```
-
-Use Noctia as a complete framework, or pick only the modules you need.
-
 ## 📚 Documentation
 
 [**Read the Documentation →**](https://noctia-docs.pages.dev/)
