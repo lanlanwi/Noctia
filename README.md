@@ -20,14 +20,14 @@ From Base styles and layouts to utilities, components, themes, and optional Java
 
 ## ✨ Features
 
-- **Base** — Foundational styles for a consistent interface.
+- **Base** — Foundational styles, including a CSS reset for a consistent interface.
 - **Layout** — Flexible tools for building responsive layouts.
 - **Utilities** — Composable utility classes for fast and flexible styling.
-- **Components** — Reusable UI components for common interface patterns.
-- **Themes** — Built-in themes and customization options.
-- **JavaScript** — Interactive features and behaviors.
-- **Modular** — Use each module independently or combine them together.
-- **Responsive** — Designed for modern responsive interfaces.
+- **Components** — Reusable, theme-aware UI components for common interface patterns.
+- **Themes** — Built-in themes with flexible options for customizing the look and feel of your interface.
+- **JavaScript** — Optional JavaScript for interactive features and behaviors.
+- **Modular** — Use individual modules independently or combine them as needed.
+- **Responsive** — Built with responsive web interfaces in mind.
 
 ## 📦 Installation
 
