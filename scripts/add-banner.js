@@ -20,7 +20,7 @@ const banner = `/*!
 `;
 
 const files = globSync(
-  'dist/**/*.{js,css}'
+  '{dist,dev}/**/*.{js,css}'
 );
 
 for (const file of files) {

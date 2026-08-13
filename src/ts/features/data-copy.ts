@@ -24,7 +24,7 @@ function handleDataCopy(
     return;
 
   const text =
-    elm.dataset.copy ?? getText(elm);
+    elm.dataset.copy || getText(elm);
 
   void copyText(text);
 }

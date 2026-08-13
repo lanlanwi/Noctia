@@ -1,6 +1,6 @@
 {
   "name": "noctia",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A lightweight and customizable CSS framework with optional JavaScript.",
   "license": "MIT",
   "author": "Lanlanwi",
@@ -22,8 +22,28 @@
     },
     "./auto": "./dist/js/noctia-auto.js",
     "./css": "./dist/css/noctia.css",
-    "./scss": "./src/scss/index.scss"
+    "./base": "./dist/css/noctia-base.css",
+    "./components": "./dist/css/noctia-components.css",
+    "./layouts": "./dist/css/noctia-layouts.css",
+    "./utilities": "./dist/css/noctia-utilities.css",
+    "./scss": "./src/scss/index.scss",
+    "./scss/base": "./src/scss/base/index.scss",
+    "./scss/components": "./src/scss/components/index.scss",
+    "./scss/layouts": "./src/scss/layouts/index.scss",
+    "./scss/utilities": "./src/scss/utilities/index.scss"
   },
+  "keywords": [
+    "css",
+    "scss",
+    "javascript",
+    "typescript",
+    "css-framework",
+    "utility-first",
+    "utilities",
+    "base",
+    "components",
+    "design-system"
+  ],
   "scripts": {
     "clean": "rimraf dev dist",
     "clean:dev": "rimraf dev",
@@ -41,8 +61,8 @@
     "build:types:dist": "tsc -p tsconfig.types.json --outDir dist/types",
     "build:types": "npm run clean:types && npm run build:types:dev && npm run build:types:dist",
     "build:dev": "npm run clean:dev && npm run build:scss:dev && npm run build:ts:dev && npm run build:types:dev",
-    "build:dist": "npm run clean:dist && npm run build:scss:dist && npm run build:ts:dist && npm run build:types:dist && npm run banner",
-    "build": "npm run check && npm run build:dev && npm run build:dist",
+    "build:dist": "npm run clean:dist && npm run build:scss:dist && npm run build:ts:dist && npm run build:types:dist",
+    "build": "npm run check && npm run build:dev && npm run build:dist && npm run banner",
     "banner": "node scripts/add-banner.js",
     "format": "prettier . --write",
     "lint": "eslint .",
