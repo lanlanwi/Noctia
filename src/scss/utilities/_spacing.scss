@@ -78,7 +78,7 @@ $spacing-utilities: (
     property: margin,
     variants: $margin-variants,
     values: $margin-values,
-    important: none,
+    important: both,
     responsive: both,
   ),
   (
@@ -86,7 +86,7 @@ $spacing-utilities: (
     property: padding,
     variants: $padding-variants,
     values: $spacing-values,
-    important: none,
+    important: both,
     responsive: both,
   )
 );
