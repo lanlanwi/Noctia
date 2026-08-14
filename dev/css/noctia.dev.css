@@ -18,7 +18,7 @@
 
 html {
   font-family: "Segoe UI", "Hiragino Sans", "Yu Gothic", "Meiryo", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: clamp(16px, min(4.5vw, 5vh), 32px);
+  font-size: min(4.5vw, 5vh);
   scroll-behavior: smooth;
 }
 

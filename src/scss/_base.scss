@@ -13,7 +13,7 @@
 
 html {
   font-family: abs.$font-sans;
-  font-size: clamp(16px, min(4.5vw, 5vh), 32px);
+  font-size: min(4.5vw, 5vh);
 
   scroll-behavior: smooth;
 }
