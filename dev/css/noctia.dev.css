@@ -1076,7 +1076,14 @@ html[data-theme=dark] .nc-title-3 {
   margin-bottom: 0.5em;
   padding: 0.2em 1em;
   font-size: 1.25rem;
-  background-color: var(--nc-border);
+}
+html[data-theme=dark] .nc-title-4 {
+  background-color: var(--nc-surface);
+}
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme]) .nc-title-4 {
+    background-color: var(--nc-surface);
+  }
 }
 
 .nc-title-5 {
@@ -15605,6 +15612,10 @@ p[data-license] {
   color: hsl(330, 90%, 75%) !important;
 }
 
+.bc-none {
+  background-color: transparent !important;
+}
+
 .bc-theme {
   background-color: var(--nc-theme, #ffffff) !important;
 }
@@ -19887,6 +19898,20 @@ p[data-license] {
 
 .overflow-y-auto {
   overflow-y: auto !important;
+}
+
+.no-pointer {
+  pointer-events: none;
+}
+
+.no-select {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.no-touch {
+  touch-action: none;
 }
 
 .hide-scrollbar {

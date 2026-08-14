@@ -14485,6 +14485,10 @@
   color: hsl(330, 90%, 75%) !important;
 }
 
+.bc-none {
+  background-color: transparent !important;
+}
+
 .bc-theme {
   background-color: var(--nc-theme, #ffffff) !important;
 }
@@ -18767,6 +18771,20 @@
 
 .overflow-y-auto {
   overflow-y: auto !important;
+}
+
+.no-pointer {
+  pointer-events: none;
+}
+
+.no-select {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.no-touch {
+  touch-action: none;
 }
 
 .hide-scrollbar {

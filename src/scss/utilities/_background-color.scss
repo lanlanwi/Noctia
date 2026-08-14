@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 @use '../abstracts' as abs;
 @use './tools' as tool;
 
@@ -5,7 +7,12 @@
 // Values
 // ------------------------------------
 
-$bg-color-values: abs.$colors;
+$bg-color-values: map.merge(
+  (
+    none: transparent,
+  ),
+  abs.$colors
+);
 
 // ------------------------------------
 // Config

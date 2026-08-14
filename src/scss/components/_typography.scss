@@ -141,7 +141,9 @@ $-title-bg-color: var(--nc-surface);
 
   font-size: 1.25rem;
 
-  background-color: $-title-border-color;
+  @include abs.when-dark {
+    background-color: $-title-bg-color;
+  }
 }
 
 .nc-title-5 {
