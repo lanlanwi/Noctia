@@ -10,9 +10,7 @@ details.nc-accordion {
   font-size: 1rem;
 
   color: var(--nc-text);
-  background-color: var(
-    --nc-background
-  );
+  background-color: var(--nc-background);
 
   & summary {
     list-style: none;
@@ -23,8 +21,7 @@ details.nc-accordion {
     line-height: 1.5;
     overflow-wrap: break-word;
 
-    transition: background-color 0.1s
-      ease;
+    transition: background-color 0.1s ease;
 
     user-select: none;
 
@@ -40,8 +37,7 @@ details.nc-accordion {
   }
 
   & summary:focus-visible {
-    outline: 0.1em solid
-      var(--nc-focus-ring);
+    outline: 0.1em solid var(--nc-focus-ring);
     outline-offset: -0.1em;
   }
 
@@ -49,8 +45,7 @@ details.nc-accordion {
     background-color: var(--nc-surface);
 
     @include abs.when-dark {
-      border: 0.1em solid
-        var(--nc-neutral);
+      border: 0.1em solid var(--nc-neutral);
     }
   }
 }

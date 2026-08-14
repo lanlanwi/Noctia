@@ -74,9 +74,7 @@ $alignment-utilities: (
   )
 );
 
-@include tool.dispatch(
-  $alignment-utilities
-);
+@include tool.dispatch($alignment-utilities);
 
 // ------------------------------------
 // Utilities

@@ -1,11 +1,9 @@
 const OVERLAY_CLASS = 'nc-overlay';
 
-let overlayElm: HTMLElement | null =
-  null;
+let overlayElm: HTMLElement | null = null;
 
 function createElm(): HTMLElement {
-  const div =
-    document.createElement('div');
+  const div = document.createElement('div');
 
   div.className = OVERLAY_CLASS;
 
@@ -16,10 +14,7 @@ function createElm(): HTMLElement {
 
 export function getElm(): HTMLElement {
   if (!overlayElm) {
-    overlayElm =
-      document.querySelector<HTMLElement>(
-        `.${OVERLAY_CLASS}`
-      ) ?? createElm();
+    overlayElm = document.querySelector<HTMLElement>(`.${OVERLAY_CLASS}`) ?? createElm();
   }
 
   return overlayElm;
@@ -33,8 +28,7 @@ export function showOverlay() {
   if (count === 1) {
     const elm = getElm();
     elm.classList.add('is-active');
-    document.body.style.overflow =
-      'hidden';
+    document.body.style.overflow = 'hidden';
   }
 }
 

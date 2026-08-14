@@ -5,11 +5,7 @@ import { defineConfig } from 'eslint/config';
 
 export default defineConfig([
   {
-    ignores: [
-      'node_modules/**',
-      'dist/**',
-      'dev/**',
-    ],
+    ignores: ['node_modules/**', 'dist/**', 'dev/**'],
   },
 
   js.configs.recommended,
@@ -28,22 +24,18 @@ export default defineConfig([
     rules: {
       'no-console': 'off',
 
-      '@typescript-eslint/no-unused-vars':
-        [
-          'error',
-          {
-            argsIgnorePattern: '^_',
-            varsIgnorePattern: '^_',
-          },
-        ],
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+        },
+      ],
     },
   },
 
   {
-    files: [
-      'scripts/**/*.js',
-      'config/**/*.js',
-    ],
+    files: ['scripts/**/*.js', 'config/**/*.js'],
     languageOptions: {
       globals: globals.node,
     },

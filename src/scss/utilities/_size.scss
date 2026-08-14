@@ -57,17 +57,9 @@ $size-viewport: (
 
 $size-viewport-units: (v, dv, lv, sv);
 
-$size-vw-values: tool.append-units(
-  $size-viewport,
-  $size-viewport-units,
-  'w'
-);
+$size-vw-values: tool.append-units($size-viewport, $size-viewport-units, 'w');
 
-$size-vh-values: tool.append-units(
-  $size-viewport,
-  $size-viewport-units,
-  'h'
-);
+$size-vh-values: tool.append-units($size-viewport, $size-viewport-units, 'h');
 
 // ------------------------------------
 // Config
@@ -77,20 +69,14 @@ $size-utilities: (
   (
     class: w,
     property: width,
-    values: map.merge(
-        $size-values,
-        $size-vw-values
-      ),
+    values: map.merge($size-values, $size-vw-values),
     important: both,
     responsive: both,
   ),
   (
     class: h,
     property: height,
-    values: map.merge(
-        $size-values,
-        $size-vh-values
-      ),
+    values: map.merge($size-values, $size-vh-values),
     important: both,
     responsive: both,
   )

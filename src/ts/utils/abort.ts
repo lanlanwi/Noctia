@@ -1,12 +1,10 @@
 export function abortManager() {
-  let controller: AbortController | null =
-    null;
+  let controller: AbortController | null = null;
 
   return {
     create() {
       controller?.abort();
-      controller =
-        new AbortController();
+      controller = new AbortController();
     },
 
     cancel() {
@@ -16,9 +14,7 @@ export function abortManager() {
 
     get signal() {
       if (!controller) {
-        throw new Error(
-          'abortManager: Call create() before accessing signal.'
-        );
+        throw new Error('abortManager: Call create() before accessing signal.');
       }
 
       return controller.signal;

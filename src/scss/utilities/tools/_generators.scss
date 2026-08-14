@@ -1,15 +1,8 @@
 @use '../../abstracts' as abs;
 
-@mixin gen(
-  $class,
-  $property,
-  $name,
-  $value,
-  $important: none
-) {
+@mixin gen($class, $property, $name, $value, $important: none) {
   $generate-normal: $important != only;
-  $generate-important: $important ==
-    only or $important == both;
+  $generate-important: $important == only or $important == both;
 
   @if $generate-normal {
     .#{$class}-#{$name} {
@@ -29,63 +22,24 @@
   }
 }
 
-@mixin gen-utils(
-  $class,
-  $property,
-  $values,
-  $important: none
-) {
+@mixin gen-utils($class, $property, $values, $important: none) {
   @each $name, $value in $values {
-    @include gen(
-      $class,
-      $property,
-      $name,
-      $value,
-      $important
-    );
+    @include gen($class, $property, $name, $value, $important);
   }
 }
 
-@mixin gen-responsive(
-  $class,
-  $property,
-  $values,
-  $important: none
-) {
-  @each $prefix,
-    $breakpoint in abs.$breakpoints
-  {
+@mixin gen-responsive($class, $property, $values, $important: none) {
+  @each $prefix, $breakpoint in abs.$breakpoints {
     @media (min-width: $breakpoint) {
       @each $name, $value in $values {
-        @include gen(
-          #{$prefix}-#{$class},
-          $property,
-          $name,
-          $value,
-          $important
-        );
+        @include gen(#{$prefix}-#{$class}, $property, $name, $value, $important);
       }
     }
   }
 }
 
-@mixin gen-all(
-  $class,
-  $property,
-  $values,
-  $important: none
-) {
-  @include gen-utils(
-    $class,
-    $property,
-    $values,
-    $important
-  );
+@mixin gen-all($class, $property, $values, $important: none) {
+  @include gen-utils($class, $property, $values, $important);
 
-  @include gen-responsive(
-    $class,
-    $property,
-    $values,
-    $important
-  );
+  @include gen-responsive($class, $property, $values, $important);
 }

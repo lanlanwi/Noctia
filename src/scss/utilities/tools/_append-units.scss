@@ -1,22 +1,12 @@
 @use 'sass:map';
 
-@function append-units(
-  $values,
-  $units,
-  $suffix: ''
-) {
+@function append-units($values, $units, $suffix: '') {
   $result: ();
 
   @each $unit in $units {
     $name: #{$unit}#{$suffix};
     @each $key, $value in $values {
-      $result: map.merge(
-        $result,
-        (
-          #{$key}#{$name}:
-            #{$value}#{$name}
-        )
-      );
+      $result: map.merge($result, (#{$key}#{$name}: #{$value}#{$name}));
     }
   }
 

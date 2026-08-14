@@ -1,7 +1,6 @@
 @use '../abstracts' as abs;
 
-$border-style: 0.1rem solid
-  var(--nc-neutral);
+$border-style: 0.1rem solid var(--nc-neutral);
 
 dl.nc-description {
   container-type: inline-size;
@@ -17,9 +16,7 @@ dl.nc-description {
   line-height: 1.5;
   overflow-wrap: break-word;
 
-  background-color: var(
-    --nc-background
-  );
+  background-color: var(--nc-background);
 
   scrollbar-gutter: stable;
 
@@ -49,9 +46,7 @@ dl.nc-description {
       position: absolute;
       inset: auto 2% 0;
 
-      background-color: var(
-        --nc-neutral
-      );
+      background-color: var(--nc-neutral);
     }
   }
 

@@ -7,15 +7,11 @@
 // Values
 // ------------------------------------
 
-$-border-color: var(
-  --nc-border,
-  #000000
-);
+$-border-color: var(--nc-border, #000000);
 
 $border-values: (
   none: none,
-  '0-5': '0.5px solid '
-    #{$-border-color},
+  '0-5': '0.5px solid ' #{$-border-color},
   1: '1px solid ' #{$-border-color},
   2: '2px solid ' #{$-border-color},
   4: '4px solid ' #{$-border-color},
@@ -51,20 +47,11 @@ $border-relative: (
 
 $border-relative-units: (em, rem);
 
-$border-values-relative: tool.append-units(
-  $border-relative,
-  $border-relative-units
-);
+$border-values-relative: tool.append-units($border-relative, $border-relative-units);
 
-$border-values: map.merge(
-  $border-values,
-  $border-values-relative
-);
+$border-values: map.merge($border-values, $border-values-relative);
 
-$border-radius-values: map.merge(
-  $border-radius-values,
-  $border-values-relative
-);
+$border-radius-values: map.merge($border-radius-values, $border-values-relative);
 
 $border-color-values: abs.$colors;
 
@@ -112,6 +99,4 @@ $border-utilities: (
   )
 );
 
-@include tool.dispatch(
-  $border-utilities
-);
+@include tool.dispatch($border-utilities);

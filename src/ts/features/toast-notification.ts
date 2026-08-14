@@ -1,20 +1,15 @@
 import { throwIf } from '../internal';
 
-const TOAST_CLASS =
-  'nc-toast-notification';
+const TOAST_CLASS = 'nc-toast-notification';
 
 let toastElm: HTMLElement | null = null;
 
 function createElm(): HTMLElement {
-  const div =
-    document.createElement('div');
+  const div = document.createElement('div');
 
   div.className = TOAST_CLASS;
   div.setAttribute('role', 'status');
-  div.setAttribute(
-    'aria-live',
-    'polite'
-  );
+  div.setAttribute('aria-live', 'polite');
 
   document.body.appendChild(div);
 
@@ -23,10 +18,7 @@ function createElm(): HTMLElement {
 
 function getElm(): HTMLElement {
   if (!toastElm) {
-    toastElm =
-      document.querySelector<HTMLElement>(
-        `.${TOAST_CLASS}`
-      ) ?? createElm();
+    toastElm = document.querySelector<HTMLElement>(`.${TOAST_CLASS}`) ?? createElm();
   }
 
   return toastElm;
@@ -35,28 +27,17 @@ function getElm(): HTMLElement {
 const MAX_LETTERS = 40;
 const TOAST_TIMEOUT = 3000;
 
-let timer:
-  | ReturnType<typeof setTimeout>
-  | undefined;
+let timer: ReturnType<typeof setTimeout> | undefined;
 
-export function showToast(
-  text: string
-) {
-  throwIf(
-    typeof text !== 'string',
-    'toast: Expected a string.'
-  );
+export function showToast(text: string) {
+  throwIf(typeof text !== 'string', 'toast: Expected a string.');
 
   const trimmedText = text.trim();
   if (!trimmedText) return;
 
   const chars = [...trimmedText];
   const formattedText =
-    chars.length > MAX_LETTERS
-      ? chars
-          .slice(0, MAX_LETTERS)
-          .join('') + '...'
-      : trimmedText;
+    chars.length > MAX_LETTERS ? chars.slice(0, MAX_LETTERS).join('') + '...' : trimmedText;
 
   const elm = getElm();
 

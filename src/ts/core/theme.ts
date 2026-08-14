@@ -1,24 +1,13 @@
 import { throwIf } from '../internal';
 
-const THEME_STORAGE_KEY =
-  'noctia-theme';
+const THEME_STORAGE_KEY = 'noctia-theme';
 
-export type ThemeType =
-  'light' | 'dark' | 'system';
+export type ThemeType = 'light' | 'dark' | 'system';
 
-const themes: ThemeType[] = [
-  'light',
-  'dark',
-  'system',
-];
+const themes: ThemeType[] = ['light', 'dark', 'system'];
 
-export function setTheme(
-  theme: ThemeType
-) {
-  throwIf(
-    typeof theme !== 'string',
-    'setTheme: Expected a string.'
-  );
+export function setTheme(theme: ThemeType) {
+  throwIf(typeof theme !== 'string', 'setTheme: Expected a string.');
 
   const html = document.documentElement;
 
@@ -28,33 +17,21 @@ export function setTheme(
     html.dataset.theme = theme;
   }
 
-  localStorage.setItem(
-    THEME_STORAGE_KEY,
-    theme
-  );
+  localStorage.setItem(THEME_STORAGE_KEY, theme);
 }
 
 export function getTheme(): ThemeType | null {
-  const data = localStorage.getItem(
-    THEME_STORAGE_KEY
-  );
+  const data = localStorage.getItem(THEME_STORAGE_KEY);
 
-  if (
-    themes.includes(data as ThemeType)
-  ) {
+  if (themes.includes(data as ThemeType)) {
     return data as ThemeType;
   }
 
   return null;
 }
 
-export function initTheme(
-  defaultTheme: ThemeType = 'light'
-) {
-  throwIf(
-    typeof defaultTheme !== 'string',
-    'initTheme: Expected a string.'
-  );
+export function initTheme(defaultTheme: ThemeType = 'light') {
+  throwIf(typeof defaultTheme !== 'string', 'initTheme: Expected a string.');
 
   const theme = getTheme();
 

@@ -32,6 +32,4 @@ $overflow-utilities: (
   )
 );
 
-@include tool.dispatch(
-  $overflow-utilities
-);
+@include tool.dispatch($overflow-utilities);

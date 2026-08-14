@@ -62,14 +62,18 @@
     "build:types": "npm run clean:types && npm run build:types:dev && npm run build:types:dist",
     "build:dev": "npm run clean:dev && npm run build:scss:dev && npm run build:ts:dev && npm run build:types:dev",
     "build:dist": "npm run clean:dist && npm run build:scss:dist && npm run build:ts:dist && npm run build:types:dist",
-    "build": "npm run check && npm run build:dev && npm run build:dist && npm run banner",
+    "build": "npm run build:dev && npm run build:dist && npm run banner",
+    "b": "npm run check && npm run build",
     "banner": "node scripts/add-banner.js",
     "format": "prettier . --write",
     "lint": "eslint .",
     "lint:css": "stylelint \"src/**/*.scss\"",
     "lint:css:fix": "stylelint \"src/**/*.scss\" --fix",
     "typecheck": "npx tsc --watch",
-    "check": "npm run lint && npm run lint:css && npx tsc"
+    "check": "npm run lint && npm run lint:css && npx tsc",
+    "update-readme": "node scripts/update-readme.js",
+    "release:minor": "npm run check && npm version minor --no-git-tag-version && npm run update-readme && npm run build",
+    "release:patch": "npm run check && npm version patch --no-git-tag-version && npm run update-readme && npm run build"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

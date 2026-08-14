@@ -53,19 +53,10 @@ const RULES: TokenRule[] = [
   },
 ];
 
-RULES.sort(
-  (a, b) =>
-    b.start.length - a.start.length
-);
+RULES.sort((a, b) => b.start.length - a.start.length);
 
-function findRule(
-  text: string,
-  index: number,
-  rules: TokenRule[]
-): TokenRule | undefined {
-  return rules.find((rule) =>
-    text.startsWith(rule.start, index)
-  );
+function findRule(text: string, index: number, rules: TokenRule[]): TokenRule | undefined {
+  return rules.find((rule) => text.startsWith(rule.start, index));
 }
 
 type Token = {
@@ -73,25 +64,16 @@ type Token = {
   value: string;
 };
 
-function readToken(
-  text: string,
-  index: number,
-  rule: TokenRule
-): Token {
+function readToken(text: string, index: number, rule: TokenRule): Token {
   let end = index + rule.start.length;
 
   while (end < text.length) {
-    if (
-      rule.escape &&
-      text.startsWith(rule.escape, end)
-    ) {
+    if (rule.escape && text.startsWith(rule.escape, end)) {
       end += rule.escape.length + 1;
       continue;
     }
 
-    if (
-      text.startsWith(rule.end, end)
-    ) {
+    if (text.startsWith(rule.end, end)) {
       end += rule.end.length;
       break;
     }
@@ -105,16 +87,11 @@ function readToken(
   };
 }
 
-function readText(
-  text: string,
-  index: number,
-  rules: TokenRule[]
-): Token {
+function readText(text: string, index: number, rules: TokenRule[]): Token {
   let end = index;
 
   while (end < text.length) {
-    if (findRule(text, end, rules))
-      break;
+    if (findRule(text, end, rules)) break;
     end++;
   }
 
@@ -124,23 +101,14 @@ function readText(
   };
 }
 
-function parse(
-  text: string,
-  rules: TokenRule[]
-): Token[] {
+function parse(text: string, rules: TokenRule[]): Token[] {
   const tokens: Token[] = [];
   let i = 0;
 
   while (i < text.length) {
-    const rule = findRule(
-      text,
-      i,
-      rules
-    );
+    const rule = findRule(text, i, rules);
 
-    const token = rule
-      ? readToken(text, i, rule)
-      : readText(text, i, rules);
+    const token = rule ? readToken(text, i, rule) : readText(text, i, rules);
 
     if (token.value.length > 0) {
       tokens.push(token);
@@ -154,13 +122,9 @@ function parse(
 
 function apply(node: Text) {
   const text = node.textContent ?? '';
-  const tokens: Token[] = parse(
-    text,
-    RULES
-  );
+  const tokens: Token[] = parse(text, RULES);
 
-  const frag =
-    document.createDocumentFragment();
+  const frag = document.createDocumentFragment();
 
   tokens.forEach((token) => {
     if (token.type === 'text') {
@@ -168,8 +132,7 @@ function apply(node: Text) {
       return;
     }
 
-    const span =
-      document.createElement('span');
+    const span = document.createElement('span');
 
     span.className = `token-${token.type} syntax-auto`;
     span.textContent = token.value;
@@ -180,21 +143,12 @@ function apply(node: Text) {
   node.replaceWith(frag);
 }
 
-export function applySyntaxHighlight(
-  elm: HTMLElement
-) {
-  throwIf(
-    !(elm instanceof HTMLElement),
-    'applySyntaxHighlight: Expected an HTMLElement.'
-  );
+export function applySyntaxHighlight(elm: HTMLElement) {
+  throwIf(!(elm instanceof HTMLElement), 'applySyntaxHighlight: Expected an HTMLElement.');
 
   const textNodes: Text[] = [];
 
-  const walker =
-    document.createTreeWalker(
-      elm,
-      NodeFilter.SHOW_TEXT
-    );
+  const walker = document.createTreeWalker(elm, NodeFilter.SHOW_TEXT);
 
   let node: Node | null;
   while ((node = walker.nextNode())) {
@@ -208,18 +162,10 @@ export function applySyntaxHighlight(
   });
 }
 
-export function removeSyntaxHighlight(
-  elm: HTMLElement
-) {
-  throwIf(
-    !(elm instanceof HTMLElement),
-    'removeSyntaxHighlight: Expected an HTMLElement.'
-  );
+export function removeSyntaxHighlight(elm: HTMLElement) {
+  throwIf(!(elm instanceof HTMLElement), 'removeSyntaxHighlight: Expected an HTMLElement.');
 
-  const auto =
-    elm.querySelectorAll<HTMLElement>(
-      '.syntax-auto'
-    );
+  const auto = elm.querySelectorAll<HTMLElement>('.syntax-auto');
 
   auto.forEach((e) => {
     e.replaceWith(e.textContent);

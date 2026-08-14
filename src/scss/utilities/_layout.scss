@@ -68,6 +68,4 @@ $layout-utilities: (
   )
 );
 
-@include tool.dispatch(
-  $layout-utilities
-);
+@include tool.dispatch($layout-utilities);

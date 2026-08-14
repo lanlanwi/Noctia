@@ -3,34 +3,13 @@
 
 @use './generators' as *;
 
-@mixin run-generator(
-  $responsive,
-  $class,
-  $property,
-  $values,
-  $important
-) {
+@mixin run-generator($responsive, $class, $property, $values, $important) {
   @if $responsive == only {
-    @include gen-responsive(
-      $class,
-      $property,
-      $values,
-      $important
-    );
+    @include gen-responsive($class, $property, $values, $important);
   } @else if $responsive == both {
-    @include gen-all(
-      $class,
-      $property,
-      $values,
-      $important
-    );
+    @include gen-all($class, $property, $values, $important);
   } @else {
-    @include gen-utils(
-      $class,
-      $property,
-      $values,
-      $important
-    );
+    @include gen-utils($class, $property, $values, $important);
   }
 }
 
@@ -39,48 +18,24 @@
   $property: map.get($config, property);
   $variants: map.get($config, variants);
   $values: map.get($config, values);
-  $important: map.get(
-    $config,
-    important
-  );
-  $responsive: map.get(
-    $config,
-    responsive
-  );
+  $important: map.get($config, important);
+  $responsive: map.get($config, responsive);
 
-  @include run-generator(
-    $responsive,
-    $class,
-    $property,
-    $values,
-    $important
-  );
+  @include run-generator($responsive, $class, $property, $values, $important);
 
   @if $variants {
     @each $key, $var in $variants {
-      @include run-generator(
-        $responsive,
-        #{$class}-#{$key},
-        #{$var},
-        $values,
-        $important
-      );
+      @include run-generator($responsive, #{$class}-#{$key}, #{$var}, $values, $important);
     }
   }
 }
 
 @mixin dispatch($utilities) {
-  @if meta.type-of($utilities) == 'list'
-  {
+  @if meta.type-of($utilities) == 'list' {
     @each $config in $utilities {
       @include process-utility($config);
     }
-  } @else if
-    meta.type-of($utilities) ==
-    'map'
-  {
-    @include process-utility(
-      $utilities
-    );
+  } @else if meta.type-of($utilities) == 'map' {
+    @include process-utility($utilities);
   }
 }

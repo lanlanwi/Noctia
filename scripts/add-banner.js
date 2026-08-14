@@ -3,9 +3,7 @@ import { globSync } from 'glob';
 import pkg from '../package.json' with { type: 'json' };
 import meta from '../.metadata.json' with { type: 'json' };
 
-const date = new Date()
-  .toISOString()
-  .slice(0, 10);
+const date = new Date().toISOString().slice(0, 10);
 const year = new Date().getFullYear();
 
 const banner = `/*!
@@ -19,18 +17,10 @@ const banner = `/*!
 
 `;
 
-const files = globSync(
-  '{dist,dev}/**/*.{js,css}'
-);
+const files = globSync('{dist,dev}/**/*.{js,css}');
 
 for (const file of files) {
-  const content = fs.readFileSync(
-    file,
-    'utf8'
-  );
+  const content = fs.readFileSync(file, 'utf8');
 
-  fs.writeFileSync(
-    file,
-    banner + content
-  );
+  fs.writeFileSync(file, banner + content);
 }

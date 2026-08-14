@@ -32,10 +32,7 @@ nav.nc-nav {
 
 @container (min-width: 1024px) {
   nav.nc-nav ul {
-    grid-template-columns: repeat(
-      2,
-      1fr
-    );
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -67,31 +64,21 @@ nav.nc-nav[data-style='card'] {
         padding: 0.5em;
         border-radius: 0.5em;
 
-        background-color: var(
-          --nc-background
-        );
-        box-shadow: 0 0 0.25em
-          var(--nc-shadow);
+        background-color: var(--nc-background);
+        box-shadow: 0 0 0.25em var(--nc-shadow);
 
         &:active {
-          background-color: var(
-            --nc-active
-          );
+          background-color: var(--nc-active);
         }
 
         @include abs.when-dark {
-          border: 0.05em solid
-            var(--nc-neutral);
+          border: 0.05em solid var(--nc-neutral);
 
-          background-color: var(
-            --nc-surface
-          );
+          background-color: var(--nc-surface);
           box-shadow: none;
 
           &:active {
-            background-color: var(
-              --nc-active
-            );
+            background-color: var(--nc-active);
           }
         }
       }
@@ -102,8 +89,7 @@ nav.nc-nav[data-style='card'] {
 nav.nc-nav[data-style='list'] {
   & ul {
     & li {
-      border-bottom: 0.1em solid
-        var(--nc-neutral);
+      border-bottom: 0.1em solid var(--nc-neutral);
 
       & a {
         padding: 0.25em;
@@ -137,8 +123,7 @@ nav.nc-nav[data-style] {
         width: 30%;
         height: auto;
 
-        border: 0.05em solid
-          var(--nc-neutral);
+        border: 0.05em solid var(--nc-neutral);
         border-radius: 0.2em;
       }
     }
@@ -159,8 +144,7 @@ nav.nc-nav[data-style] {
       width: 100%;
       height: auto;
 
-      border: 0.1em solid
-        var(--nc-neutral);
+      border: 0.1em solid var(--nc-neutral);
       border-radius: 0.5em;
     }
   }
@@ -175,15 +159,11 @@ nav.nc-nav[data-style] {
   font-size: 1rem;
 
   color: var(--nc-text);
-  background-color: var(
-    --nc-background
-  );
-  box-shadow: 0 0 0.25em
-    var(--nc-shadow);
+  background-color: var(--nc-background);
+  box-shadow: 0 0 0.25em var(--nc-shadow);
 
   @include abs.when-dark {
-    border: 0.1em solid
-      var(--nc-neutral);
+    border: 0.1em solid var(--nc-neutral);
 
     box-shadow: none;
   }

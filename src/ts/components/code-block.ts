@@ -1,25 +1,10 @@
-import {
-  applySyntaxHighlight,
-  removeSyntaxHighlight,
-  throwIf,
-} from '../internal';
+import { applySyntaxHighlight, removeSyntaxHighlight, throwIf } from '../internal';
 
-export function enhanceCodeBlock(
-  elm: HTMLElement
-) {
-  throwIf(
-    !(elm instanceof HTMLElement),
-    'enhanceCodeBlock: Expected an HTMLElement.'
-  );
+export function enhanceCodeBlock(elm: HTMLElement) {
+  throwIf(!(elm instanceof HTMLElement), 'enhanceCodeBlock: Expected an HTMLElement.');
 
-  const code =
-    elm.querySelector<HTMLElement>(
-      ':scope pre code'
-    );
-  throwIf(
-    !code,
-    'enhanceCodeBlock: Missing <code>.'
-  );
+  const code = elm.querySelector<HTMLElement>(':scope pre code');
+  throwIf(!code, 'enhanceCodeBlock: Missing <code>.');
 
   function highlight() {
     clearHighlight();
@@ -38,13 +23,8 @@ export function enhanceCodeBlock(
   };
 }
 
-export function initCodeBlock(
-  root: ParentNode = document
-) {
-  const codeBlocks =
-    root.querySelectorAll<HTMLElement>(
-      '[data-code-block]'
-    );
+export function initCodeBlock(root: ParentNode = document) {
+  const codeBlocks = root.querySelectorAll<HTMLElement>('[data-code-block]');
 
   codeBlocks.forEach((elm) => {
     enhanceCodeBlock(elm);

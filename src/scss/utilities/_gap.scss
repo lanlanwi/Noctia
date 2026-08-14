@@ -36,15 +36,9 @@ $gap-relative: (
 
 $gap-relative-units: (em, rem);
 
-$gap-values-relative: tool.append-units(
-  $gap-relative,
-  $gap-relative-units
-);
+$gap-values-relative: tool.append-units($gap-relative, $gap-relative-units);
 
-$gap-values: map.merge(
-  $gap-values,
-  $gap-values-relative
-);
+$gap-values: map.merge($gap-values, $gap-values-relative);
 
 // ------------------------------------
 // Config

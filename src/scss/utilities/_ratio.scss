@@ -28,6 +28,4 @@ $ratio-utilities: (
   )
 );
 
-@include tool.dispatch(
-  $ratio-utilities
-);
+@include tool.dispatch($ratio-utilities);

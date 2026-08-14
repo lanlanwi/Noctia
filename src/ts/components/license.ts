@@ -2,14 +2,9 @@ import { throwIf } from '../internal';
 
 const YEAR = new Date().getFullYear();
 
-export function applyLicense(
-  elm: HTMLParagraphElement
-) {
+export function applyLicense(elm: HTMLParagraphElement) {
   throwIf(
-    !(
-      elm instanceof
-      HTMLParagraphElement
-    ),
+    !(elm instanceof HTMLParagraphElement),
     'applyLicense: Expected an HTMLParagraphElement.'
   );
 
@@ -18,8 +13,7 @@ export function applyLicense(
 
   const copyright = `© ${YEAR} ${holder}.`;
 
-  const statement =
-    elm.dataset.statement;
+  const statement = elm.dataset.statement;
 
   if (!statement) {
     elm.textContent = copyright;
@@ -30,13 +24,8 @@ export function applyLicense(
   }
 }
 
-export function initLicense(
-  root: ParentNode = document
-) {
-  const licenseElms =
-    root.querySelectorAll<HTMLParagraphElement>(
-      'p[data-license]'
-    );
+export function initLicense(root: ParentNode = document) {
+  const licenseElms = root.querySelectorAll<HTMLParagraphElement>('p[data-license]');
 
   licenseElms.forEach((elm) => {
     applyLicense(elm);

@@ -6,15 +6,9 @@ import { initCodeBlock } from './code-block';
 import { initDrawer } from './drawer';
 import { initLicense } from './license';
 
-export function initComponents(
-  root:
-    Document | HTMLElement = document
-) {
+export function initComponents(root: Document | HTMLElement = document) {
   throwIf(
-    !(
-      root instanceof Document ||
-      root instanceof HTMLElement
-    ),
+    !(root instanceof Document || root instanceof HTMLElement),
     'initComponents: Expected a Document or HTMLElement.'
   );
 

@@ -21,9 +21,7 @@ form.nc-form {
   font-size: 1rem;
   @include -text-style;
 
-  background-color: var(
-    --nc-background
-  );
+  background-color: var(--nc-background);
 
   & .nc-field {
     display: flex;
@@ -80,9 +78,7 @@ label {
   font-size: 1em;
   @include -text-style;
 
-  background-color: var(
-    --nc-background
-  );
+  background-color: var(--nc-background);
 
   resize: none;
 
@@ -122,9 +118,7 @@ textarea {
   font-size: 0.875em;
   @include -text-style;
 
-  background-color: var(
-    --nc-background
-  );
+  background-color: var(--nc-background);
 }
 
 input[type='date'],

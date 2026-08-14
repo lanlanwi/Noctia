@@ -33,15 +33,9 @@ $spacing-relative: (
 
 $spacing-relative-units: (em, rem);
 
-$spacing-values-relative: tool.append-units(
-  $spacing-relative,
-  $spacing-relative-units
-);
+$spacing-values-relative: tool.append-units($spacing-relative, $spacing-relative-units);
 
-$spacing-values: map.merge(
-  $spacing-values,
-  $spacing-values-relative
-);
+$spacing-values: map.merge($spacing-values, $spacing-values-relative);
 
 $margin-values: map.merge(
   (
@@ -91,6 +85,4 @@ $spacing-utilities: (
   )
 );
 
-@include tool.dispatch(
-  $spacing-utilities
-);
+@include tool.dispatch($spacing-utilities);

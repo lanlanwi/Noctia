@@ -21,6 +21,4 @@ $bg-color-utilities: (
   )
 );
 
-@include tool.dispatch(
-  $bg-color-utilities
-);
+@include tool.dispatch($bg-color-utilities);

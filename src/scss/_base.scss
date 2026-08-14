@@ -13,11 +13,7 @@
 
 html {
   font-family: abs.$font-sans;
-  font-size: clamp(
-    16px,
-    min(4.5vw, 5vh),
-    32px
-  );
+  font-size: clamp(16px, min(4.5vw, 5vh), 32px);
 
   scroll-behavior: smooth;
 }
@@ -30,10 +26,7 @@ body {
   overflow-wrap: break-word;
 
   color: var(--nc-text, #252525);
-  background-color: var(
-    --nc-background,
-    #ffffff
-  );
+  background-color: var(--nc-background, #ffffff);
 }
 
 // ------------------------------------
@@ -109,8 +102,7 @@ textarea,
 select,
 button {
   &:focus-visible {
-    outline: 0.15em solid
-      var(--nc-focus-ring, #000000);
+    outline: 0.15em solid var(--nc-focus-ring, #000000);
     outline-offset: 0.1em;
   }
 }

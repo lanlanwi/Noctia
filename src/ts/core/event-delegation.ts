@@ -1,7 +1,4 @@
-type DelegatedListener = (
-  evt: Event,
-  elm: Element
-) => void;
+type DelegatedListener = (evt: Event, elm: Element) => void;
 
 type DelegatedEvent = {
   selector: string;
@@ -9,25 +6,14 @@ type DelegatedEvent = {
   listener: DelegatedListener;
 };
 
-const events: Partial<
-  Record<
-    keyof DocumentEventMap,
-    DelegatedEvent[]
-  >
-> = {};
+const events: Partial<Record<keyof DocumentEventMap, DelegatedEvent[]>> = {};
 
-function dispatch(
-  type: keyof DocumentEventMap,
-  target: Element,
-  evt: Event
-) {
+function dispatch(type: keyof DocumentEventMap, target: Element, evt: Event) {
   const handlers = events[type];
   if (!handlers) return;
 
   handlers.forEach((handler) => {
-    const elm = target.closest(
-      handler.selector
-    );
+    const elm = target.closest(handler.selector);
 
     if (!elm) return;
 
@@ -35,27 +21,19 @@ function dispatch(
   });
 }
 
-const registered = new Set<
-  keyof DocumentEventMap
->();
+const registered = new Set<keyof DocumentEventMap>();
 
-function registerEvent(
-  type: keyof DocumentEventMap
-) {
+function registerEvent(type: keyof DocumentEventMap) {
   if (registered.has(type)) return;
   registered.add(type);
 
-  document.addEventListener(
-    type,
-    (e) => {
-      const target = e.target;
+  document.addEventListener(type, (e) => {
+    const target = e.target;
 
-      if (!(target instanceof Element))
-        return;
+    if (!(target instanceof Element)) return;
 
-      dispatch(type, target, e);
-    }
-  );
+    dispatch(type, target, e);
+  });
 }
 
 export function delegateEvent(
@@ -76,16 +54,11 @@ export function delegateEvent(
   });
 }
 
-export function undelegateEvent(
-  type: keyof DocumentEventMap,
-  id: string
-) {
+export function undelegateEvent(type: keyof DocumentEventMap, id: string) {
   const handlers = events[type];
   if (!handlers) return;
 
-  const filtered = handlers.filter(
-    (e) => e.id !== id
-  );
+  const filtered = handlers.filter((e) => e.id !== id);
 
   if (filtered.length === 0) {
     delete events[type];

@@ -177,9 +177,7 @@ $font-text-utilities: (
   )
 );
 
-@include tool.dispatch(
-  $font-text-utilities
-);
+@include tool.dispatch($font-text-utilities);
 
 // ------------------------------------
 // Utilities

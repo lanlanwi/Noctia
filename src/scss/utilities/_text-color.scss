@@ -21,6 +21,4 @@ $text-color-utilities: (
   )
 );
 
-@include tool.dispatch(
-  $text-color-utilities
-);
+@include tool.dispatch($text-color-utilities);

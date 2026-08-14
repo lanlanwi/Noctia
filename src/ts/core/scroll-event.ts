@@ -1,6 +1,4 @@
-type HandlerType = (
-  scrollY: number
-) => void;
+type HandlerType = (scrollY: number) => void;
 
 type HandlersType = {
   handler: HandlerType;
@@ -9,20 +7,13 @@ type HandlersType = {
 
 const handlers: HandlersType[] = [];
 
-export function addScrollHandler(
-  handler: HandlerType,
-  id: string
-) {
+export function addScrollHandler(handler: HandlerType, id: string) {
   removeScrollHandler(id);
   handlers.push({ handler, id });
 }
 
-export function removeScrollHandler(
-  id: string
-) {
-  const index = handlers.findIndex(
-    (e) => e.id === id
-  );
+export function removeScrollHandler(id: string) {
+  const index = handlers.findIndex((e) => e.id === id);
 
   if (index === -1) return;
   handlers.splice(index, 1);
@@ -31,8 +22,7 @@ export function removeScrollHandler(
 let ticking = false;
 
 function onScroll() {
-  if (ticking || handlers.length === 0)
-    return;
+  if (ticking || handlers.length === 0) return;
   ticking = true;
 
   requestAnimationFrame(() => {
@@ -44,7 +34,4 @@ function onScroll() {
   });
 }
 
-window.addEventListener(
-  'scroll',
-  onScroll
-);
+window.addEventListener('scroll', onScroll);

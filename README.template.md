@@ -42,13 +42,16 @@ npm install noctia
 **CSS**
 
 ```css
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/noctia@1.2.1/dist/css/noctia.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/noctia@{{VERSION}}/dist/css/noctia.css">
 ```
 
 **JavaScript**
 
 ```js
-<script type="module" src="https://cdn.jsdelivr.net/npm/noctia@1.2.1/dist/js/noctia.js"></script>
+<script
+  type="module"
+  src="https://cdn.jsdelivr.net/npm/noctia@{{VERSION}}/dist/js/noctia.js"
+></script>
 ```
 
 **Auto Initialization**
@@ -56,7 +59,7 @@ npm install noctia
 ```Auto Initialization
 <script
   type="module"
-  src="https://cdn.jsdelivr.net/npm/noctia@1.2.1/dist/js/noctia-auto.js"
+  src="https://cdn.jsdelivr.net/npm/noctia@{{VERSION}}/dist/js/noctia-auto.js"
 ></script>
 ```
 
@@ -72,4 +75,4 @@ MIT
 
 ---
 
-**Noctia v1.2.1**
+**Noctia v{{VERSION}}**

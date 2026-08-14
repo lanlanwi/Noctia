@@ -9,17 +9,13 @@ table.nc-table {
   font-size: 1rem;
   overflow-wrap: break-word;
 
-  background-color: var(
-    --nc-background
-  );
-  box-shadow: 0 0 0.25em
-    var(--nc-shadow);
+  background-color: var(--nc-background);
+  box-shadow: 0 0 0.25em var(--nc-shadow);
 
   & th,
   & td {
     padding: 1em;
-    border: 0.05em solid
-      var(--nc-neutral);
+    border: 0.05em solid var(--nc-neutral);
 
     font-family: abs.$font-sans;
     line-height: 1.5;

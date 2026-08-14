@@ -1,10 +1,7 @@
 @use 'sass:map';
 
 $theme: var(--nc-theme, #ffffff);
-$theme-inverse: var(
-  --nc-theme-inverse,
-  #000000
-);
+$theme-inverse: var(--nc-theme-inverse, #000000);
 
 $white: #ffffff;
 $off-white: #f5f5f5;
@@ -117,20 +114,8 @@ $accent-colors: (
   'a-pink': $accent-pink,
 );
 
-$chromatic-colors: map.merge(
-  $base-colors,
-  map.merge(
-    $main-colors,
-    $accent-colors
-  )
-);
+$chromatic-colors: map.merge($base-colors, map.merge($main-colors, $accent-colors));
 
-$static-colors: map.merge(
-  $neutral-colors,
-  $chromatic-colors
-);
+$static-colors: map.merge($neutral-colors, $chromatic-colors);
 
-$colors: map.merge(
-  $theme-colors,
-  $static-colors
-);
+$colors: map.merge($theme-colors, $static-colors);
