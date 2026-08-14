@@ -3,7 +3,7 @@
  * Version: 1.2.0
  * Copyright (c) 2026 Lanlanwi
  * Created: 2025-11-06
- * Last Updated: 2026-08-13
+ * Last Updated: 2026-08-14
  * Licensed under the MIT License
  */
 
@@ -21,9 +21,7 @@ function abortManager() {
     },
     get signal() {
       if (!controller) {
-        throw new Error(
-          "abortManager: Call create() before accessing signal."
-        );
+        throw new Error("abortManager: Call create() before accessing signal.");
       }
       return controller.signal;
     }
@@ -33,18 +31,13 @@ function abortManager() {
 // src/ts/utils/focus-trap.ts
 function getFocusables(elm) {
   const target = '[href], button, input, select, textarea, [tabindex]:not([tabindex="-1"])';
-  const elms = elm.querySelectorAll(
-    target
-  );
+  const elms = elm.querySelectorAll(target);
   return [...elms].filter(
     (e) => !e.hasAttribute("disabled") && e.getClientRects().length > 0 && e.tabIndex >= 0
   );
 }
 function enhanceFocusTrap(container) {
-  throwIf(
-    !(container instanceof HTMLElement),
-    "enhanceFocusTrap: Expected an HTMLElement."
-  );
+  throwIf(!(container instanceof HTMLElement), "enhanceFocusTrap: Expected an HTMLElement.");
   function onKeyDown(e) {
     if (e.key !== "Tab") return;
     const focusables = getFocusables(container);
@@ -74,19 +67,11 @@ function enhanceFocusTrap(container) {
     if (document.activeElement instanceof HTMLElement) {
       previousFocus = document.activeElement;
     }
-    container.addEventListener(
-      "keydown",
-      onKeyDown
-    );
-    (_a = getFocusables(
-      container
-    )[0]) == null ? void 0 : _a.focus();
+    container.addEventListener("keydown", onKeyDown);
+    (_a = getFocusables(container)[0]) == null ? void 0 : _a.focus();
   }
   function disable() {
-    container.removeEventListener(
-      "keydown",
-      onKeyDown
-    );
+    container.removeEventListener("keydown", onKeyDown);
     previousFocus == null ? void 0 : previousFocus.focus();
   }
   return {
@@ -168,13 +153,9 @@ var RULES = [
     escape: "\\"
   }
 ];
-RULES.sort(
-  (a, b) => b.start.length - a.start.length
-);
+RULES.sort((a, b) => b.start.length - a.start.length);
 function findRule(text, index, rules) {
-  return rules.find(
-    (rule) => text.startsWith(rule.start, index)
-  );
+  return rules.find((rule) => text.startsWith(rule.start, index));
 }
 function readToken(text, index, rule) {
   let end = index + rule.start.length;
@@ -197,8 +178,7 @@ function readToken(text, index, rule) {
 function readText(text, index, rules) {
   let end = index;
   while (end < text.length) {
-    if (findRule(text, end, rules))
-      break;
+    if (findRule(text, end, rules)) break;
     end++;
   }
   return {
@@ -210,11 +190,7 @@ function parse(text, rules) {
   const tokens = [];
   let i = 0;
   while (i < text.length) {
-    const rule = findRule(
-      text,
-      i,
-      rules
-    );
+    const rule = findRule(text, i, rules);
     const token = rule ? readToken(text, i, rule) : readText(text, i, rules);
     if (token.value.length > 0) {
       tokens.push(token);
@@ -226,10 +202,7 @@ function parse(text, rules) {
 function apply(node) {
   var _a;
   const text = (_a = node.textContent) != null ? _a : "";
-  const tokens = parse(
-    text,
-    RULES
-  );
+  const tokens = parse(text, RULES);
   const frag = document.createDocumentFragment();
   tokens.forEach((token) => {
     if (token.type === "text") {
@@ -244,15 +217,9 @@ function apply(node) {
   node.replaceWith(frag);
 }
 function applySyntaxHighlight(elm) {
-  throwIf(
-    !(elm instanceof HTMLElement),
-    "applySyntaxHighlight: Expected an HTMLElement."
-  );
+  throwIf(!(elm instanceof HTMLElement), "applySyntaxHighlight: Expected an HTMLElement.");
   const textNodes = [];
-  const walker = document.createTreeWalker(
-    elm,
-    NodeFilter.SHOW_TEXT
-  );
+  const walker = document.createTreeWalker(elm, NodeFilter.SHOW_TEXT);
   let node;
   while (node = walker.nextNode()) {
     if (node instanceof Text) {
@@ -264,13 +231,8 @@ function applySyntaxHighlight(elm) {
   });
 }
 function removeSyntaxHighlight(elm) {
-  throwIf(
-    !(elm instanceof HTMLElement),
-    "removeSyntaxHighlight: Expected an HTMLElement."
-  );
-  const auto = elm.querySelectorAll(
-    ".syntax-auto"
-  );
+  throwIf(!(elm instanceof HTMLElement), "removeSyntaxHighlight: Expected an HTMLElement.");
+  const auto = elm.querySelectorAll(".syntax-auto");
   auto.forEach((e) => {
     e.replaceWith(e.textContent);
   });
@@ -289,68 +251,38 @@ function parseTime(value) {
   return value.trim().endsWith("ms") ? n : n * 1e3;
 }
 function getTransitionTime(elm) {
-  if (!(elm instanceof HTMLElement))
-    return 0;
+  if (!(elm instanceof HTMLElement)) return 0;
   const style = getComputedStyle(elm);
   const durations = style.transitionDuration.split(",");
   const delays = style.transitionDelay.split(",");
   return Math.max(
     0,
-    ...durations.map(
-      (dur, i) => parseTime(dur) + parseTime(
-        delays[i % delays.length]
-      )
-    )
+    ...durations.map((dur, i) => parseTime(dur) + parseTime(delays[i % delays.length]))
   );
 }
 function waitTransition(elm, signal) {
-  throwIf(
-    !(elm instanceof HTMLElement),
-    "waitTransition: Expected an HTMLElement."
-  );
-  return new Promise(
-    (resolve, reject) => {
-      if (signal == null ? void 0 : signal.aborted) {
-        reject(
-          new DOMException(
-            "Aborted",
-            "AbortError"
-          )
-        );
-        return;
-      }
-      const duration = getTransitionTime(elm);
-      if (duration === 0) {
-        resolve();
-        return;
-      }
-      const onAbort = () => {
-        clearTimeout(timer2);
-        signal == null ? void 0 : signal.removeEventListener(
-          "abort",
-          onAbort
-        );
-        reject(
-          new DOMException(
-            "Aborted",
-            "AbortError"
-          )
-        );
-      };
-      signal == null ? void 0 : signal.addEventListener(
-        "abort",
-        onAbort,
-        { once: true }
-      );
-      const timer2 = setTimeout(() => {
-        signal == null ? void 0 : signal.removeEventListener(
-          "abort",
-          onAbort
-        );
-        resolve();
-      }, duration + 10);
+  throwIf(!(elm instanceof HTMLElement), "waitTransition: Expected an HTMLElement.");
+  return new Promise((resolve, reject) => {
+    if (signal == null ? void 0 : signal.aborted) {
+      reject(new DOMException("Aborted", "AbortError"));
+      return;
     }
-  );
+    const duration = getTransitionTime(elm);
+    if (duration === 0) {
+      resolve();
+      return;
+    }
+    const onAbort = () => {
+      clearTimeout(timer2);
+      signal == null ? void 0 : signal.removeEventListener("abort", onAbort);
+      reject(new DOMException("Aborted", "AbortError"));
+    };
+    signal == null ? void 0 : signal.addEventListener("abort", onAbort, { once: true });
+    const timer2 = setTimeout(() => {
+      signal == null ? void 0 : signal.removeEventListener("abort", onAbort);
+      resolve();
+    }, duration + 10);
+  });
 }
 
 // src/ts/features/data-copy.ts
@@ -362,37 +294,24 @@ function getText(elm) {
   return (_a = elm.textContent) != null ? _a : "";
 }
 function handleDataCopy(_, elm) {
-  if (!(elm instanceof HTMLElement))
-    return;
+  if (!(elm instanceof HTMLElement)) return;
   const text = elm.dataset.copy || getText(elm);
   void copyText(text);
 }
 function handleCopyTarget(_, elm) {
-  if (!(elm instanceof HTMLElement))
-    return;
+  if (!(elm instanceof HTMLElement)) return;
   const id = elm.dataset.copyTarget;
   if (!id) return;
   const target = document.getElementById(id);
-  if (!(target instanceof HTMLElement))
-    return;
+  if (!(target instanceof HTMLElement)) return;
   const text = getText(target);
   void copyText(text);
 }
 var DELEGATE_ID_COPY = "data-copy-id";
 var DELEGATE_ID_TARGET = "data-copy-target-id";
 function initDataCopy() {
-  delegateEvent(
-    "click",
-    "[data-copy]",
-    DELEGATE_ID_COPY,
-    handleDataCopy
-  );
-  delegateEvent(
-    "click",
-    "[data-copy-target]",
-    DELEGATE_ID_TARGET,
-    handleCopyTarget
-  );
+  delegateEvent("click", "[data-copy]", DELEGATE_ID_COPY, handleDataCopy);
+  delegateEvent("click", "[data-copy-target]", DELEGATE_ID_TARGET, handleCopyTarget);
 }
 
 // src/ts/features/scroll-to-top.ts
@@ -405,12 +324,7 @@ function handleScrollTop(_, __) {
 }
 var DELEGATE_ID_SCROLL_TOP = "scroll-top";
 function initScrollToTop() {
-  delegateEvent(
-    "click",
-    "[data-scroll-top]",
-    DELEGATE_ID_SCROLL_TOP,
-    handleScrollTop
-  );
+  delegateEvent("click", "[data-scroll-top]", DELEGATE_ID_SCROLL_TOP, handleScrollTop);
 }
 
 // src/ts/features/init.ts
@@ -421,14 +335,9 @@ function initFeatures() {
 
 // src/ts/features/copy-text.ts
 async function copyText(text) {
-  throwIf(
-    typeof text !== "string",
-    "copyText: Expected a string."
-  );
+  throwIf(typeof text !== "string", "copyText: Expected a string.");
   try {
-    await navigator.clipboard.writeText(
-      text
-    );
+    await navigator.clipboard.writeText(text);
     showToast(`Copied: ${text}`);
   } catch (error) {
     console.error(error);
@@ -449,9 +358,7 @@ function createElm() {
 function getElm() {
   var _a;
   if (!overlayElm) {
-    overlayElm = (_a = document.querySelector(
-      `.${OVERLAY_CLASS}`
-    )) != null ? _a : createElm();
+    overlayElm = (_a = document.querySelector(`.${OVERLAY_CLASS}`)) != null ? _a : createElm();
   }
   return overlayElm;
 }
@@ -481,19 +388,14 @@ function createElm2() {
   const div = document.createElement("div");
   div.className = TOAST_CLASS;
   div.setAttribute("role", "status");
-  div.setAttribute(
-    "aria-live",
-    "polite"
-  );
+  div.setAttribute("aria-live", "polite");
   document.body.appendChild(div);
   return div;
 }
 function getElm2() {
   var _a;
   if (!toastElm) {
-    toastElm = (_a = document.querySelector(
-      `.${TOAST_CLASS}`
-    )) != null ? _a : createElm2();
+    toastElm = (_a = document.querySelector(`.${TOAST_CLASS}`)) != null ? _a : createElm2();
   }
   return toastElm;
 }
@@ -501,10 +403,7 @@ var MAX_LETTERS = 40;
 var TOAST_TIMEOUT = 3e3;
 var timer;
 function showToast(text) {
-  throwIf(
-    typeof text !== "string",
-    "toast: Expected a string."
-  );
+  throwIf(typeof text !== "string", "toast: Expected a string.");
   const trimmedText = text.trim();
   if (!trimmedText) return;
   const chars = [...trimmedText];
@@ -520,41 +419,26 @@ function showToast(text) {
 
 // src/ts/core/theme.ts
 var THEME_STORAGE_KEY = "noctia-theme";
-var themes = [
-  "light",
-  "dark",
-  "system"
-];
+var themes = ["light", "dark", "system"];
 function setTheme(theme) {
-  throwIf(
-    typeof theme !== "string",
-    "setTheme: Expected a string."
-  );
+  throwIf(typeof theme !== "string", "setTheme: Expected a string.");
   const html = document.documentElement;
   if (theme === "system") {
     html.removeAttribute("data-theme");
   } else {
     html.dataset.theme = theme;
   }
-  localStorage.setItem(
-    THEME_STORAGE_KEY,
-    theme
-  );
+  localStorage.setItem(THEME_STORAGE_KEY, theme);
 }
 function getTheme() {
-  const data = localStorage.getItem(
-    THEME_STORAGE_KEY
-  );
+  const data = localStorage.getItem(THEME_STORAGE_KEY);
   if (themes.includes(data)) {
     return data;
   }
   return null;
 }
 function initTheme(defaultTheme = "light") {
-  throwIf(
-    typeof defaultTheme !== "string",
-    "initTheme: Expected a string."
-  );
+  throwIf(typeof defaultTheme !== "string", "initTheme: Expected a string.");
   const theme = getTheme();
   setTheme(theme != null ? theme : defaultTheme);
 }
@@ -570,9 +454,7 @@ function dispatch(type, target, evt) {
   const handlers2 = events[type];
   if (!handlers2) return;
   handlers2.forEach((handler) => {
-    const elm = target.closest(
-      handler.selector
-    );
+    const elm = target.closest(handler.selector);
     if (!elm) return;
     handler.listener(evt, elm);
   });
@@ -581,15 +463,11 @@ var registered = /* @__PURE__ */ new Set();
 function registerEvent(type) {
   if (registered.has(type)) return;
   registered.add(type);
-  document.addEventListener(
-    type,
-    (e) => {
-      const target = e.target;
-      if (!(target instanceof Element))
-        return;
-      dispatch(type, target, e);
-    }
-  );
+  document.addEventListener(type, (e) => {
+    const target = e.target;
+    if (!(target instanceof Element)) return;
+    dispatch(type, target, e);
+  });
 }
 function delegateEvent(type, selector, id, listener) {
   registerEvent(type);
@@ -604,9 +482,7 @@ function delegateEvent(type, selector, id, listener) {
 function undelegateEvent(type, id) {
   const handlers2 = events[type];
   if (!handlers2) return;
-  const filtered = handlers2.filter(
-    (e) => e.id !== id
-  );
+  const filtered = handlers2.filter((e) => e.id !== id);
   if (filtered.length === 0) {
     delete events[type];
   } else {
@@ -621,16 +497,13 @@ function addScrollHandler(handler, id) {
   handlers.push({ handler, id });
 }
 function removeScrollHandler(id) {
-  const index = handlers.findIndex(
-    (e) => e.id === id
-  );
+  const index = handlers.findIndex((e) => e.id === id);
   if (index === -1) return;
   handlers.splice(index, 1);
 }
 var ticking = false;
 function onScroll() {
-  if (ticking || handlers.length === 0)
-    return;
+  if (ticking || handlers.length === 0) return;
   ticking = true;
   requestAnimationFrame(() => {
     const scrollY = window.scrollY;
@@ -640,10 +513,7 @@ function onScroll() {
     ticking = false;
   });
 }
-window.addEventListener(
-  "scroll",
-  onScroll
-);
+window.addEventListener("scroll", onScroll);
 
 // src/ts/layouts/bar.ts
 var status = {
@@ -657,28 +527,17 @@ var status = {
   }
 };
 function attachBar(elm) {
-  throwIf(
-    !(elm instanceof HTMLElement),
-    "attachBar: Expected an HTMLElement."
-  );
+  throwIf(!(elm instanceof HTMLElement), "attachBar: Expected an HTMLElement.");
   const mode = elm.dataset.bar !== "bottom" ? "top" : "bottom";
-  if (!status[mode] || status[mode].exist)
-    return;
+  if (!status[mode] || status[mode].exist) return;
   status[mode].exist = true;
   let destroyed = false;
   function throwIfDestroyed() {
-    throwIf(
-      destroyed,
-      "Bar has been destroyed."
-    );
+    throwIf(destroyed, "Bar has been destroyed.");
   }
-  const observer = new ResizeObserver(
-    (ent) => {
-      requestAnimationFrame(
-        () => onChangeSize(ent[0])
-      );
-    }
-  );
+  const observer = new ResizeObserver((ent) => {
+    requestAnimationFrame(() => onChangeSize(ent[0]));
+  });
   function onChangeSize(ent) {
     var _a, _b, _c;
     const height = (_c = (_b = (_a = ent.borderBoxSize) == null ? void 0 : _a[0]) == null ? void 0 : _b.blockSize) != null ? _c : ent.contentRect.height;
@@ -730,9 +589,7 @@ function attachBar(elm) {
   };
 }
 function initBar(root = document) {
-  const bars = root.querySelectorAll(
-    "[data-bar]"
-  );
+  const bars = root.querySelectorAll("[data-bar]");
   bars.forEach((elm) => {
     attachBar(elm);
   });
@@ -754,35 +611,19 @@ function enhanceAccordion(elm) {
     !(elm instanceof HTMLDetailsElement),
     "enhanceAccordion: Expected an HTMLDetailsElement."
   );
-  const summary = elm.querySelector(
-    ":scope > summary"
-  );
-  throwIf(
-    !summary,
-    "enhanceAccordion: Missing <summary>."
-  );
-  const content = elm.querySelector(
-    "[data-accordion-content]"
-  );
-  throwIf(
-    !content,
-    "enhanceAccordion: Missing [data-accordion-content]."
-  );
+  const summary = elm.querySelector(":scope > summary");
+  throwIf(!summary, "enhanceAccordion: Missing <summary>.");
+  const content = elm.querySelector("[data-accordion-content]");
+  throwIf(!content, "enhanceAccordion: Missing [data-accordion-content].");
   const closeText = (_a = summary.textContent) != null ? _a : "";
   const openText = (_b = elm.dataset.accordion) != null ? _b : closeText;
   let destroyed = false;
   function throwIfDestroyed() {
-    throwIf(
-      destroyed,
-      "Accordion has been destroyed."
-    );
+    throwIf(destroyed, "Accordion has been destroyed.");
   }
   function reset() {
     abort.cancel();
-    summary.removeEventListener(
-      "click",
-      onClick
-    );
+    summary.removeEventListener("click", onClick);
     content.style.height = "";
   }
   function init() {
@@ -790,10 +631,7 @@ function enhanceAccordion(elm) {
     reset();
     state2 = elm.open ? "open" : "closed";
     summary.textContent = elm.open ? openText : closeText;
-    summary.addEventListener(
-      "click",
-      onClick
-    );
+    summary.addEventListener("click", onClick);
   }
   function onClick(e) {
     e.preventDefault();
@@ -821,15 +659,11 @@ function enhanceAccordion(elm) {
       await nextTwoFrame();
       if (destroyed) return;
       content.style.height = `${content.scrollHeight}px`;
-      await waitTransition(
-        content,
-        abort.signal
-      );
+      await waitTransition(content, abort.signal);
       content.style.height = "auto";
       state2 = "open";
     } catch (e) {
-      if (e instanceof DOMException && e.name === "AbortError")
-        return;
+      if (e instanceof DOMException && e.name === "AbortError") return;
       throw e;
     }
   }
@@ -844,16 +678,12 @@ function enhanceAccordion(elm) {
       await nextTwoFrame();
       if (destroyed) return;
       content.style.height = "0px";
-      await waitTransition(
-        content,
-        abort.signal
-      );
+      await waitTransition(content, abort.signal);
       elm.open = false;
       content.style.height = "auto";
       state2 = "closed";
     } catch (e) {
-      if (e instanceof DOMException && e.name === "AbortError")
-        return;
+      if (e instanceof DOMException && e.name === "AbortError") return;
       throw e;
     }
   }
@@ -883,9 +713,7 @@ function enhanceAccordion(elm) {
   };
 }
 function initAccordion(root = document) {
-  const accordions = root.querySelectorAll(
-    "[data-accordion]"
-  );
+  const accordions = root.querySelectorAll("[data-accordion]");
   accordions.forEach((elm) => {
     enhanceAccordion(elm);
   });
@@ -897,20 +725,12 @@ function createSep(sep) {
   const span = document.createElement("span");
   span.className = SEPARATOR_CLASS;
   span.textContent = sep;
-  span.setAttribute(
-    "aria-hidden",
-    "true"
-  );
+  span.setAttribute("aria-hidden", "true");
   return span;
 }
 function applyCrumbSep(elm) {
-  throwIf(
-    !(elm instanceof HTMLElement),
-    "applyCrumbSep: Expected an HTMLElement."
-  );
-  const items = elm.querySelectorAll(
-    ":scope li"
-  );
+  throwIf(!(elm instanceof HTMLElement), "applyCrumbSep: Expected an HTMLElement.");
+  const items = elm.querySelectorAll(":scope li");
   if (!items.length) return;
   function reset() {
     remove();
@@ -921,9 +741,7 @@ function applyCrumbSep(elm) {
     });
   }
   function remove() {
-    elm.querySelectorAll(
-      `.${SEPARATOR_CLASS}`
-    ).forEach((e) => e.remove());
+    elm.querySelectorAll(`.${SEPARATOR_CLASS}`).forEach((e) => e.remove());
   }
   reset();
   return {
@@ -932,9 +750,7 @@ function applyCrumbSep(elm) {
   };
 }
 function initBreadcrumb(root = document) {
-  const breadcrumbs = root.querySelectorAll(
-    "nav[data-breadcrumb-sep]"
-  );
+  const breadcrumbs = root.querySelectorAll("nav[data-breadcrumb-sep]");
   breadcrumbs.forEach((elm) => {
     applyCrumbSep(elm);
   });
@@ -942,17 +758,9 @@ function initBreadcrumb(root = document) {
 
 // src/ts/components/code-block.ts
 function enhanceCodeBlock(elm) {
-  throwIf(
-    !(elm instanceof HTMLElement),
-    "enhanceCodeBlock: Expected an HTMLElement."
-  );
-  const code = elm.querySelector(
-    ":scope pre code"
-  );
-  throwIf(
-    !code,
-    "enhanceCodeBlock: Missing <code>."
-  );
+  throwIf(!(elm instanceof HTMLElement), "enhanceCodeBlock: Expected an HTMLElement.");
+  const code = elm.querySelector(":scope pre code");
+  throwIf(!code, "enhanceCodeBlock: Missing <code>.");
   function highlight() {
     clearHighlight();
     applySyntaxHighlight(code);
@@ -967,9 +775,7 @@ function enhanceCodeBlock(elm) {
   };
 }
 function initCodeBlock(root = document) {
-  const codeBlocks = root.querySelectorAll(
-    "[data-code-block]"
-  );
+  const codeBlocks = root.querySelectorAll("[data-code-block]");
   codeBlocks.forEach((elm) => {
     enhanceCodeBlock(elm);
   });
@@ -979,45 +785,24 @@ function initCodeBlock(root = document) {
 var state = /* @__PURE__ */ new WeakMap();
 function attachDrawer(btn) {
   var _a;
-  throwIf(
-    !(btn instanceof HTMLButtonElement),
-    "attachDrawer: Expected an HTMLButtonElement."
-  );
+  throwIf(!(btn instanceof HTMLButtonElement), "attachDrawer: Expected an HTMLButtonElement.");
   const id = (_a = btn.getAttribute("aria-controls")) != null ? _a : "";
   const drawer = document.getElementById(id);
-  throwIf(
-    !drawer,
-    `attachDrawer: Expected an HTMLElement with id "${id}".`
-  );
+  throwIf(!drawer, `attachDrawer: Expected an HTMLElement with id "${id}".`);
   const menu = drawer;
   let destroyed = false;
   function throwIfDestroyed() {
-    throwIf(
-      destroyed,
-      "Drawer has been destroyed."
-    );
+    throwIf(destroyed, "Drawer has been destroyed.");
   }
   function reset() {
-    btn.removeEventListener(
-      "click",
-      onClick
-    );
-    menu.removeEventListener(
-      "keydown",
-      onKeyDown
-    );
+    btn.removeEventListener("click", onClick);
+    menu.removeEventListener("keydown", onKeyDown);
   }
   function init() {
     throwIfDestroyed();
     reset();
-    btn.addEventListener(
-      "click",
-      onClick
-    );
-    menu.addEventListener(
-      "keydown",
-      onKeyDown
-    );
+    btn.addEventListener("click", onClick);
+    menu.addEventListener("keydown", onKeyDown);
   }
   function onClick(e) {
     const target = e.currentTarget;
@@ -1047,27 +832,19 @@ function attachDrawer(btn) {
   const trap = enhanceFocusTrap(menu);
   function open() {
     throwIfDestroyed();
-    if (state.get(menu) === "open")
-      return;
+    if (state.get(menu) === "open") return;
     state.set(menu, "open");
     menu.classList.add("is-active");
-    btn.setAttribute(
-      "aria-expanded",
-      "true"
-    );
+    btn.setAttribute("aria-expanded", "true");
     showOverlay();
     trap.enable();
   }
   function close() {
     throwIfDestroyed();
-    if (state.get(menu) !== "open")
-      return;
+    if (state.get(menu) !== "open") return;
     state.set(menu, "closed");
     menu.classList.remove("is-active");
-    btn.setAttribute(
-      "aria-expanded",
-      "false"
-    );
+    btn.setAttribute("aria-expanded", "false");
     hideOverlay();
     trap.disable();
   }
@@ -1099,9 +876,7 @@ function attachDrawer(btn) {
   };
 }
 function initDrawer(root = document) {
-  const drawerBtns = root.querySelectorAll(
-    "button[data-drawer]"
-  );
+  const drawerBtns = root.querySelectorAll("button[data-drawer]");
   drawerBtns.forEach((btn) => {
     attachDrawer(btn);
   });
@@ -1127,9 +902,7 @@ function applyLicense(elm) {
   }
 }
 function initLicense(root = document) {
-  const licenseElms = root.querySelectorAll(
-    "p[data-license]"
-  );
+  const licenseElms = root.querySelectorAll("p[data-license]");
   licenseElms.forEach((elm) => {
     applyLicense(elm);
   });
@@ -1151,9 +924,7 @@ function initComponents(root = document) {
 // src/ts/auto-init.ts
 function initNoctia(root = document) {
   if (!(root instanceof Document || root instanceof HTMLElement)) {
-    throw new TypeError(
-      "initNoctia: Expected a Document or HTMLElement."
-    );
+    throw new TypeError("initNoctia: Expected a Document or HTMLElement.");
   }
   initCore();
   initLayouts(root);
@@ -1161,11 +932,7 @@ function initNoctia(root = document) {
   initFeatures();
 }
 if (document.readyState === "loading") {
-  document.addEventListener(
-    "DOMContentLoaded",
-    () => initNoctia(),
-    { once: true }
-  );
+  document.addEventListener("DOMContentLoaded", () => initNoctia(), { once: true });
 } else {
   initNoctia();
 }

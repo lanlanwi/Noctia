@@ -10,6 +10,7 @@ export default {
     'at-rule-empty-line-before': null,
     'scss/dollar-variable-empty-line-before': null,
     'custom-property-empty-line-before': null,
+    'scss/dollar-variable-colon-space-after': null,
 
     'hue-degree-notation': 'angle',
     'color-hex-length': 'long',

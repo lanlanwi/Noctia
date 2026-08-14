@@ -1,4 +1,4 @@
-export { initCore, setTheme, getTheme, initTheme, } from './core';
+export { initCore, setTheme, getTheme, initTheme } from './core';
 export * from './layouts';
 export * from './components';
 export { initFeatures, copyText, initDataCopy, showOverlay, hideOverlay, showToast, } from './features';
