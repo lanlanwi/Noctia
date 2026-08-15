@@ -23,7 +23,7 @@ table.nc-table {
     color: var(--nc-text);
   }
 
-  & th {
+  th {
     font-size: 1em;
     text-align: center;
 
@@ -32,7 +32,7 @@ table.nc-table {
     user-select: none;
   }
 
-  & td {
+  td {
     font-size: 0.875em;
   }
 }

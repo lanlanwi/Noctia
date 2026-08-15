@@ -12,7 +12,7 @@ details.nc-accordion {
   color: var(--nc-text);
   background-color: var(--nc-background);
 
-  & summary {
+  summary {
     list-style: none;
 
     padding: 0.5em 1em;
@@ -28,15 +28,15 @@ details.nc-accordion {
     outline: none;
   }
 
-  & summary::-webkit-details-marker {
+  summary::-webkit-details-marker {
     display: none;
   }
 
-  & summary:active {
+  summary:active {
     background-color: var(--nc-active);
   }
 
-  & summary:focus-visible {
+  summary:focus-visible {
     outline: 0.1em solid var(--nc-focus-ring);
     outline-offset: -0.1em;
   }

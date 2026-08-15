@@ -13,6 +13,7 @@ const banner = `/*!
  * Created: ${meta.created}
  * Last Updated: ${date}
  * Licensed under the ${pkg.license} License
+ * ${meta.licenseLink}
  */
 
 `;

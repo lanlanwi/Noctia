@@ -28,7 +28,7 @@ p.nc-text,
 
   color: var(--nc-text);
 
-  & p {
+  p {
     margin-bottom: 0.5em;
     padding-inline: 0.25em;
 
@@ -54,7 +54,7 @@ ol.nc-list {
 
   color: var(--nc-text);
 
-  & li {
+  li {
     font: inherit;
 
     color: inherit;

@@ -20,7 +20,7 @@ dl.nc-description {
 
   scrollbar-gutter: stable;
 
-  & dt {
+  dt {
     display: flex;
     align-items: center;
     grid-column: 1 / 3;
@@ -50,7 +50,7 @@ dl.nc-description {
     }
   }
 
-  & dd {
+  dd {
     grid-column: 1 / 3;
     overflow-y: auto;
 
@@ -71,7 +71,7 @@ dl.nc-description {
 
 @container (min-width: 768px) {
   dl.nc-description {
-    & dt {
+    dt {
       grid-column: 1 / 2;
       overflow: hidden;
 
@@ -84,7 +84,7 @@ dl.nc-description {
       }
     }
 
-    & dd {
+    dd {
       grid-column: 2 / 3;
 
       border-top: $border-style;

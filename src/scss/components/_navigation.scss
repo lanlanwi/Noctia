@@ -10,16 +10,16 @@ nav.nc-nav {
 
   color: var(--nc-text);
 
-  & ul {
+  ul {
     display: grid;
     grid-template-columns: 1fr;
     align-items: stretch;
     gap: 0.5em;
 
-    & li {
+    li {
       width: 100%;
 
-      & a {
+      a {
         height: 100%;
 
         line-height: 1.5;
@@ -37,19 +37,19 @@ nav.nc-nav {
 }
 
 nav.nc-nav[data-style] {
-  & ul {
+  ul {
     padding: 0;
 
-    & li {
+    li {
       list-style: none;
 
-      & a {
+      a {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
         gap: 0.5em;
 
-        & img {
+        img {
           object-fit: contain;
         }
       }
@@ -58,9 +58,9 @@ nav.nc-nav[data-style] {
 }
 
 nav.nc-nav[data-style='card'] {
-  & ul {
-    & li {
-      & a {
+  ul {
+    li {
+      a {
         padding: 0.5em;
         border-radius: 0.5em;
 
@@ -87,11 +87,11 @@ nav.nc-nav[data-style='card'] {
 }
 
 nav.nc-nav[data-style='list'] {
-  & ul {
-    & li {
+  ul {
+    li {
       border-bottom: 0.1em solid var(--nc-neutral);
 
-      & a {
+      a {
         padding: 0.25em;
 
         line-height: 1.5;
@@ -116,7 +116,7 @@ nav.nc-nav[data-style='list'] {
 
 nav.nc-nav[data-style] {
   &[data-img-style='small'] {
-    & ul li a {
+    ul li a {
       flex-wrap: nowrap;
 
       img {
@@ -130,7 +130,7 @@ nav.nc-nav[data-style] {
   }
 
   &[data-img-style='resize'] {
-    & ul li a img {
+    ul li a img {
       max-width: 80%;
       max-height: min(16em, 80dvh);
 
@@ -140,7 +140,7 @@ nav.nc-nav[data-style] {
   }
 
   &[data-img-style='full'] {
-    & ul li a img {
+    ul li a img {
       width: 100%;
       height: auto;
 
@@ -168,11 +168,11 @@ nav.nc-nav[data-style] {
     box-shadow: none;
   }
 
-  & section + section {
+  section + section {
     margin-top: 1em;
   }
 
-  & .nc-title {
+  .nc-title {
     display: block;
 
     margin: 0;
@@ -187,7 +187,7 @@ nav.nc-nav[data-style] {
     user-select: none;
   }
 
-  & nav.nc-nav {
+  nav.nc-nav {
     margin-block: 0;
 
     font-size: 0.875em;

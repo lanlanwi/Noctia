@@ -5,6 +5,7 @@
  * Created: 2025-11-06
  * Last Updated: 2026-08-15
  * Licensed under the MIT License
+ * https://opensource.org/licenses/MIT
  */
 
 // src/ts/utils/abort.ts

@@ -23,7 +23,7 @@ form.nc-form {
 
   background-color: var(--nc-background);
 
-  & .nc-field {
+  .nc-field {
     display: flex;
     align-items: center;
     place-content: center space-between;

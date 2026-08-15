@@ -15,7 +15,7 @@
     background-color: var(--nc-surface);
   }
 
-  & .nc-header {
+  .nc-header {
     display: flex;
     align-items: stretch;
     overflow: hidden;
@@ -36,7 +36,7 @@
       user-select: none;
     }
 
-    & button[data-copy-target] {
+    button[data-copy-target] {
       margin-left: auto;
 
       &:active {
@@ -50,7 +50,7 @@
     }
   }
 
-  & pre {
+  pre {
     display: block;
     overflow: hidden;
 
@@ -64,19 +64,19 @@
 
     scrollbar-gutter: stable;
 
-    & code {
+    code {
       font-family: abs.$font-mono;
       line-height: 1.5;
 
       color: var(--nc-text);
 
-      & [data-copy] {
+      [data-copy] {
         background-color: var(--nc-hover);
 
         outline: none;
       }
 
-      & .token-string {
+      .token-string {
         color: #2563eb;
 
         @include abs.when-dark {
@@ -84,7 +84,7 @@
         }
       }
 
-      & .token-comment {
+      .token-comment {
         color: #6b7280;
 
         @include abs.when-dark {
