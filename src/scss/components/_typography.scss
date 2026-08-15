@@ -9,7 +9,7 @@ p.nc-text,
   padding-inline: 0.25em;
 
   font-family: abs.$font-sans;
-  font-size: 1rem;
+  font-size: 1em;
   line-height: 2;
   overflow-wrap: break-word;
 
@@ -24,7 +24,7 @@ p.nc-text,
   margin-block: 2em;
 
   font-family: abs.$font-sans;
-  font-size: 1rem;
+  font-size: 1em;
 
   color: var(--nc-text);
 
@@ -48,7 +48,7 @@ ol.nc-list {
   padding-left: 1.5em;
 
   font-family: abs.$font-sans;
-  font-size: 0.875rem;
+  font-size: 0.875em;
   line-height: 1.5;
   overflow-wrap: break-word;
 
@@ -68,7 +68,7 @@ ol.nc-list {
   & ol {
     padding-right: 1em;
 
-    font-size: 0.75rem;
+    font-size: 1em;
 
     color: inherit;
   }
@@ -113,7 +113,7 @@ $-title-bg-color: var(--nc-surface);
   border-top: 0.1em solid $-title-border-color;
   border-bottom: 0.1em solid $-title-border-color;
 
-  font-size: 2rem;
+  font-size: 2em;
 }
 
 .nc-title-3 {
@@ -124,7 +124,7 @@ $-title-bg-color: var(--nc-surface);
   padding-inline: 0.25em;
   border-left: 0.2em solid $-title-border-color;
 
-  font-size: 1.5rem;
+  font-size: 1.5em;
 
   box-shadow: 0 0 0.2em var(--nc-shadow);
 
@@ -139,7 +139,7 @@ $-title-bg-color: var(--nc-surface);
   margin-bottom: 0.5em;
   padding: 0.2em 1em;
 
-  font-size: 1.25rem;
+  font-size: 1.25em;
 
   @include abs.when-dark {
     background-color: $-title-bg-color;
@@ -154,7 +154,7 @@ $-title-bg-color: var(--nc-surface);
   padding-inline: 0.25em;
   border-bottom: 0.125em solid $-title-border-color;
 
-  font-size: 1rem;
+  font-size: 1em;
 }
 
 .nc-title-6 {
@@ -171,7 +171,7 @@ $-title-bg-color: var(--nc-surface);
   padding-inline: 0.5em;
   border-bottom: 0.2em solid $-title-border-color;
 
-  font-size: 0.875rem;
+  font-size: 0.875em;
 }
 
 // ------------------------------------
@@ -180,7 +180,7 @@ $-title-bg-color: var(--nc-surface);
 
 p[data-license] {
   font-family: abs.$font-sans;
-  font-size: 0.875rem;
+  font-size: 0.875em;
   line-height: 1.5;
   overflow-wrap: break-word;
 

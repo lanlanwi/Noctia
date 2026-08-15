@@ -3,7 +3,7 @@
  * Version: 1.2.0
  * Copyright (c) 2026 Lanlanwi
  * Created: 2025-11-06
- * Last Updated: 2026-08-14
+ * Last Updated: 2026-08-15
  * Licensed under the MIT License
  */
 
@@ -254,7 +254,7 @@ details.nc-accordion {
   margin-block: 1em;
   border-radius: 0.2em;
   font-family: "Segoe UI", "Hiragino Sans", "Yu Gothic", "Meiryo", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 1rem;
+  font-size: 1em;
   color: var(--nc-text);
   background-color: var(--nc-background);
 }
@@ -305,7 +305,7 @@ html[data-theme=dark] details.nc-accordion:open {
 nav.nc-breadcrumb {
   padding-inline: 0.5em;
   font-family: inherit;
-  font-size: inherit;
+  font-size: 1em;
   line-height: 1.2;
   overflow-wrap: break-word;
   color: inherit;
@@ -389,7 +389,7 @@ nav[data-breadcrumb-sep] ul li .nc-separator {
   margin-block: 1em;
   border: 0.1em solid var(--nc-neutral);
   border-radius: 0.25em;
-  font-size: 1rem;
+  font-size: 1em;
   background-color: var(--nc-background);
 }
 html[data-theme=dark] .nc-code-block {
@@ -482,7 +482,7 @@ dl.nc-description {
   margin-block: 1em;
   border: 0.1rem solid var(--nc-neutral);
   border-radius: 0.25em;
-  font-size: 1rem;
+  font-size: 1em;
   line-height: 1.5;
   overflow-wrap: break-word;
   background-color: var(--nc-background);
@@ -552,7 +552,7 @@ dl.nc-description dd + dt {
   max-width: 100vw;
   max-height: 100vh;
   position: fixed;
-  font-size: 1rem;
+  font-size: 1em;
   background-color: var(--nc-background);
   transition: transform 0.4s ease;
   scrollbar-gutter: stable;
@@ -585,7 +585,7 @@ form.nc-form {
   padding: 1em;
   border: 0.1em solid var(--nc-neutral);
   border-radius: 0.5em;
-  font-size: 1rem;
+  font-size: 1em;
   font-family: "Segoe UI", "Hiragino Sans", "Yu Gothic", "Meiryo", Roboto, "Helvetica Neue", Arial, sans-serif;
   line-height: 1.5;
   overflow-wrap: break-word;
@@ -710,7 +710,7 @@ nav.nc-nav {
   container-type: inline-size;
   margin-block: 1em;
   font-family: "Segoe UI", "Hiragino Sans", "Yu Gothic", "Meiryo", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 0.875rem;
+  font-size: 0.875em;
   color: var(--nc-text);
 }
 nav.nc-nav ul {
@@ -822,7 +822,7 @@ nav.nc-nav[data-style][data-img-style=full] ul li a img {
   padding: 1em;
   border-radius: 1em;
   font-family: "Segoe UI", "Hiragino Sans", "Yu Gothic", "Meiryo", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 1rem;
+  font-size: 1em;
   color: var(--nc-text);
   background-color: var(--nc-background);
   box-shadow: 0 0 0.25em var(--nc-shadow);
@@ -862,7 +862,7 @@ table.nc-table {
   width: 100%;
   margin-block: 1em;
   border-collapse: collapse;
-  font-size: 1rem;
+  font-size: 1em;
   overflow-wrap: break-word;
   background-color: var(--nc-background);
   box-shadow: 0 0 0.25em var(--nc-shadow);
@@ -890,7 +890,7 @@ p.nc-text,
 .nc-text p {
   padding-inline: 0.25em;
   font-family: "Segoe UI", "Hiragino Sans", "Yu Gothic", "Meiryo", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 1rem;
+  font-size: 1em;
   line-height: 2;
   overflow-wrap: break-word;
   color: var(--nc-text);
@@ -903,7 +903,7 @@ p.nc-text + p,
 .nc-text-group {
   margin-block: 2em;
   font-family: "Segoe UI", "Hiragino Sans", "Yu Gothic", "Meiryo", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 1rem;
+  font-size: 1em;
   color: var(--nc-text);
 }
 .nc-text-group p {
@@ -918,7 +918,7 @@ ul.nc-list,
 ol.nc-list {
   padding-left: 1.5em;
   font-family: "Segoe UI", "Hiragino Sans", "Yu Gothic", "Meiryo", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 0.875rem;
+  font-size: 0.875em;
   line-height: 1.5;
   overflow-wrap: break-word;
   color: var(--nc-text);
@@ -936,7 +936,7 @@ ul.nc-list ul, ul.nc-list ol,
 ol.nc-list ul,
 ol.nc-list ol {
   padding-right: 1em;
-  font-size: 0.75rem;
+  font-size: 1em;
   color: inherit;
 }
 
@@ -972,7 +972,7 @@ ol.nc-list ol {
   padding-inline: 0.25em;
   border-top: 0.1em solid var(--nc-border);
   border-bottom: 0.1em solid var(--nc-border);
-  font-size: 2rem;
+  font-size: 2em;
 }
 
 .nc-title-3 {
@@ -990,7 +990,7 @@ ol.nc-list ol {
   padding-top: 0.25em;
   padding-inline: 0.25em;
   border-left: 0.2em solid var(--nc-border);
-  font-size: 1.5rem;
+  font-size: 1.5em;
   box-shadow: 0 0 0.2em var(--nc-shadow);
 }
 html[data-theme=dark] .nc-title-3 {
@@ -1015,7 +1015,7 @@ html[data-theme=dark] .nc-title-3 {
           user-select: none;
   margin-bottom: 0.5em;
   padding: 0.2em 1em;
-  font-size: 1.25rem;
+  font-size: 1.25em;
 }
 html[data-theme=dark] .nc-title-4 {
   background-color: var(--nc-surface);
@@ -1041,7 +1041,7 @@ html[data-theme=dark] .nc-title-4 {
   padding-top: 0.25em;
   padding-inline: 0.25em;
   border-bottom: 0.125em solid var(--nc-border);
-  font-size: 1rem;
+  font-size: 1em;
 }
 
 .nc-title-6 {
@@ -1063,12 +1063,12 @@ html[data-theme=dark] .nc-title-4 {
   padding-top: 0.25em;
   padding-inline: 0.5em;
   border-bottom: 0.2em solid var(--nc-border);
-  font-size: 0.875rem;
+  font-size: 0.875em;
 }
 
 p[data-license] {
   font-family: "Segoe UI", "Hiragino Sans", "Yu Gothic", "Meiryo", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 0.875rem;
+  font-size: 0.875em;
   line-height: 1.5;
   overflow-wrap: break-word;
   color: var(--nc-text);
