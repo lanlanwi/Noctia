@@ -3,7 +3,7 @@
  * Version: 1.2.0
  * Copyright (c) 2026 Lanlanwi
  * Created: 2025-11-06
- * Last Updated: 2026-08-15
+ * Last Updated: 2026-08-16
  * Licensed under the MIT License
  * https://opensource.org/licenses/MIT
  */
@@ -409,7 +409,7 @@ html[data-theme=dark] .nc-code-block {
   overflow: hidden;
   border-bottom: 0.1em solid var(--nc-neutral);
 }
-.nc-code-block .nc-header .nc-title, .nc-code-block .nc-header button[data-copy-target] {
+.nc-code-block .nc-title, .nc-code-block button[data-copy-target] {
   padding: 0.25em 0.5em;
   font-family: "Segoe UI", "Hiragino Sans", "Yu Gothic", "Meiryo", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: inherit;
@@ -420,13 +420,13 @@ html[data-theme=dark] .nc-code-block {
      -moz-user-select: none;
           user-select: none;
 }
-.nc-code-block .nc-header button[data-copy-target] {
+.nc-code-block button[data-copy-target] {
   margin-left: auto;
 }
-.nc-code-block .nc-header button[data-copy-target]:active {
+.nc-code-block button[data-copy-target]:active {
   background-color: var(--nc-active);
 }
-.nc-code-block .nc-header button[data-copy-target]:focus-visible {
+.nc-code-block button[data-copy-target]:focus-visible {
   outline: 0.1em solid var(--nc-focus-ring);
   outline-offset: -0.1em;
 }
