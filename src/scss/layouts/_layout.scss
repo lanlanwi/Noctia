@@ -13,12 +13,18 @@ body.nc-layout {
     padding-inline: 0.5rem;
 
     & > section {
-      & + section {
-        margin-top: 5rem;
+      margin-top: 5rem;
+
+      &:first-child {
+        margin-top: 0;
       }
 
-      & > section + section {
+      & section {
         margin-top: 2rem;
+
+        &:first-child {
+          margin-top: 0;
+        }
       }
     }
   }

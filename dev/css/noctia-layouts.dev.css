@@ -3,7 +3,7 @@
  * Version: 1.2.0
  * Copyright (c) 2026 Lanlanwi
  * Created: 2025-11-06
- * Last Updated: 2026-08-16
+ * Last Updated: 2026-08-21
  * Licensed under the MIT License
  * https://opensource.org/licenses/MIT
  */
@@ -225,11 +225,17 @@ body.nc-layout main {
   margin-block: 0.25rem;
   padding-inline: 0.5rem;
 }
-body.nc-layout main > section + section {
+body.nc-layout main > section {
   margin-top: 5rem;
 }
-body.nc-layout main > section > section + section {
+body.nc-layout main > section:first-child {
+  margin-top: 0;
+}
+body.nc-layout main > section section {
   margin-top: 2rem;
+}
+body.nc-layout main > section section:first-child {
+  margin-top: 0;
 }
 body.nc-layout header, body.nc-layout footer {
   padding: 2rem 1rem 1rem;
