@@ -4,7 +4,7 @@ export function enhanceCodeBlock(elm: HTMLElement) {
   throwIf(!(elm instanceof HTMLElement), 'enhanceCodeBlock: Expected an HTMLElement.');
 
   const code = elm.querySelector<HTMLElement>(':scope pre code');
-  throwIf(!code, 'enhanceCodeBlock: Missing <code>.');
+  throwIf(!code, 'enhanceCodeBlock: Missing <pre><code>.');
 
   function highlight() {
     clearHighlight();

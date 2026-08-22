@@ -3,7 +3,7 @@
  * Version: 1.2.0
  * Copyright (c) 2026 Lanlanwi
  * Created: 2025-11-06
- * Last Updated: 2026-08-21
+ * Last Updated: 2026-08-22
  * Licensed under the MIT License
  * https://opensource.org/licenses/MIT
  */
@@ -607,7 +607,7 @@ function initLayouts(root = document) {
 
 // src/ts/components/accordion.ts
 function enhanceAccordion(elm) {
-  var _a, _b;
+  var _a;
   throwIf(
     !(elm instanceof HTMLDetailsElement),
     "enhanceAccordion: Expected an HTMLDetailsElement."
@@ -617,7 +617,7 @@ function enhanceAccordion(elm) {
   const content = elm.querySelector("[data-accordion-content]");
   throwIf(!content, "enhanceAccordion: Missing [data-accordion-content].");
   const closeText = (_a = summary.textContent) != null ? _a : "";
-  const openText = (_b = elm.dataset.accordion) != null ? _b : closeText;
+  const openText = elm.dataset.accordion || closeText;
   let destroyed = false;
   function throwIfDestroyed() {
     throwIf(destroyed, "Accordion has been destroyed.");
@@ -761,7 +761,7 @@ function initBreadcrumb(root = document) {
 function enhanceCodeBlock(elm) {
   throwIf(!(elm instanceof HTMLElement), "enhanceCodeBlock: Expected an HTMLElement.");
   const code = elm.querySelector(":scope pre code");
-  throwIf(!code, "enhanceCodeBlock: Missing <code>.");
+  throwIf(!code, "enhanceCodeBlock: Missing <pre><code>.");
   function highlight() {
     clearHighlight();
     applySyntaxHighlight(code);

@@ -15,7 +15,7 @@ export function enhanceAccordion(elm: HTMLDetailsElement) {
   throwIf(!content, 'enhanceAccordion: Missing [data-accordion-content].');
 
   const closeText = summary!.textContent ?? '';
-  const openText = elm.dataset.accordion ?? closeText;
+  const openText = elm.dataset.accordion || closeText;
 
   let destroyed = false;
 
