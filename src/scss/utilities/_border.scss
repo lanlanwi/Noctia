@@ -55,8 +55,6 @@ $border-relative-units: (em, rem);
 
 $border-values-relative: tool.append-units($border-relative, $border-relative-units);
 
-$border-values: map.merge($border-values, $border-values-relative);
-
 $border-radius-values: map.merge($border-radius-values, $border-values-relative);
 
 $border-color-values: abs.$colors;
