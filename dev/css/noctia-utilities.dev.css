@@ -3,7 +3,7 @@
  * Version: 1.2.0
  * Copyright (c) 2026 Lanlanwi
  * Created: 2025-11-06
- * Last Updated: 2026-08-22
+ * Last Updated: 2026-08-23
  * Licensed under the MIT License
  * https://opensource.org/licenses/MIT
  */
@@ -18580,12 +18580,24 @@
   border: 0.05em !important;
 }
 
+.border-0-05rem {
+  border: 0.05rem !important;
+}
+
 .border-0-1em {
   border: 0.1em !important;
 }
 
+.border-0-1rem {
+  border: 0.1rem !important;
+}
+
 .border-0-2em {
   border: 0.2em !important;
+}
+
+.border-0-2rem {
+  border: 0.2rem !important;
 }
 
 .border-0-25em {
@@ -18606,18 +18618,6 @@
 
 .border-2em {
   border: 2em !important;
-}
-
-.border-0-05rem {
-  border: 0.05rem !important;
-}
-
-.border-0-1rem {
-  border: 0.1rem !important;
-}
-
-.border-0-2rem {
-  border: 0.2rem !important;
 }
 
 .border-0-25rem {
@@ -18668,12 +18668,24 @@
   border-top: 0.05em !important;
 }
 
+.border-t-0-05rem {
+  border-top: 0.05rem !important;
+}
+
 .border-t-0-1em {
   border-top: 0.1em !important;
 }
 
+.border-t-0-1rem {
+  border-top: 0.1rem !important;
+}
+
 .border-t-0-2em {
   border-top: 0.2em !important;
+}
+
+.border-t-0-2rem {
+  border-top: 0.2rem !important;
 }
 
 .border-t-0-25em {
@@ -18694,18 +18706,6 @@
 
 .border-t-2em {
   border-top: 2em !important;
-}
-
-.border-t-0-05rem {
-  border-top: 0.05rem !important;
-}
-
-.border-t-0-1rem {
-  border-top: 0.1rem !important;
-}
-
-.border-t-0-2rem {
-  border-top: 0.2rem !important;
 }
 
 .border-t-0-25rem {
@@ -18756,12 +18756,24 @@
   border-right: 0.05em !important;
 }
 
+.border-r-0-05rem {
+  border-right: 0.05rem !important;
+}
+
 .border-r-0-1em {
   border-right: 0.1em !important;
 }
 
+.border-r-0-1rem {
+  border-right: 0.1rem !important;
+}
+
 .border-r-0-2em {
   border-right: 0.2em !important;
+}
+
+.border-r-0-2rem {
+  border-right: 0.2rem !important;
 }
 
 .border-r-0-25em {
@@ -18782,18 +18794,6 @@
 
 .border-r-2em {
   border-right: 2em !important;
-}
-
-.border-r-0-05rem {
-  border-right: 0.05rem !important;
-}
-
-.border-r-0-1rem {
-  border-right: 0.1rem !important;
-}
-
-.border-r-0-2rem {
-  border-right: 0.2rem !important;
 }
 
 .border-r-0-25rem {
@@ -18844,12 +18844,24 @@
   border-bottom: 0.05em !important;
 }
 
+.border-b-0-05rem {
+  border-bottom: 0.05rem !important;
+}
+
 .border-b-0-1em {
   border-bottom: 0.1em !important;
 }
 
+.border-b-0-1rem {
+  border-bottom: 0.1rem !important;
+}
+
 .border-b-0-2em {
   border-bottom: 0.2em !important;
+}
+
+.border-b-0-2rem {
+  border-bottom: 0.2rem !important;
 }
 
 .border-b-0-25em {
@@ -18870,18 +18882,6 @@
 
 .border-b-2em {
   border-bottom: 2em !important;
-}
-
-.border-b-0-05rem {
-  border-bottom: 0.05rem !important;
-}
-
-.border-b-0-1rem {
-  border-bottom: 0.1rem !important;
-}
-
-.border-b-0-2rem {
-  border-bottom: 0.2rem !important;
 }
 
 .border-b-0-25rem {
@@ -18932,12 +18932,24 @@
   border-left: 0.05em !important;
 }
 
+.border-l-0-05rem {
+  border-left: 0.05rem !important;
+}
+
 .border-l-0-1em {
   border-left: 0.1em !important;
 }
 
+.border-l-0-1rem {
+  border-left: 0.1rem !important;
+}
+
 .border-l-0-2em {
   border-left: 0.2em !important;
+}
+
+.border-l-0-2rem {
+  border-left: 0.2rem !important;
 }
 
 .border-l-0-25em {
@@ -18958,18 +18970,6 @@
 
 .border-l-2em {
   border-left: 2em !important;
-}
-
-.border-l-0-05rem {
-  border-left: 0.05rem !important;
-}
-
-.border-l-0-1rem {
-  border-left: 0.1rem !important;
-}
-
-.border-l-0-2rem {
-  border-left: 0.2rem !important;
 }
 
 .border-l-0-25rem {
