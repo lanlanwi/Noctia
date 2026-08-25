@@ -3,6 +3,8 @@
 nav.nc-nav {
   container-type: inline-size;
 
+  max-width: 100%;
+
   margin-block: 1em;
 
   font-family: abs.$font-sans;
@@ -151,6 +153,8 @@ nav.nc-nav[data-style] {
 }
 
 .nc-collection {
+  max-width: 100%;
+
   margin-block: 1em;
   padding: 1em;
   border-radius: 1em;

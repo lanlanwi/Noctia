@@ -1,6 +1,8 @@
 @use '../abstracts' as abs;
 
 .nc-code-block {
+  max-width: 100%;
+
   margin-block: 1em;
   border: 0.1em solid var(--nc-neutral);
   border-radius: 0.25em;

@@ -8,6 +8,8 @@ dl.nc-description {
   display: grid;
   grid-template-columns: 33.333% 1fr;
 
+  max-width: 100%;
+
   margin-block: 1em;
   border: $border-style;
   border-radius: 0.25em;

@@ -13,6 +13,8 @@ form.nc-form {
   flex-wrap: wrap;
   row-gap: 0.5em;
 
+  max-width: 100%;
+
   margin-block: 1em;
   padding: 1em;
   border: 0.1em solid var(--nc-neutral);

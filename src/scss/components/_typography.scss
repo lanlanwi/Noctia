@@ -6,6 +6,8 @@
 
 p.nc-text,
 .nc-text p {
+  max-width: 100%;
+
   padding-inline: 0.25em;
 
   font-family: abs.$font-sans;
@@ -21,6 +23,8 @@ p.nc-text,
 }
 
 .nc-text-group {
+  max-width: 100%;
+
   margin-block: 2em;
 
   font-family: abs.$font-sans;
@@ -45,6 +49,8 @@ p.nc-text,
 
 ul.nc-list,
 ol.nc-list {
+  max-width: 100%;
+
   padding-left: 1.5em;
 
   font-family: abs.$font-sans;
@@ -82,6 +88,8 @@ $-title-border-color: var(--nc-border);
 $-title-bg-color: var(--nc-surface);
 
 @mixin -title-style {
+  max-width: 100%;
+
   margin-top: 1em;
 
   font-family: abs.$font-sans;
@@ -179,6 +187,8 @@ $-title-bg-color: var(--nc-surface);
 // ------------------------------------
 
 p[data-license] {
+  max-width: 100%;
+
   font-family: abs.$font-sans;
   font-size: 0.875em;
   line-height: 1.5;

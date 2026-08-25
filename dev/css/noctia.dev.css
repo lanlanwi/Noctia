@@ -3,7 +3,7 @@
  * Version: 1.2.0
  * Copyright (c) 2026 Lanlanwi
  * Created: 2025-11-06
- * Last Updated: 2026-08-23
+ * Last Updated: 2026-08-25
  * Licensed under the MIT License
  * https://opensource.org/licenses/MIT
  */
@@ -318,6 +318,7 @@ body.nc-layout footer {
 
 details.nc-accordion {
   overflow: hidden;
+  max-width: 100%;
   margin-block: 1em;
   border-radius: 0.2em;
   font-family: "Segoe UI", "Hiragino Sans", "Yu Gothic", "Meiryo", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -370,6 +371,7 @@ html[data-theme=dark] details.nc-accordion:open {
 }
 
 nav.nc-breadcrumb {
+  max-width: 100%;
   padding-inline: 0.5em;
   font-family: inherit;
   font-size: 1em;
@@ -453,6 +455,7 @@ nav[data-breadcrumb-sep] ul li .nc-separator {
 }
 
 .nc-code-block {
+  max-width: 100%;
   margin-block: 1em;
   border: 0.1em solid var(--nc-neutral);
   border-radius: 0.25em;
@@ -546,6 +549,7 @@ dl.nc-description {
   container-type: inline-size;
   display: grid;
   grid-template-columns: 33.333% 1fr;
+  max-width: 100%;
   margin-block: 1em;
   border: 0.1rem solid var(--nc-neutral);
   border-radius: 0.25em;
@@ -648,6 +652,7 @@ form.nc-form {
   display: flex;
   flex-wrap: wrap;
   row-gap: 0.5em;
+  max-width: 100%;
   margin-block: 1em;
   padding: 1em;
   border: 0.1em solid var(--nc-neutral);
@@ -775,6 +780,7 @@ form.nc-form select, select.nc-select {
 
 nav.nc-nav {
   container-type: inline-size;
+  max-width: 100%;
   margin-block: 1em;
   font-family: "Segoe UI", "Hiragino Sans", "Yu Gothic", "Meiryo", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 0.875em;
@@ -885,6 +891,7 @@ nav.nc-nav[data-style][data-img-style=full] ul li a img {
 }
 
 .nc-collection {
+  max-width: 100%;
   margin-block: 1em;
   padding: 1em;
   border-radius: 1em;
@@ -927,6 +934,7 @@ html[data-theme=dark] .nc-collection {
 
 table.nc-table {
   width: 100%;
+  max-width: 100%;
   margin-block: 1em;
   border-collapse: collapse;
   font-size: 1em;
@@ -955,6 +963,7 @@ table.nc-table td {
 
 p.nc-text,
 .nc-text p {
+  max-width: 100%;
   padding-inline: 0.25em;
   font-family: "Segoe UI", "Hiragino Sans", "Yu Gothic", "Meiryo", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 1em;
@@ -968,6 +977,7 @@ p.nc-text + p,
 }
 
 .nc-text-group {
+  max-width: 100%;
   margin-block: 2em;
   font-family: "Segoe UI", "Hiragino Sans", "Yu Gothic", "Meiryo", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 1em;
@@ -983,6 +993,7 @@ p.nc-text + p,
 
 ul.nc-list,
 ol.nc-list {
+  max-width: 100%;
   padding-left: 1.5em;
   font-family: "Segoe UI", "Hiragino Sans", "Yu Gothic", "Meiryo", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 0.875em;
@@ -1008,6 +1019,7 @@ ol.nc-list ol {
 }
 
 .nc-title-1 {
+  max-width: 100%;
   margin-top: 1em;
   font-family: "Segoe UI", "Hiragino Sans", "Yu Gothic", "Meiryo", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: bold;
@@ -1024,6 +1036,7 @@ ol.nc-list ol {
 }
 
 .nc-title-2 {
+  max-width: 100%;
   margin-top: 1em;
   font-family: "Segoe UI", "Hiragino Sans", "Yu Gothic", "Meiryo", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: bold;
@@ -1043,6 +1056,7 @@ ol.nc-list ol {
 }
 
 .nc-title-3 {
+  max-width: 100%;
   margin-top: 1em;
   font-family: "Segoe UI", "Hiragino Sans", "Yu Gothic", "Meiryo", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: bold;
@@ -1070,6 +1084,7 @@ html[data-theme=dark] .nc-title-3 {
 }
 
 .nc-title-4 {
+  max-width: 100%;
   margin-top: 1em;
   font-family: "Segoe UI", "Hiragino Sans", "Yu Gothic", "Meiryo", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: bold;
@@ -1094,6 +1109,7 @@ html[data-theme=dark] .nc-title-4 {
 }
 
 .nc-title-5 {
+  max-width: 100%;
   margin-top: 1em;
   font-family: "Segoe UI", "Hiragino Sans", "Yu Gothic", "Meiryo", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: bold;
@@ -1112,6 +1128,7 @@ html[data-theme=dark] .nc-title-4 {
 }
 
 .nc-title-6 {
+  max-width: 100%;
   margin-top: 1em;
   font-family: "Segoe UI", "Hiragino Sans", "Yu Gothic", "Meiryo", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: bold;
@@ -1134,6 +1151,7 @@ html[data-theme=dark] .nc-title-4 {
 }
 
 p[data-license] {
+  max-width: 100%;
   font-family: "Segoe UI", "Hiragino Sans", "Yu Gothic", "Meiryo", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 0.875em;
   line-height: 1.5;
