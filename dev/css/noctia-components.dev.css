@@ -867,6 +867,7 @@ html[data-theme=dark] .nc-collection {
 }
 
 table.nc-table {
+  table-layout: fixed;
   width: 100%;
   max-width: 100%;
   margin-block: 1em;
@@ -881,6 +882,7 @@ table.nc-table th, table.nc-table td {
   border: 0.05em solid var(--nc-neutral);
   font-family: "Segoe UI", "Hiragino Sans", "Yu Gothic", "Meiryo", Roboto, "Helvetica Neue", Arial, sans-serif;
   line-height: 1.5;
+  overflow-wrap: anywhere;
   color: var(--nc-text);
 }
 table.nc-table th {
